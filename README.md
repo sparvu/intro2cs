@@ -13,4 +13,4 @@ Includes:
 * Lesson 3: Programming languages. Coding 
 * Lesson 4: Data structures and Algorithms 
 * Lesson 5: Computer system performance 
-* Lesson 6: Build safe and secure software
+* Lesson 6: Safe and secure software
