@@ -8,15 +8,9 @@ A short introduction to Computer Science. Click [here](https://github.com/sparvu
 
 Includes:
 
-* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs
-  * Exercises and Problems: [1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf)
-* Lesson 2: Software speciﬁcations. Formal methods
-  * Exercises and Problems: [1]()
-* Lesson 3: Programming languages. Coding
-  * Exercises and Problems: [1]()
-* Lesson 4: Data structures and Algorithms
-  * Exercises and Problems: [1]()
-* Lesson 5: Computer system performance
-  * Exercises and Problems: [1]()
-* Lesson 6: Safe and secure software
-  * Exercises and Problems: [1]()
+* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs | Homeworks:  [Exercise 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf)
+* Lesson 2: Software speciﬁcations. Formal methods | Homeworks:
+* Lesson 3: Programming languages. Coding | Homeworks:
+* Lesson 4: Data structures and Algorithms | Homeworks:
+* Lesson 5: Computer system performance | Homeworks: 
+* Lesson 6: Safe and secure software | Homeworks:
