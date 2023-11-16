@@ -8,7 +8,7 @@ A short introduction to Computer Science. Click [here](https://github.com/sparvu
 
 Includes:
 
-* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs - Assignments: [1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf), 2, 3, 4)
+* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs  [Exercises: [1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf), 2]
 * Lesson 2: Software speciﬁcations. Formal methods 
 * Lesson 3: Programming languages. Coding 
 * Lesson 4: Data structures and Algorithms 
