@@ -5,6 +5,10 @@
 \usepackage{amsmath,amsfonts}
 \usepackage{algpseudocode}
 \usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
 
 
 %-------------------------------------------------------------------
@@ -70,8 +74,8 @@
 
 \begin{frame}
 \begin{center}
-\Huge Lesson 1\\
-Computation. Algorithms. Programs
+\Huge Lesson 1\\~\\
+\textbf{Computation. Algorithms. Programs}
 \end{center}
 \end{frame}
 
@@ -94,8 +98,8 @@ Computation. Algorithms. Programs
 
 \begin{frame}
 \begin{center}
-\Huge Computer Science (CS)\\
-\textbf { But what's the difference? }
+\Huge Computer Science (CS)\\~\\
+\textbf { But what's the difference between IT and CS? }
 \end{center}
 \end{frame}
 
@@ -106,7 +110,7 @@ Computation. Algorithms. Programs
 
 \begin{frame}{Lesson 1}{}
 \begin{center}
-\Huge Computation
+\Huge \textbf{Computation}
 \end{center}
 \end{frame}
 
@@ -117,16 +121,193 @@ Computation. Algorithms. Programs
 
 
 
-
 \begin{frame}{Lesson 1}{}
+\Huge
+A \textbf{computation} is what a \alert{computing device} does\\~\\
+
 \Large
-A \textbf{computation} is what a \alert{computing device} does, like: a computer system, a tablet, or a mobile phone. But a computing device can be as a not physical device, that you cant buy from a shop: \alert{algorithms}.\\~\\
-
-Example of computations: well-defined mathematical statements, which are solvable. 
-
-%But there are mathematically concepts which are not well-%defined, and can be difficult to solve, like: the halting %problem, or busy beaver game.
+We sometimes call the computation, a behaviour
 
 \end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf{Computing device}\\~\\
+\Large
+For example, a computer system, a tablet, a mobile phone or a basic calculator. But it can be as well, a non physical device, something more abstract, like an \alert{algorithm}.\\~\\
+
+We describe a computing device by describing all its possible computations or behaviours. 
+
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf{What is an algorithm?}\\~\\
+
+
+\begin{center}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,171); %set diagram left start at 0, and has height of 171
+
+%Shape: Rectangle [id:dp3842912892539916] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ][line width=2.25]  (349,57) -- (433,57) -- (433,138) -- (349,138) -- cycle ;
+%Straight Lines [id:da6734653265949071] 
+\draw [line width=2.25]    (440.9,94.36) -- (555.8,93.74) ;
+\draw [shift={(560.8,93.71)}, rotate = 179.69] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (14.29,-6.86) -- (0,0) -- (14.29,6.86) -- cycle    ;
+%Straight Lines [id:da6306489033059055] 
+\draw [line width=2.25]    (222,95) -- (336.9,94.38) ;
+\draw [shift={(341.9,94.36)}, rotate = 179.69] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (14.29,-6.86) -- (0,0) -- (14.29,6.86) -- cycle    ;
+
+
+% Text Node
+\draw (241,65) node [anchor=north west][inner sep=0.75pt]   [align=left] {INPUT};
+% Text Node
+\draw (242,103) node [anchor=north west][inner sep=0.75pt]   [align=left] {values};
+% Text Node
+\draw (449,67) node [anchor=north west][inner sep=0.75pt]   [align=left] {OUTPUT};
+% Text Node
+\draw (465,103) node [anchor=north west][inner sep=0.75pt]   [align=left] {values};
+
+\end{tikzpicture}
+
+$\overbrace{\hbox{Executes in a finite time}}^{\hbox{}}$
+
+\end{center}
+
+Sequence of computational steps that transform the 
+input into the oputput
+
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf{Example of computations}\\~\\
+\begin{itemize}
+    \item well-defined mathematical statements
+    \item solvable statements
+    \item simple instructions
+\end{itemize}
+
+There are mathematically concepts which difficult to solve, like: the halting problem, or busy beaver game.
+
+\end{frame}
+
+
+\begin{frame}{Lesson 1}{}
+
+{\LARGE\textbf{{Computation as a sequence of states}}}\\~\\
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.68pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,274); %set diagram left start at 0, and has height of 274
+
+%Shape: Rectangle [id:dp6019250769064086] 
+\draw  [line width=2.25]  (8,8.89) -- (190.02,8.89) -- (190.02,182.89) -- (8,182.89) -- cycle ;
+
+%Shape: Rectangle [id:dp7080615929230203] 
+\draw  [line width=2.25]  (220,8.89) -- (402.02,8.89) -- (402.02,260.24) -- (220,260.24) -- cycle ;
+%Shape: Rectangle [id:dp947692085619549] 
+\draw   (231,19.02) -- (392.78,19.02) -- (392.78,63.25) -- (231,63.25) -- cycle ;
+
+%Shape: Rectangle [id:dp5588602651005923] 
+\draw  [line width=2.25]  (430,8.89) -- (612.02,8.89) -- (612.02,182.89) -- (430,182.89) -- cycle ;
+%Shape: Rectangle [id:dp10843731413716062] 
+\draw   (232,68.24) -- (392.19,68.24) -- (392.19,156.25) -- (232,156.25) -- cycle ;
+%Shape: Rectangle [id:dp1566544972277042] 
+\draw   (233,164.24) -- (393.19,164.24) -- (393.19,249.25) -- (233,249.25) -- cycle ;
+
+% Text Node
+\draw (24,24) node [anchor=north west][inner sep=0.75pt]   [align=left] {INSTRUCTION 1};
+% Text Node
+\draw (24,55) node [anchor=north west][inner sep=0.75pt]   [align=left] {INSTRUCTION 2};
+% Text Node
+\draw (24,87) node [anchor=north west][inner sep=0.75pt]   [align=left] {INSTRUCTION 3};
+% Text Node
+\draw (24,156) node [anchor=north west][inner sep=0.75pt]   [align=left] {INSTRUCTION N};
+% Text Node
+\draw (25,106) node [anchor=north west][inner sep=0.75pt]   [align=left] {.};
+% Text Node
+\draw (25,118) node [anchor=north west][inner sep=0.75pt]   [align=left] {.};
+% Text Node
+\draw (25,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {.};
+% Text Node
+\draw (445,26) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle Initial\ State$};
+% Text Node
+\draw (445,84) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle State\ 2$};
+% Text Node
+\draw (447,106) node [anchor=north west][inner sep=0.75pt]   [align=left] {.};
+% Text Node
+\draw (447,118) node [anchor=north west][inner sep=0.75pt]   [align=left] {.};
+% Text Node
+\draw (447,130) node [anchor=north west][inner sep=0.75pt]   [align=left] {.};
+% Text Node
+\draw (446,155) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle State\ N$};
+% Text Node
+\draw (444,54) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle State\ 1$};
+% Text Node
+\draw (327.67,32.02) node [anchor=north west][inner sep=0.75pt]   [align=left] {State 1};
+% Text Node
+\draw (238.78,22.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+x\ =\ 12\ \\
+y\ =\ 18
+\end{array}$};
+% Text Node
+\draw (327,102) node [anchor=north west][inner sep=0.75pt]   [align=left] {State 2};
+% Text Node
+\draw (246.78,83.4) node [anchor=north west][inner sep=0.75pt]    {$y\ -\ x$};
+% Text Node
+\draw (248.78,181.4) node [anchor=north west][inner sep=0.75pt]    {$x\ -\ y$};
+% Text Node
+\draw (236,144) node [anchor=north west][inner sep=0.75pt]   [align=left] {$ $};
+% Text Node
+\draw (238.78,110.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+x\ =\ 12\ \\
+y\ =\ 6
+\end{array}$};
+% Text Node
+\draw (329,200) node [anchor=north west][inner sep=0.75pt]   [align=left] {State 3};
+% Text Node
+\draw (241.78,205.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+x\ =\ 6\ \\
+y\ =\ 6
+\end{array}$};
+
+
+\end{tikzpicture}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+
+{\Large\textbf{{What is a computing state?}}}\\~\\
+
+\Large
+A state is an assignment of values to variables.
+
+\begin{itemize}
+    \item calculations carried by an electronic computer or calculator
+    %\item calculations carried out on an \alert{analytical engine}
+    %\item majority of mathematical statements and calculations
+\end{itemize}
+
+\end{frame}
+
+
+
 
 
 \begin{frame}{Lesson 1}{}
@@ -411,24 +592,59 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 \begin{frame}{Lesson 1}{}
 {\Huge{What is a computer program?}}
 \includegraphics[scale=0.67]{Images/program}
+\end{frame}
+
+\begin{frame}{Lesson 1}{}
+\Large
+\textbf{Program. Computation. States}\\~\\
 
 \Large{
 \begin{itemize}
-    \item A computer program in its human-readable form: source code
-    \item The source code needs to be translated into machine code to be able to execute
-    \item The resulting file is called an executable file
-    \item Then the operating system loads the executable into memory and starts a process to execute it
+    \item A program execution is a computation (behaviour)
+    \item A computation is a sequence of states    
+    \item A state is an assignment of values to variables
 \end{itemize}}
+
+\Large {A program is modeled as a set of computations, representing all possible program executions}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\Large
+\textbf{Program. Computation. States}\\~\\
+
+\Large{
+\begin{itemize}
+    \item A program execution is a computation (behaviour)
+    \item A computation is a sequence of states    
+    \item A state is an assignment of values to variables
+\end{itemize}}
+
+\Large {A program is modeled as a set of computations, representing all possible program executions}
+\end{frame}
+
+
+
+
+
+\begin{frame}{Lesson 1}{}
+
+{\Huge{Alogrithm or Program? Is a program an algorithm?}}
+
+\Large
+\textbf{An algorithm is an abstract program?}\\~\\
+
 
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Algorithms}
+\begin{frame}{Lesson 1}{}
 \Huge Computers, digital systems are executing programs
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Programs}
+\begin{frame}{Lesson 1}{}
 \Large
 \textbf{From source code to executable}\\~\\ 
 \includegraphics[scale=0.65]{Images/CompilationChain}

@@ -1,1 +1,6 @@
-\beamer@sectionintoc {1}{Computation. Algorithms. Programs}{2}{0}{1}
+\beamer@sectionintoc {1}{Computation. Algorithms. Programs}{1}{0}{1}
+\beamer@sectionintoc {2}{Software specifications. Formal methods}{45}{0}{2}
+\beamer@sectionintoc {3}{Programming languages. Coding}{46}{0}{3}
+\beamer@sectionintoc {4}{Data structures. Algorithms}{47}{0}{4}
+\beamer@sectionintoc {5}{Computer system performance}{48}{0}{5}
+\beamer@sectionintoc {6}{Safe and secure software}{49}{0}{6}
