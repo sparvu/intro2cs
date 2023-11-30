@@ -11,6 +11,11 @@
 \usetikzlibrary{arrows}
 
 
+%-------------------------------------------------------------------
+%	 TITLE SLIDE
+%-------------------------------------------------------------------
+
+
 \begin{document}
 
 
@@ -22,7 +27,7 @@
 \begin{frame}
 \begin{center}
 \Huge Lesson 1\\~\\
-\textbf{Computation. Algorithms. Programs}
+\textbf{Computation. Algorithms. Computer Programs}
 \end{center}
 \end{frame}
 
@@ -143,7 +148,7 @@ Sequence of computational steps that transform the input into the output
     \item simple instructions
 \end{itemize}
 
-There are mathematically concepts which difficult to solve, like: the halting problem, or busy beaver game.
+\textbf{Note:} We have mathematically concepts difficult to solve, like: the halting problem, or busy beaver game.
 
 \end{frame}
 
@@ -244,14 +249,51 @@ y\ =\ 6
 \Large
 A state is an assignment of values to variables.
 
-\begin{itemize}
-    \item calculations carried by an electronic computer or calculator
-    %\item calculations carried out on an \alert{analytical engine}
-    %\item majority of mathematical statements and calculations
-\end{itemize}
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,236); %set diagram left start at 0, and has height of 236
+
+%Shape: Rectangle [id:dp9618660579176745] 
+\draw   (22,126.02) -- (183.78,126.02) -- (183.78,178.04) -- (22,178.04) -- cycle ;
+%Shape: Rectangle [id:dp8277264942293441] 
+\draw   (214,84.24) -- (374.19,84.24) -- (374.19,178.49) -- (214,178.49) -- cycle ;
+%Shape: Rectangle [id:dp20031164153050973] 
+\draw   (405,87.24) -- (565.19,87.24) -- (565.19,178.49) -- (405,178.49) -- cycle ;
+
+% Text Node
+\draw (74.67,192.02) node [anchor=north west][inner sep=0.75pt]   [align=left] {State 1};
+% Text Node
+\draw (29.78,129.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+x\ =\ 12\ \\
+y\ =\ 18
+\end{array}$};
+% Text Node
+\draw (272,192) node [anchor=north west][inner sep=0.75pt]   [align=left] {State 2};
+% Text Node
+\draw (228.78,99.4) node [anchor=north west][inner sep=0.75pt]    {$y\ -\ x$};
+% Text Node
+\draw (220.78,126.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+x\ =\ 12\ \\
+y\ =\ 6
+\end{array}$};
+% Text Node
+\draw (420.78,104.4) node [anchor=north west][inner sep=0.75pt]    {$x\ -\ y$};
+% Text Node
+\draw (408,67) node [anchor=north west][inner sep=0.75pt]   [align=left] {$ $};
+% Text Node
+\draw (468,192) node [anchor=north west][inner sep=0.75pt]   [align=left] {State 3};
+% Text Node
+\draw (413.78,128.4) node [anchor=north west][inner sep=0.75pt]    {$ \begin{array}{l}
+x\ =\ 6\ \\
+y\ =\ 6
+\end{array}$};
+
+\end{tikzpicture}
 
 \end{frame}
-
 
 
 
@@ -264,24 +306,24 @@ Some well-defined computations:
 
 \begin{itemize}
     \item calculations carried by an electronic computer or calculator
-    %\item calculations carried out on an \alert{analytical engine}
-    %\item majority of mathematical statements and calculations
+    \item calculations performed on a \alert{analytical engine}, \alert{Turing machine}
+    \item majority of mathematical statements and calculations
 \end{itemize}
 
 \end{frame}
 
 
 \begin{frame}{Lesson 1}{}
-{\Large\textbf{{What is an Analytical Engine?}}}
+{\Large\textbf{{The Analytical Engine}}}
 \Large
-\begin{minipage}{0.55\textwidth}
+\begin{minipage}{0.64\textwidth}
     \begin{itemize}
-      \item The very first mechanical general-purpose computer
-      \item Designed by the English mathematician and computer pioneer Charles Babbage
-      \item Designed in 1837
+      \item The very first mechanical general purpose computer system
+      \item Designed in 1837 by the English mathematician and computer pioneer Charles Babbage
+      \item Built as a programmable device to solve different things  
     \end{itemize}
   \end{minipage}
-\begin{minipage}{0.35\textwidth}
+\begin{minipage}{0.25\textwidth}
     % Show the image at item three and afterwards
       \begin{figure}
         \includegraphics[scale=0.45]{Images/Babbages_AnalyticalEngine}
@@ -291,7 +333,23 @@ Some well-defined computations:
 
 
 \begin{frame}{Lesson 1}{}
-{\Large\textbf{{The basic calculator}}}
+{\Large\textbf{{Turing Machine}}}\\~\\
+\begin{minipage}{0.57\textwidth}
+\includegraphics[scale=0.24]{Images/Turing_Machine}
+\end{minipage}
+\Large
+\begin{minipage}{0.42\textwidth}
+    \begin{itemize}
+      \item Infinite tape, divided into cells with symbols
+      \item A head can read/write symbols on the tape
+      \item A register that stores the state of the machine
+    \end{itemize}
+  \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Lesson 1}{}
+{\Large\textbf{{Modern calculator}}}
 \Large
 \begin{minipage}{0.70\textwidth}
     \begin{itemize}
@@ -327,19 +385,14 @@ Computation can be seen as a \textbf{sequence of states} a computing device does
 \Large{
 \begin{itemize}
     \item Contains one or many sequence of states
-    \item We can consider a system to have infinite number of sequence of states
+    \item Can be an infinite number of sequence of states
+    \item Or it can terminate with a final state
  \end{itemize}}
     
- For example a real clock is a computing device. We describe a computing device by describing all their possible computations.
+ We can describe a computing device by describing all their possible computations.
 
 \end{frame}
 
-
-\begin{frame}{Lesson 1}{}
-\Large
-Computation can be seen as a purely physical process occurring inside a closed \textbf{physical system} called a \textbf{computer}.\\~\\ 
-Example of physical systems: analytical engine machines, human mathematicians following strict rules, digital computers, mechanical computers, analog computers and others.
-\end{frame}
 
 
 % --------------------------------------------------------------
@@ -364,6 +417,49 @@ Example of physical systems: analytical engine machines, human mathematicians fo
 \end{itemize}}
 
 \end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf{What is an algorithm?}\\~\\
+
+\begin{center}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,171); %set diagram left start at 0, and has height of 171
+
+%Shape: Rectangle [id:dp3842912892539916] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ][line width=2.25]  (349,57) -- (433,57) -- (433,138) -- (349,138) -- cycle ;
+%Straight Lines [id:da6734653265949071] 
+\draw [line width=2.25]    (440.9,94.36) -- (555.8,93.74) ;
+\draw [shift={(560.8,93.71)}, rotate = 179.69] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (14.29,-6.86) -- (0,0) -- (14.29,6.86) -- cycle    ;
+%Straight Lines [id:da6306489033059055] 
+\draw [line width=2.25]    (222,95) -- (336.9,94.38) ;
+\draw [shift={(341.9,94.36)}, rotate = 179.69] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (14.29,-6.86) -- (0,0) -- (14.29,6.86) -- cycle    ;
+
+
+% Text Node
+\draw (241,65) node [anchor=north west][inner sep=0.75pt]   [align=left] {INPUT};
+% Text Node
+\draw (242,103) node [anchor=north west][inner sep=0.75pt]   [align=left] {values};
+% Text Node
+\draw (449,67) node [anchor=north west][inner sep=0.75pt]   [align=left] {OUTPUT};
+% Text Node
+\draw (465,103) node [anchor=north west][inner sep=0.75pt]   [align=left] {values};
+
+\end{tikzpicture}
+
+$\overbrace{\hbox{Executes in a finite time}}^{\hbox{}}$
+
+\end{center}
+
+Sequence of computational steps that transform the input into the output
+
+\end{frame}
+
 
 \begin{frame}{Lesson 1}{Algorithms}
 \Large
@@ -556,33 +652,14 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 
 
 
-\begin{frame}{Lesson 1}{}
-\Large
-\textbf{Program. Computation. States}\\~\\
 
-\Large{
-\begin{itemize}
-    \item A program execution is a computation (behaviour)
-    \item A computation is a sequence of states    
-    \item A state is an assignment of values to variables
-\end{itemize}}
+%\begin{frame}{Lesson 1}{}
 
-\Large {A program is modeled as a set of computations, representing all possible program executions}
-\end{frame}
+%{\Huge{Alogrithm or Program? Is a program an algorithm?}}
 
-
-
-
-
-\begin{frame}{Lesson 1}{}
-
-{\Huge{Alogrithm or Program? Is a program an algorithm?}}
-
-\Large
-\textbf{An algorithm is an abstract program?}\\~\\
-
-
-\end{frame}
+%\Large
+%\textbf{An algorithm is an abstract program?}\\~\\
+%\end{frame}
 
 
 \begin{frame}{Lesson 1}{}
@@ -669,7 +746,6 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 %Sample text in green box. The title of the block is ``Examples".
 %\end{examples}
 %\end{frame}
-
 
 
 \end{document}
