@@ -48,26 +48,27 @@
 
 \begin{frame}
 \frametitle{Table of Contents}
-\Large{Introduction to Computer Science}\\~\\
-    \large
-    \begin{columns}[onlytextwidth,T]
-     
-        \begin{column}{.55\textwidth}
-            \vfill
-            \tableofcontents[sections=1-3]
-        \end{column}
-        
-        \begin{column}{.45\textwidth}
-           
-            \tableofcontents[sections=4-6]
-        \end{column}
-        
-    \end{columns}
+%\Large{Introduction to Computer Science}\\~\\
+\tableofcontents
+
+%    \begin{columns}[onlytextwidth,T]
+%     
+%        \begin{column}{.50\textwidth}
+%            \vfill
+%            \tableofcontents[sections=1-4]
+%        \end{column}
+% 
+%        \begin{column}{.45\textwidth}
+%        		\vfill
+%            \tableofcontents[sections=5-7]
+%        \end{column}
+% 
+%    \end{columns}
 \end{frame}
 
 
 
-% -------------------------------------------------------------------
+%% -------------------------------------------------------------------
 % Lesson 1
 % -------------------------------------------------------------------
 \section{Computation. Algorithms. Programs}
@@ -114,14 +115,14 @@
 \end{center}
 \end{frame}
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 {\Huge{What is a Computation?}}
 \includegraphics[scale=0.58]{Images/computation.png}
 \end{frame}
 
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 \Huge
 A \textbf{computation} is what a \alert{computing device} does\\~\\
 
@@ -132,21 +133,21 @@ We sometimes call the computation, a behaviour
 
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 \LARGE
 \textbf{Computing device}\\~\\
 \Large
 For example, a computer system, a tablet, a mobile phone or a basic calculator. But it can be as well, a non physical device, something more abstract, like an \alert{algorithm}.\\~\\
 
-We describe a computing device by describing all its possible computations or behaviours. 
+We describe a computing device by describing all its possible computations or its behaviours. 
 
 \end{frame}
 
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 \LARGE
-\textbf{What is an algorithm?}\\~\\
+\textbf{But what is an algorithm?}\\~\\
 
 
 \begin{center}
@@ -177,7 +178,6 @@ We describe a computing device by describing all its possible computations or be
 
 \end{tikzpicture}
 
-$\overbrace{\hbox{Executes in a finite time}}^{\hbox{}}$
 
 \end{center}
 
@@ -187,7 +187,7 @@ Sequence of computational steps that transform the input into the output
 
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 \LARGE
 \textbf{Example of computations}\\~\\
 \begin{itemize}
@@ -196,12 +196,34 @@ Sequence of computational steps that transform the input into the output
     \item simple instructions
 \end{itemize}
 
-\textbf{Note:} We have mathematically concepts difficult to solve, like: the halting problem, or busy beaver game.
+\Large
+\textbf{Note:} There are however other problems difficult to solve or sometimes impossible to solve because there is no algorithm for them. Like the halting problem. 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+
+\LARGE
+\textbf{The halting problem}\\~\\
+"The halting problem is the problem of determining, from a description of
+an arbitrary computer program and an input, whether the program will
+finish running, or continue to run forever. The halting problem is
+undecidable, meaning that no general algorithm exists that solves the
+halting problem for all possible program input pairs."
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+
+\LARGE
+\textbf{Computation as a Sequence of States}\\~\\
 
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 
 {\LARGE\textbf{{Computation as a sequence of states}}}\\~\\
 
@@ -281,13 +303,16 @@ x\ =\ 6\ \\
 y\ =\ 6
 \end{array}$};
 
+
 \end{tikzpicture}
+
+
 
 \end{frame}
 
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 
 {\Large\textbf{{What is a computing state?}}}\\~\\
 
@@ -342,8 +367,29 @@ y\ =\ 6
 
 
 
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf{Standard Computational Model}\\~\\
+\begin{itemize}
+    \item A program execution is represented by a computation or a behaviour
+    \item A computation is a sequence of states
+    \item A state is an assignment of values to variables	
+    \item A program is modeled as a set of computations
+\end{itemize}
 
-\begin{frame}{Lesson 1}{Computation}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf{Computing devices}\\~\\
+
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
 \Large
 Computing devices are supposed to compute something. Like calculate
 and predict the weather, render to produce a movie, calculate first 1000 digits of $\pi$ \\~\\ 
@@ -358,7 +404,18 @@ Some well-defined computations:
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
+\Large
+\textbf{World's first computing device?}\\~\\ 
+The escapement clock, a man-made device, to keep track of
+time.\\~\\ 
+\includegraphics[scale=0.15]{Images/Le_Roy_escapement_mechanism}
+\includegraphics[scale=0.25]{Images/chronometer_detent_escapement}
+\includegraphics[scale=0.35]{Images/Galileo_Pendulum_Clock}
+\end{frame}
+
+
+\begin{frame}{Lesson 1}{}
 {\Large\textbf{{The Analytical Engine}}}
 \Large
 \begin{minipage}{0.64\textwidth}
@@ -377,7 +434,7 @@ Some well-defined computations:
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computation}
+\begin{frame}{Lesson 1}{}
 {\Large\textbf{{Turing Machine}}}\\~\\
 \begin{minipage}{0.57\textwidth}
 \includegraphics[scale=0.24]{Images/Turing_Machine}
@@ -393,14 +450,16 @@ Some well-defined computations:
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computation}
+
+\begin{frame}{Lesson 1}{}
 {\Large\textbf{{Modern calculator}}}
 \Large
 \begin{minipage}{0.70\textwidth}
     \begin{itemize}
       \item Execute a number of precise operations
       \item Designed to contain a set of such operations and instructions
-      \item Includes even more complex operations, graphing charting 
+      \item Includes even more complex operations, graphing charting
+      \item Example: Texas Instruments
     \end{itemize}
   \end{minipage}
 \begin{minipage}{.0\textwidth}
@@ -412,30 +471,56 @@ Some well-defined computations:
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computation}
+
+\begin{frame}{Lesson 1}{}
+{\Large\textbf{{Single-Board Computers (SBC)}}}
 \Large
-\textbf{World's first computing device?}\\~\\ 
-The escapement clock, a man-made device, to keep track of
-time.\\~\\ 
-\includegraphics[scale=0.35]{Images/Le_Roy_escapement_mechanism}
-\includegraphics[scale=0.25]{Images/chronometer_detent_escapement}
-\includegraphics[scale=0.35]{Images/Galileo_Pendulum_Clock}
+\begin{minipage}{0.65\textwidth}
+    \begin{itemize}
+      \item A simple computing device 
+      \item CPU, GPU and Memory on a single chip
+      \item Designed to run few applications
+      \item Example: Raspberry PI 
+    \end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.30]{Images/rbpi}
+      \end{figure}
+  \end{minipage}  
 \end{frame}
 
 
 
-\begin{frame}{Lesson 1}{Computation}
+
+
+\begin{frame}{Lesson 1}{}
+{\Large\textbf{{Datacenter Servers}}}\\~\\
+\begin{minipage}{0.50\textwidth}
+\includegraphics[scale=0.38]{Images/sunfire}
+\end{minipage}
 \Large
+\begin{minipage}{0.48\textwidth}
+    \begin{itemize}
+      \item Runs 24x7
+      \item Enterprise applications
+      \item Suitable for large number of users and applications 
+      \item Available for data-centers
+    \end{itemize}
+  \end{minipage}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
 Computation can be seen as a \textbf{sequence of states} a computing device does.\\~\\
-\Large{
 \begin{itemize}
     \item Contains one or many sequence of states
     \item Can be an infinite number of sequence of states
     \item Or it can terminate with a final state
- \end{itemize}}
-    
- We can describe a computing device by describing all their possible computations.
-
+ \end{itemize}
 \end{frame}
 
 
@@ -450,7 +535,7 @@ Computation can be seen as a \textbf{sequence of states} a computing device does
 \end{frame}
 
 % What is an algorithm?
-\begin{frame}{Lesson 1}{Algorithms}
+\begin{frame}{Lesson 1}{}
 {\Huge{What is an algorithm?}}
 \includegraphics[scale=0.33]{Images/algorithm.png}
 
@@ -465,7 +550,7 @@ Computation can be seen as a \textbf{sequence of states} a computing device does
 
 
 
-\begin{frame}{Lesson 1}{Algorithms}
+\begin{frame}{Lesson 1}{}
 \LARGE
 \textbf{What is an algorithm?}\\~\\
 
@@ -506,91 +591,17 @@ Sequence of computational steps that transform the input into the output
 \end{frame}
 
 
-
-\begin{frame}{Lesson 1}{Algorithms}
-\Huge{An algorithm is}\\
-\LARGE{
-\begin{itemize}
-    \item a method 
-    \item or a computational procedure
-    \item or a sequence of computational steps 
-    \item or a recipe
-\end{itemize}}
-
-to transform the input into the output
-
-\end{frame}
-
-
-
-\begin{frame}{Lesson 1}{Algorithms}
-\Huge{An algorithm is characterised}\\
-\LARGE{
-\begin{itemize}
-    \item a method to solve something \textbf{speed}: executes in a finite amount of time
-    \item \textbf{correctness}: the output should be correct
-\end{itemize}}
-
-\end{frame}
-
-
-
 \begin{frame}{Lesson 1}{Algorithms}
 \Large
 \textbf{Algorithms are everywhere}\\~\\ 
 From your kitchen, in your microwave oven, your washing machine, to your phone or computer. When you browse Internet web sites your web browser is using different algorithms to decide how to display data to you.\\~\\
-Our society relies on algorithms to suggest sentences for convicted criminals. We even use algorithms to keep people alive: the control systems from any modern car, or different medical devices.
+Our society relies on algorithms to suggest sentences for convicted criminals. You even use algorithms to keep you alive: the control systems from your car, or in different medical devices.
 \end{frame}
 
 
 \begin{frame}{Lesson 1}{Algorithms}
 \Large
-\textbf{Do we really need to study algorithms}\\~\\ 
-Even if computing resources were infinite available, we would still need to study and understand algorithms. Why?\\~\\
-\textbf{Because we would like to be certain that our program terminates in time and does so with the correct answer(s).}
-\end{frame}
-
-
-\begin{frame}{Lesson 1}{Algorithms}
-\Large
-\textbf{Time is more valuable than money}\\~\\ 
-Computers systems might be fast, but they are not infinitely fast. Computing time is a precious resource. The  memory of a computer system might be inexpensive but it is neither infinite nor free!\\~\\
-\textbf{You can get back money after you spend it, but once time is spent, you can never get it back!}
-\end{frame}
-
-
-\begin{frame}{Lesson 1}{Algorithms}
-\Huge
-Select algorithms that use resources of time and space efficiently!
-\end{frame}
-
-
-
-\begin{frame}{Lesson 1}{Algorithms}
-\LARGE
-\textbf{How to store and organize data}\\~\\
-\Large
-Part of the algorithm design is how we plan to store and organize data in order to compute something. We call this \textbf{data structures}\\~\\
-
-There is no single data structure which works well for all purposes 
-
-\end{frame}
-
-
-\begin{frame}{Lesson 1}{Algorithms}
-\LARGE
-\textbf{Hard problems or NP-complete}\\~\\
-\Large
-Algorithms are used to solve different problems in a precise amount of time, the speed of the algorithm. We must be able to answer how long does it take for an algorithm to produce its output.\\~\\
-
-But there are problems for which there are no algorithms that run in a reasonable amount of time.  We call these \textbf{NP-complete} problems. and these are important because many real applications can contain such probmes.
-
-\end{frame}
-
-
-\begin{frame}{Lesson 1}{Algorithms}
-\Large
-\textbf{But how can we describe or design algorithms?}\\~\\ 
+\textbf{But how can we describe them?}\\~\\ 
 As an abstraction of something you plan to build or use, including all basic operations to achieve that. For example, think you plan to search in a phone book, a person phone number by the name:
 \begin{itemize}
     \item you can start page by page searching for that name
@@ -607,6 +618,7 @@ You can write it in plain English or in a more precise way using mathematics. So
 \includegraphics[scale=0.27]{Images/pseudocode}
 
 \end{frame}
+
 
 
 \begin{frame}{Lesson 1}{Algorithms}
@@ -703,14 +715,35 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 
 
 
-
-
-
 \begin{frame}{Lesson 1}{Algorithms}
 \Large
 \textbf{Euclid's Algorithm, using mathematics}\\~\\
 \includegraphics[scale=0.5]{Images/gcdtla}
 \end{frame}
+
+
+\begin{frame}
+\begin{center}
+\Huge 
+\textbf {But how do we know our algorithm does the right thing?}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf {"An algorithm for a computational problem is CORRECT if, for every problem instance provided as input it HALTS, finishes its computing  in finite time and outputs the correct solution to the problem instance"\\~\\}
+A correct algorithm SOLVES the given computational problem
+
+\end{frame}
+
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf {An incorrect algorithm might not HALT at all on some input instances, or it might halt with an incorrect answer\\~\\}
+\end{frame}
+
 
 
 \begin{frame}{Lesson 1}{Algorithms}
@@ -737,6 +770,63 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 \end{frame}
 
 
+\begin{frame}
+\begin{center}
+\Huge 
+\textbf { How about AI? }
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 1}{}
+\LARGE
+\textbf {Still an algorithm\\~\\}
+\begin{itemize}
+    \item Or more precisely many algorithms
+    \item Complex algorithms
+    \item But still algorithms nevertheless 
+ \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 1}{}
+\includegraphics[scale=0.3]{Images/AI}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Lesson 1}
+
+\Huge Algorithms 
+\alert{dont feel} are not 
+ \alert{conscious},
+ \alert{sentient beings}!
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Lesson 1}
+\huge
+\textbf {We need safe and secure software\\~\\}
+\begin{itemize}
+	 \item predictable - \alert{which we can CONTROL}
+	 \item not harmful - \alert{USEFUL to us}
+	 \item \alert{being able to STOP it if we want}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Lesson 1}
+\huge
+\textbf {This is not about being nice, but rather being able to describe and proof that our algorithms do the right thing and do it efficiently based on mathematically tools\\~\\}
+
+This is what we need.
+\end{frame}
+
+
+
 
 % --------------------------------------------------------------
 % Programs 
@@ -750,12 +840,12 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 
 % What is a computer program?
 % What is an algorithm?
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 {\Huge{What is a computer program?}}
 \includegraphics[scale=0.67]{Images/program}
 \end{frame}
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 \Large
 \textbf{Program. Computation. States}\\~\\
 
@@ -766,7 +856,7 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
     \item A state is an assignment of values to variables
 \end{itemize}}
 
-\Large {A program is modelled as a set of computations, representing all possible program executions}
+\Large {A program is modeled as a set of computations, representing all possible program executions}
 \end{frame}
 
 
@@ -781,19 +871,19 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 %\end{frame}
 
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 \Huge Computers, digital systems are executing programs
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 \Large
 \textbf{From source code to executable}\\~\\ 
 \includegraphics[scale=0.65]{Images/CompilationChain}
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 {\Huge{Program structure}}
 \includegraphics[scale=0.67]{Images/program}
 
@@ -808,7 +898,7 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 {\Huge{Program types}}\\~\\ 
 
 \Large{
@@ -821,7 +911,7 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{}
 {\Large\textbf{{Application and System Programs}}}
 
 \Large
@@ -840,9 +930,11 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 \end{frame}
 
 
-\begin{frame}{Lesson 1}{Computer Programs}
+\begin{frame}{Lesson 1}{Programs}
 \includegraphics[scale=0.15]{Images/sfwhdw}
 \end{frame}
+
+
 
 
 %\begin{frame}
@@ -867,16 +959,16 @@ Compute then GCD(B,R) since GCD(A,B) = GCD(B,R)
 %\end{frame}
 
 
+
 % -------------------------------------------------------------------
 % Lesson 2
 % -------------------------------------------------------------------
 \section{Software specifications. Formal methods}
 
-
 \begin{frame}
 \begin{center}
 \Huge Lesson 2\\
-Software specifications. Formal methods
+Software speifications. Formal methods
 \end{center}
 \end{frame}
 
@@ -928,12 +1020,12 @@ Software specifications. Formal methods
 % -------------------------------------------------------------------
 % Lesson 3
 % -------------------------------------------------------------------
-\section{Programming languages. Coding}
+\section{Data Structures and Algorithms }
 
 \begin{frame}
 \begin{center}
 \Huge Lesson 3\\
-Programming languages. Coding
+Data Structures and Algorithms
 \end{center}
 \end{frame}
 
@@ -943,34 +1035,25 @@ Programming languages. Coding
 % -------------------------------------------------------------------
 % Lesson 4
 % -------------------------------------------------------------------
-\section{Data structures. Algorithms}
-
+\section{Programming vs Coding}
 
 \begin{frame}
 \begin{center}
 \Huge Lesson 4\\
-Data structures. Algorithms
+Programming vs Coding
 \end{center}
 \end{frame}
-
-
-%\begin{frame}{Lists in beamer}{Itemize environment (default)}
-%\begin{itemize}
-%    \item First item
-%    \item Second item
-%    \item Third item
-%\end{itemize}
-%\end{frame}
 
 
 % -------------------------------------------------------------------
 % Lesson 5
 % -------------------------------------------------------------------
-\section{Computer system performance}
+\section{Data Ingestion, Transformation, Analysis}
+
 \begin{frame}
 \begin{center}
 \Huge Lesson 5\\
-Computer system performance
+Data Capturing, Transformation, Analysis
 \end{center}
 \end{frame}
 
@@ -979,11 +1062,23 @@ Computer system performance
 % -------------------------------------------------------------------
 % Lesson 6
 % -------------------------------------------------------------------
-\section{Safe and secure software}
+\section{Build Safe and Secure Software}
 \begin{frame}
 \begin{center}
 \Huge Lesson 6\\
-Build safe and secure software
+Build Safe and Secure Software
+\end{center}
+\end{frame}
+
+
+% -------------------------------------------------------------------
+% Lesson 7
+% -------------------------------------------------------------------
+\section{System Performance Analysis}
+\begin{frame}
+\begin{center}
+\Huge Lesson 7\\
+System Performance Analysis
 \end{center}
 \end{frame}
 
