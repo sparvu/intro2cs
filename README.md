@@ -8,10 +8,10 @@ A short introduction to Computer Science. Click [here](https://github.com/sparvu
 
 Includes:
 
-* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs | Homeworks:  [Exercise 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf)
-* Lesson 2: Software speciﬁcations. Formal methods | Homeworks:
-* Lesson 3: Data Structures and Algorithms | Homeworks:
-* Lesson 4: Programming vs Coding | Homeworks:
-* Lesson 5: Data Capturing, Transformation, Analysis | Homeworks:
-* Lesson 6: Build Safe and Secure Software | Homeworks:
-* Lesson 7: System Performance Analysis | Homeworks:
+* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson1/description.md) | Homeworks:  [Exercise 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf)
+* Lesson 2: Software speciﬁcations. Formal methods | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson2/description.md) | Homeworks:
+* Lesson 3: Data Structures and Algorithms | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson3/description.md) Homeworks:
+* Lesson 4: Programming vs Coding | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson4/description.md) | Homeworks:
+* Lesson 5: Data Capturing, Transformation, Analysis | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson5/description.md) | Homeworks:
+* Lesson 6: Build Safe and Secure Software | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson6/description.md) | Homeworks:
+* Lesson 7: System Performance Analysis | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson7/description.md) | Homeworks:
