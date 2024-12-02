@@ -1,4 +1,3 @@
-####  A[0] to A[n-1] is the array to sort, n is the length of the array 
 
 # ################################
 # SelectionSort Procedure 
@@ -9,7 +8,7 @@ SelectionSort (A)
     n = length(A)
 
     # we advance the position through the entire array
-    for i from 0 to n - 1
+    for i from 0 to n -1
      
         ### assume the min is the first element 
         jMin = i
