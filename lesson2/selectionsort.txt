@@ -1,0 +1,32 @@
+####  A[0] to A[n-1] is the array to sort, n is the length of the array 
+
+# ################################
+# SelectionSort Procedure 
+# ################################
+SelectionSort (A)
+   
+    i, j
+    n = length(A)
+
+    # we advance the position through the entire array
+    for i from 0 to n - 1
+     
+        ### assume the min is the first element 
+        jMin = i
+        
+        ### Find the index of the minimum element in the unsorted part
+        for j from i + 1 to n 
+            if A[j] < A[jMin] then
+                jMin = j
+       
+
+        ### Swap the min element with the first element of the unsorted part
+        if (jMin != i) then
+            swap A[i] with A[min_index]
+    
+    # Array is now sorted
+    
+    return A
+
+end procedure
+
