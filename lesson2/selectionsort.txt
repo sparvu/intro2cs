@@ -21,10 +21,9 @@ SelectionSort (A)
 
         ### Swap the min element with the first element of the unsorted part
         if (jMin != i) then
-            swap A[i] with A[min_index]
+            swap A[i] with A[jMin]
     
     # Array is now sorted
-    
     return A
 
 end procedure
