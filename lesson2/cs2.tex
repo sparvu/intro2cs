@@ -61,8 +61,22 @@
 
 \begin{frame}{Lesson 2}{}
 \Huge
- Our software is getting more and more \textbf{complex}, \textbf{buggy} and \textbf{difficult} to maintain.
+ Our software is \textbf{complex}, \textbf{buggy} and \textbf{difficult} to maintain.
  \end{frame}
+
+
+\begin{frame}
+\begin{center}
+\Huge
+\begin{quote}
+\textbf{"If our software is buggy, what does
+that say about its security?"}
+\begin{flushright}
+{--- Prof. Robert H. Morris}
+\end{flushright}
+\end{quote}
+\end{center}
+\end{frame}
 
 
 \begin{frame}[plain,noframenumbering]
@@ -87,8 +101,9 @@
 
 \begin{frame}{Lesson 2}{}
 \Huge
-\center
+\begin{center}
    Start with a \textbf{smart design} at the specification level
+\end{center}
 \end{frame}
 
 
@@ -100,69 +115,26 @@
 
 
 \begin{frame}{Lesson 2}{}
-\Huge{What is a computer specification?}
+\Huge{What is a specification?}
 \includegraphics[scale=0.52]{Images/specs}
 \end{frame}
 
 
 \begin{frame}{Lesson 2}{}
-\Huge{What is a software specification?}
-\includegraphics[scale=0.52]{Images/sfwspecs}
+\Huge{What is a functional specification?}
+\includegraphics[scale=0.46]{Images/funcspecs0}
 \end{frame}
 
 
 \begin{frame}{Lesson 2}{}
-\Huge
-    A \textbf{Software Specification} is a 
-    \alert{written} description of what a our application or program 
-    is supposed to do.
-\end{frame}
-
-
-
-
-\begin{frame}{Lesson 2}{}
-\Huge
-    A \textbf{Software Specification} is a
-    \alert{written} description of what a our application or program
-    is supposed to do.
+\huge
+    A \textbf{functional software specification} is a
+    \alert{written} description of what our program is supposed to do.
 \end{frame}
 
 
 \begin{frame}{Lesson 2}{}
-\Huge
-    We call these \alert{\textbf{functional}} specifications 
-\end{frame}
-
-%
-%https://www.geeksforgeeks.org/functional-vs-non-functional-requirements/
-
-\begin{frame}{Lesson 2}{}
-\includegraphics[scale=0.30]{Images/fvsnf.png}
-\end{frame}
-
-
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Functional specifications}\\~\\
-help us understand our software or application. It’s a very good idea to understand a
-system before building it, and that means to write a specification of our program
-\alert{before} implementing it.
-\end{frame}
-
-
-
-%%% Examples of specifications
-\begin{frame}{Lesson 1}{}
-\Large
-\textbf{Examples of specifications}\\~\\
-Here are few examples of software soecifications
-time.\\~\\
-\includegraphics[scale=0.15]{Images/Le_Roy_escapement_mechanism}
-\includegraphics[scale=0.25]{Images/chronometer_detent_escapement}
-\includegraphics[scale=0.35]{Images/Galileo_Pendulum_Clock}
+\includegraphics[scale=0.41]{Images/funcspecs}
 \end{frame}
 
 
@@ -175,76 +147,117 @@ time.\\~\\
     \item Graphical diagrams. Drawing
     \item Technical sketches. Mockups
 \end{itemize}
-
-\Large
-\textbf But all these are imprecise. How can we be precise? What does it mean to be precise?
 \end{frame}
 
 
-
 \begin{frame}{Lesson 2}{}
-\Huge
-    A \textbf{The specification is the program} is a
-    \alert{written} description of what a our application or program
-    is supposed to do.
+\LARGE
+\textbf{Functional specification}\\~\\
+Helps us to understand what our program will do. It’s highly important to write first a specification of our program \alert{before}  implementing and developing anything.
 \end{frame}
 
 
 
 
-
-
-
-
-
+\begin{frame}{Lesson 2}{}
+\LARGE
+    \textbf{The specification -- what our program does.}\\~\\
+  
+\textbf{But how should we describe this specification? How can we be precise? What does it mean to be precise?}
+\end{frame}
 
 
 
 \begin{frame}{Lesson 2}{}
+\begin{center}
 \Huge
 	Imprecision can lead to \alert{\textbf{ERRORS!}}
+\end{center}
 \end{frame}
 
 
 \begin{frame}{Lesson 2}{}
 \LARGE
 \textbf{Precise specifications}\\~\\
-Its difficult to be precise using English or Chinese. Thats why in science and 
-engineering fields precise specifications have adopted basic maths to describe 
-the specifications.
+Its difficult to be precise using English or Chinese. Thats why in science and engineering precise specifications have adopted basic maths to describe the specifications.
 \end{frame}
 
 
 \begin{frame}{Lesson 2}{}
 \LARGE
-\textbf{Basic maths?}\\~\\
-Ordinary math. Elementary mathematics. Propositional logic.
+\textbf{Basic math}\\~\\
+Elementary mathematics. Propositional logic.
 \end{frame}
-
-<<<<<<< HEAD
-=======
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Precise Specifications}\\~\\
-% image insert
-\end{frame}
-
-
 
 
 \begin{frame}{Lesson 2}{}
 \LARGE
-\textbf{}\\~\\
-A computer
-system differs from the systems traditionally studied by scientists because we can
-pretend that its state changes in discrete steps. So, we represent the execution
-of a system as a sequence of states. Formally, we define a behavior to be a
-sequence of states, where a state is an assignment of values to variables. We
-specify a system by specifying a set of possible behaviors—the ones representing
-a correct execution of the system
+\textbf{Propositional Logic}\\~\\
+\includegraphics[scale=0.54]{Images/basiclogic}
+\end{frame}
 
 
->>>>>>> 896c40fe12139ccf0e9e8175882ace19dca0fc20
+\begin{frame}{Lesson 2}{}
+\LARGE
+\textbf{Propositional Logic, cont.}
+\includegraphics[scale=0.55]{Images/basiclogic2}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 2}{}
+\LARGE
+\textbf{Formal methods}\\~\\
+\includegraphics[scale=0.53]{Images/fm}
+\end{frame}
+
+
+\begin{frame}{Lesson 2}{}
+\LARGE
+\textbf{Specifications using formal methods}\\~\\
+\includegraphics[scale=0.53]{Images/fms}
+\end{frame}
+
+
+\begin{frame}{Lesson 2}{}
+\LARGE
+    Formal verification is the use of software tools to prove properties of a formal specification, or to prove that a formal model of a system implementation satisfies its specification.\\~\\
+\textbf{Once a formal specification has been developed, the specification may be used as the basis for proving properties of the specification.}
+\end{frame}
+
+
+\begin{frame}{Lesson 2}{}
+\LARGE
+    \textbf{Verification: Are we building the product right?}
+
+\end{frame}
+
+\begin{frame}{Lesson 2}{}
+\LARGE
+    \textbf{Validation: Are we building the right product?}
+\end{frame}
+
+\begin{frame}{Lesson 2}{}
+\LARGE
+"Building the product right" checks that the specifications are correctly implemented by the system while "building the right product" refers back to the user's needs. Ideally, formal methods provide a mathematical guarantee that software meets its specifications.
+\end{frame}
+
+
+
+%\begin{frame}{Lesson 2}{}
+%\LARGE
+%\textbf{}\\~\\
+%A computer system differs from the systems traditionally studied by 
+% scientists because we can
+%pretend that its state changes in discrete steps. So, we represent the 
+%execution
+%of a system as a sequence of states. Formally, we define a behavior to be 
+%a
+%sequence of states, where a state is an assignment of values to 
+%variables. We
+%specify a system by specifying a set of possible behaviors—the ones 
+%representing
+%a correct execution of the system
+
 \end{document}
 
