@@ -196,8 +196,28 @@ A dynamic set which supports all these basic operations is a dictionary
 \State \Return $MAX$
 \EndProcedure
 \end{algorithmic}
-
 \end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Arrays}
+\Large
+\textbf{Example2: Search element X in array A}\\~\\
+\label{SearchArray}
+\begin{algorithmic}[1]
+\Procedure{SearchArray}{$A$} \Comment{Returns the max value in A}
+\State $X\gets MyElement$
+\For{\texttt{i=0 to L-1}}
+\If {$X = A[i]$}
+    \State \Return {$i$}  \Comment{The index for my match}
+\EndIf
+\EndFor
+\State \Return -1 \Comment{otherwise return -1}
+\EndProcedure
+\end{algorithmic}
+\end{frame}
+
+
 
 
 
