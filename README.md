@@ -8,8 +8,8 @@ A short introduction to Computer Science. Click [here](https://github.com/sparvu
 
 Includes:
 
-* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson1/description.md) | Homeworks:  [Exercise 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf)
-* [Lesson 2](https://github.com/sparvu/intro2cs/blob/main/lesson2/cs2.pdf): Software speciﬁcations. Formal methods | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson2/description.md) | Homeworks:
+* [Lesson 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/cs1.pdf): Computation. Algorithms. Programs | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson1/description.md) | Homeworks: [Exercise 1](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex1.pdf)
+* [Lesson 2](https://github.com/sparvu/intro2cs/blob/main/lesson2/cs2.pdf): Software speciﬁcations. Formal methods | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson2/description.md) | Homeworks: [Exercise 2](https://github.com/sparvu/intro2cs/blob/main/lesson1/ex2.pdf)
 * Lesson 3: Data Structures and Algorithms | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson3/description.md) Homeworks:
 * Lesson 4: Programming vs Coding | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson4/description.md) | Homeworks:
 * Lesson 5: Data Capturing, Transformation, Analysis | [Description](https://github.com/sparvu/intro2cs/blob/main/lesson5/description.md) | Homeworks:
