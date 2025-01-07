@@ -4,7 +4,7 @@
 [![](https://img.shields.io/static/v1.svg?label=license&message=BSD3&color=blue)](LICENSE)
 
 # Overview
-A short introduction to Computer Science. Click [here](https://github.com/sparvu/intro2cs/blob/main/Intro-CS.pdf) to access the full course (Work in progress!). 
+A short introduction to Computer Science (Work in progress) 
 
 Includes:
 
