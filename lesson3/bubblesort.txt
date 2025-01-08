@@ -1,0 +1,18 @@
+# ####################################################
+# BubbleSort
+# ####################################################
+procedure bubbleSort (A)
+
+    i,j
+    n = lenght(A)
+
+    for i from 0 to n-2
+    
+        for j from 0 to n-2
+        
+            # check the elements and swap
+            if A[j] > A[j+1]
+                swap(A[j], A[j+1])
+
+end procedure
+# ####################################################
