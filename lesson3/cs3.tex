@@ -72,22 +72,28 @@ Its a collection of data values, and the relationships among these values
 The basic, fundamental data structure: \{1,2,4,51,9\}
 \begin{itemize}
     \item mathematical set
-    \item unchanging
-    \item contains a fixed number of elements
+    \item unchanging, unique elements, no duplicates
+    \item contains a fixed number of elements or infinite
 \end{itemize}
 
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{}
+\Huge{A set of polygons}
+\begin{center}
+\includegraphics[scale=0.10]{Images/set}
+\end{center}
+\end{frame}
+
 
 \begin{frame}{Lesson 3}{}
 \LARGE
 \textbf{Sets}\\~\\
-As mathematical sets are unchanging, sets which are manipulated by algorithms are dynamic. Can change in size, grow or shrink, basically change over the time. 
-
+A set is fixed, not changing. Sets which are manipulated by algorithms are dynamic. These sets can change in size, grow or shrink, basically change over the time. 
 \begin{itemize}
-    \item static - 5 elements \{1,2,4,51,9\}
-    \item dynamic - can add or remove elements
+    \item static set - \{1,2,4,51,9\}
+    \item dynamic set - can add or remove elements
 \end{itemize}
 
 \end{frame}
@@ -102,7 +108,16 @@ As mathematical sets are unchanging, sets which are manipulated by algorithms ar
 \begin{frame}{Lesson 3}{}
 \LARGE
 \textbf{Sets}\\~\\
+A set is a \textbf{mathematical model} for a collection of different things, a set contains elements or members, which can be mathematical objects of any kind numbers, symbols, points in space, lines, other geometrical shapes, variables, or even other sets.
+
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{}
+\LARGE
+\textbf{Sets}\\~\\
 \begin{itemize}
+	\item \{white, blue, red, yellow\}
     \item The empty set \{\}
     \item Natural numbers: $\mathbb{N} = \{0, 1, 2, 3, \ldots\}$
     \item Natural numbers except 0: $\mathbb{N^*} = \{1, 2, 3, \ldots\}$
@@ -112,18 +127,34 @@ As mathematical sets are unchanging, sets which are manipulated by algorithms ar
 \end{frame}
 
 
+
+\begin{frame}{Lesson 3}{}
+\Huge{\textbf{\{1,2,3,4\}}}\\~\\
+\LARGE
+Roster or the enumeration notation defines a set by listing its elements between curly brackets, separated by commas.
+\end{frame}
+
+
+
 \begin{frame}{Lesson 3}{}
 \LARGE
 \textbf{Basic Operations on Sets}\\~\\
 \begin{itemize}
-    \item insert
-    \item delete
-    \item test if the element belongs to a set or not 
+    \item Insert
+    \item Delete
+    \item Test - if element X belongs to a set or not 
 \end{itemize}
 
-A dynamic set which supports all these basic operations is a dictionary
+A dynamic set which supports all these basic operations: \textbf{a dictionary} 
 \end{frame}
 
+
+
+\begin{frame}{Lesson 3}{}
+\LARGE
+\textbf{Data Structures}\\~\\
+The main advantage of using a set data structure is that it allows you to perform operations on a collection of elements in an efficient and organized way.
+\end{frame}
 
 
 \begin{frame}{Lesson 3}{}
@@ -203,9 +234,9 @@ A dynamic set which supports all these basic operations is a dictionary
 \label{MaxArray}
 \begin{algorithmic}[1]
 \Procedure{MaxArray}{$A$} \Comment{Returns the max value in A}
-\State $L\gets length(A)$
+\State $N\gets length(A)$
 \State $MAX\gets A[0]$
-\For{\texttt{i=1 to L-1}}
+\For{\texttt{from i=1 to N-1}}
 \If {$A[i] > MAX$}
     \State \textbf{$MAX = A[i]$} \Comment{The MAX is A[i]}
 \EndIf
@@ -224,7 +255,8 @@ A dynamic set which supports all these basic operations is a dictionary
 \begin{algorithmic}[1]
 \Procedure{SearchArray}{$A$} \Comment{Returns the max value in A}
 \State $X\gets MyElement$
-\For{\texttt{i=0 to L-1}}
+\State $N\gets length(A)$
+\For{\texttt{from i=0 to N-1}}
 \If {$X = A[i]$}
     \State \Return {$i$}  \Comment{The index for my match}
 \EndIf
