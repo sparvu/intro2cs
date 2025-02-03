@@ -574,4 +574,210 @@ for row in A:
 \end{frame}
 
 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stacks
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Lesson 3}{Stacks}
+\begin{center}
+\Huge Stacks
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sets}
+\Huge{What is a stack?}\\~\\
+\end{frame}
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+The stack is an analogy to a set of physical items stacked one atop
+another, such as a stack of plates.
+\end{frame}
+
+\begin{frame}{Lesson 3}{Stacks}
+\begin{center}
+\includegraphics[scale=0.23]{Images/stack}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+Stacks are collections of elements, which support two main operations:\\
+\begin{itemize}
+    \item \textbf{PUSH}: which adds an element to the collection 
+    \item \textbf{POP}: which removes the most recent elements from the collection
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+There might be, another operation called \textbf{PEEK}, which without
+modifying the stack, return the value of the last element added.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+\begin{itemize}
+    \item \textbf{PUSH}: which adds an element to the collection 
+    \item \textbf{POP}: which removes the most recent elements from the collection
+    \item \textbf{PEEK}: returns the value of the last element added
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+The stack supports few operations. And it operates in a certain,
+predefined order. The order in which an element added to or removed
+from a stack is described as last in, first out,
+referred to by the acronym \textbf{LIFO}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\begin{center}
+\includegraphics[scale=0.13]{Images/Lifo_stack}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+"Stacks entered the computer science literature in 1946, when
+\alert{Alan Turing} used the terms "bury" and "unbury" as a means of
+calling and returning from subroutines."
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+{\LARGE\textbf{{Who was Alan Turing?}}}
+\Large
+\begin{minipage}{0.70\textwidth}
+    \begin{itemize}
+      \item The father of Computer Science
+      \item English mathematician, computer scientist, logician, cryptanalyst
+      \item Established the very first formalisation of the concepts of algorithm and computation with the Turing machine (a model of a general-purpose computer)
+     \end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.28]{Images/Alan_turing}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+\begin{frame}{Lesson 3}{Stacks}
+{\LARGE\textbf{{Remember this? The Turing Machine}}}\\~\\
+\begin{minipage}{0.57\textwidth}
+\includegraphics[scale=0.24]{Images/Turing_Machine}
+\end{minipage}
+\Large
+\begin{minipage}{0.42\textwidth}
+    \begin{itemize}
+      \item Infinite tape, divided into cells with symbols
+      \item A head can read/write symbols on the tape
+      \item A register that stores the state of the machine
+    \end{itemize}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+During World War II, Turing worked for the Government Code and Cypher
+School at Bletchley Park, Britain's codebreaking centre that produced
+Ultra intelligence. He led Hut 8, the section responsible for German
+naval cryptanalysis. Turing devised techniques for speeding the
+breaking of German ciphers, including improvements to the pre-war
+Polish bomba method, an electromechanical machine that could find
+settings for the Enigma machine. 
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/Bombe}}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Alan Turing - the inventor of ACE}\\~\\
+Automatic Computing Engine (ACE) was a British early electronic
+serial stored-program computer
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/Pilot_ACE3}}
+\end{frame}
+
+\begin{frame}{Lesson 3}{}
+\Huge
+ Want to know more? Read about Turing. See the \textbf{Imitation Game}
+ movie.
+ \end{frame}
+ 
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/enigma}}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Huge 
+\textbf{Stacks}\\~\\
+How can we implement a stack? 
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+A stack can be easily implemented using an array. The first
+element, usually at the zero offset, is the bottom, resulting in
+array[0] being the first element pushed onto the stack and the last
+element popped off. 
+\end{frame}
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+The program must keep track of the size (length) of the stack, using a variable top that records the number of items pushed so far, therefore pointing to the place in the array where the next element is to be inserted (assuming a zero-based index convention). Thus, the stack itself can be effectively implemented as a three-element structure:
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Queues
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Lesson 3}{Queues}
+\begin{center}
+\Huge Queues
+\end{center}
+\end{frame}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Linked lists
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Lesson 3}{Linked lists}
+\begin{center}
+\Huge Linked lists
+\end{center}
+\end{frame}
+
+
+
+
+
 \end{document}
