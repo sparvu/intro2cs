@@ -760,25 +760,20 @@ index convention).
 
 
 
-
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
 \textbf{Stacks}\\~\\
-The program must keep track of the size (length) of the stack, using a variable 
-top that records the number of items pushed so far, therefore pointing to the 
-place in the array where the next element is to be inserted (assuming a zero-based 
-index convention).
+The program must keep track of the size (length) of the stack, using
+a variable top that records the number of items pushed so far,
+therefore pointing to the place in the array where the next element
+is to be inserted (assuming a zero-based index convention).
 \end{frame}
-
 
 
 \begin{frame}[fragile]
 \Large
 \textbf{Stack using arrays}\\~\\
 \begin{lstlisting}[language=Python]
-# import maxis from sys module 
-# Used to return -infinite when stack is empty 
-from sys import maxsize 
 
 # Create a stack. It initializes size of stack as 0 
 def createStack(): 
@@ -822,18 +817,171 @@ def peek(stack):
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{There are numerous applications of stacks}\\
+\begin{itemize}
+    \item Undo mechanism in text editors
+    \item Fwd and back buttons on web browsers
+    \item Memory management in computer programming (static memory allocation. It can be used to keep track of functions calls)
+    \item Implementing \alert{recursion}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Huge
+ But what is recursion?
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion}\\
+\begin{itemize}
+    \item It is a programming technique, a way to program and develop a program where a function calls itself many times
+    \item You take a big problem, into smaller problems, trying to apply a solution to solve the small problems
+    \item You define a problem in terms of itself 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion}\\~\\
+You are standing in a long queue of people. You must answer, how many
+people are behind you in the line?\\~\\
+\large
+\textbf{Note:}
+One person can see only the person standing directly in front and
+behind. One cannot look back and count. Each person is allowed to ask
+questions from the person standing in front or behind.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion}\\~\\
+You look behind and see if there is a person there. If not, then you
+can return the answer "0". If there is a person, repeat this step and
+wait for a response from the person standing behind. Once a person
+receives a response, they add 1 and respond to the person that asked
+them or the person standing in front of them.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Large
+\textbf{Recursion example}\\~\\
+\label{personCount}
+\begin{algorithmic}[1]
+\Procedure{personCount}{$currPerson$}
+\If {$noOneBehind(currPerson) == TRUE$}
+    \State \Return {$0$}
+\Else { $personBehind == currPerson.checkBehind$ }
+    \State \Return {$1 + \Call{personCount}{$}}    
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+{\LARGE\textbf{{Thinking recursively}}}
+\Large
+\begin{minipage}{0.60\textwidth}
+    \begin{itemize}
+      \item Learning to look for big things 
+      \item That are made from smaller things
+    \end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.30]{Images/recursion}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Solving a problem recursively}\\~\\
+\underline{Recursion is a function calling itself} until a generic,
+base condition is true to produce the correct output. In other words,
+to solve a problem, we solve a problem that is a smaller instance of
+the same problem, and then use the solution to that smaller instance
+to solve the original problem.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Factorial number}\\~\\
+In mathematics, the factorial of a non-negative integer 
+$n!$ is the product of all positive integers less than or equal to n
+\begin{equation}
+n!=n \times (n-1)!
+\end{equation}
+\begin{equation}
+n! = n \times (n-1) \times (n-2) \times \dots 3 \times 2 \times 1
+\end{equation}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\begin{center}
+\includegraphics[scale=0.99]{Images/factorial2}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\begin{center}
+\includegraphics[scale=0.55]{Images/factorial1}
+\includegraphics[scale=0.55]{Images/factorial11}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Large
+\textbf{Recursion example}\\~\\
+\label{factorial}
+\begin{algorithmic}[1]
+\Procedure{factorial}{$N$}
+\If {$N == 0$}
+    \State \Return {$1$}
+\Else
+    \State \Return {$N * \Call{factorial}{N-1}$}
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{frame}
+
 
 \begin{frame}[fragile]
 \Large
+\textbf{Factorial, using recursion}\\~\\
 \begin{lstlisting}[language=Python]
-# Main program    
-stack = createStack() 
-push(stack, str(10)) 
-push(stack, str(25))
-push(stack, str(50)) 
-print(pop(stack) + " popped from stack")
+
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
  \end{lstlisting}
-\end{frame}
+\end{frame} 
+
+
 
 
 
