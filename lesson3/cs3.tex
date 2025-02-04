@@ -759,6 +759,84 @@ index convention).
 \end{frame}
 
 
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Stacks}\\~\\
+The program must keep track of the size (length) of the stack, using a variable 
+top that records the number of items pushed so far, therefore pointing to the 
+place in the array where the next element is to be inserted (assuming a zero-based 
+index convention).
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Stack using arrays}\\~\\
+\begin{lstlisting}[language=Python]
+# import maxis from sys module 
+# Used to return -infinite when stack is empty 
+from sys import maxsize 
+
+# Create a stack. It initializes size of stack as 0 
+def createStack(): 
+    stack = [] 
+    return stack 
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+\Large
+\begin{lstlisting}[language=Python]
+# Stack is empty when stack size is 0 
+def isEmpty(stack): 
+    return len(stack) == 0
+
+# Add an item to stack. It increases size by 1 
+def push(stack, item): 
+    stack.append(item) 
+    print(item + " pushed to stack ")
+ \end{lstlisting}
+\end{frame} 
+    
+    
+\begin{frame}[fragile]
+\Large
+\begin{lstlisting}[language=Python]    
+# Remove an item from stack. It decreases size by 1 
+def pop(stack): 
+    if (isEmpty(stack)): 
+        # return minus infinite
+        return str(-maxsize -1) 
+    return stack.pop() 
+
+# Return the top from stack without removing it 
+def peek(stack): 
+    if (isEmpty(stack)): 
+        # return minus infinite
+        return str(-maxsize -1)  
+    return stack[len(stack) - 1] 
+ \end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\Large
+\begin{lstlisting}[language=Python]
+# Main program    
+stack = createStack() 
+push(stack, str(10)) 
+push(stack, str(25))
+push(stack, str(50)) 
+print(pop(stack) + " popped from stack")
+ \end{lstlisting}
+\end{frame}
+
+
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Queues
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
