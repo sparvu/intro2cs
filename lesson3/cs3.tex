@@ -817,6 +817,23 @@ def peek(stack):
 \end{frame}
 
 
+\begin{frame}[fragile]
+\LARGE
+\textbf{Stack using LiFoQueue}\\~\\
+\Large
+\begin{lstlisting}[language=Python]
+from queue import LifoQueue
+stack = LifoQueue()
+stack.put(1)
+stack.put(2)
+stack.put(3)
+print(stack.get()) # Prints 3
+print(stack.get()) # Prints 2
+\end{lstlisting}
+\end{frame}
+
+
+
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
 \textbf{There are numerous applications of stacks}\\
@@ -1047,6 +1064,39 @@ $fact(0) \rightarrow fact(1) \rightarrow ... \rightarrow fact(n - 1) \rightarrow
 \end{frame}
 
 
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion is important!}\\
+\begin{itemize}
+    \item the basis for Dynamic Programming and Divide and Conquer algorithms
+    \item helps in solving complex problems by breaking them into smaller subproblems
+    \item fundamental to sorting, like quicksort, mergesort
+    \item used in traversing trees and other complex data structures
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Huge
+Recursion vs Iteration?
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\huge
+A program is called \textbf{recursive} when an entity calls itself.
+A program is called \textbf{iterative} when there is a loop (or
+repetition) of some sort.
+\end{frame}
+
+
+
+
+
+
+
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
 \textbf{There are numerous applications of stacks}\\
@@ -1095,6 +1145,112 @@ $fact(0) \rightarrow fact(1) \rightarrow ... \rightarrow fact(n - 1) \rightarrow
 \Huge Queues
 \end{center}
 \end{frame}
+
+
+\begin{frame}{Lesson 3}{Queues}
+\LARGE
+\textbf{Queues}\\~\\
+A queue is a collection of entities that are maintained in
+a sequence and can be modified by the addition of entities at one
+end of the sequence and the removal of entities from the other end
+of the sequence. 
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Queues}
+\begin{center}
+\includegraphics[scale=0.10]{Images/Queue}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Queues}
+\LARGE
+By convention, the end of the sequence at which elements are added
+is called \textbf{the back, tail, or rear} of the queue, and the end
+at which elements are removed is called the \textbf{head or front}
+of the queue, analogously to the words used when people line up to
+wait for goods or services.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Queues}
+\LARGE
+\textbf{Queues}\\~\\
+The operations of a queue make it a first-in-first-out \textbf{FIFO}
+data structure. In a FIFO data structure, the first element added to
+the queue will be the first one to be removed.\\
+A queue is an example of a linear data structure, or more abstractly
+a sequential collection.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Queues}
+\LARGE
+\textbf{Queue Properties}\\~\\
+\Large
+\begin{itemize}
+\item \textbf{Front:} Position of the entry in a queue ready to be served, that is, the first entry that will be removed from the queue, is called the front of the queue (head of the queue)
+\item \textbf{Rear:} Position of the last entry in the queue, that is, the one most recently added, is called the rear of the queue. (tail of the queue)
+\item \textbf{Size:} the current number of elements in the queue 
+\item \textbf{Capacity:} the maximum number of elements the queue can hold
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Queues}
+\LARGE
+\textbf{Queue Operations}\\~\\
+\Large
+\begin{itemize}
+\item \textbf{Enqueue} — Add an element to the end of the queue
+\item \textbf{Dequeue} — Remove an element from the front of the queue
+\item \textbf{Is Empty} — Check if the queue is empty
+\item \textbf{Is Full} — Check if the queue is full
+\item \textbf{Peek} — Get the value of the front element without removing it
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Queue implements a basic FIFO queue}\\~\\
+\begin{lstlisting}[language=Python]
+from queue import Queue
+q = Queue()
+q.put(1) # Add 1 to queue
+q.put(2)
+q.put(3)
+print(q.qsize()) # Prints 3
+print(q.get()) # Prints 1
+print(q.get()) # Prints 2
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Python Queue}\\~\\
+\begin{lstlisting}[language=Python]
+from queue import Queue
+q = Queue()
+# The key methods available are:
+# qsize() - Get the size of the queue
+# empty() - Check if queue is empty
+# full() - Check if queue is full
+# put(item) - Put an item into the queue
+# get() - Remove and return an item from the queue
+# join() - Block until all tasks are processed
+\end{lstlisting}
+\end{frame}
+
+
+
+
 
 
 
