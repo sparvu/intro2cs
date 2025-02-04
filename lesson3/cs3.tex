@@ -864,10 +864,10 @@ questions from the person standing in front or behind.
 \LARGE
 \textbf{Recursion}\\~\\
 You look behind and see if there is a person there. If not, then you
-can return the answer "0". If there is a person, repeat this step and
-wait for a response from the person standing behind. Once a person
-receives a response, they add 1 and respond to the person that asked
-them or the person standing in front of them.
+can return the answer "0". If there is a person, repeat this step 
+and wait for a response from the person standing behind. Once a
+person receives a response, they add 1 and respond to the person
+that asked them or the person standing in front of them.
 \end{frame}
 
 
@@ -911,10 +911,10 @@ them or the person standing in front of them.
 \LARGE
 \textbf{Solving a problem recursively}\\~\\
 \underline{Recursion is a function calling itself} until a generic,
-base condition is true to produce the correct output. In other words,
-to solve a problem, we solve a problem that is a smaller instance of
-the same problem, and then use the solution to that smaller instance
-to solve the original problem.
+base condition is true to produce the correct output. In other 
+words, to solve a problem, we solve a problem that is a smaller
+instance of the same problem, and then use the solution to that
+smaller instance to solve the original problem.
 \end{frame}
 
 
@@ -1009,15 +1009,6 @@ for smaller input sizes until we reach the base case of recursion.
 \end{frame}
 
 
-\begin{frame}{Lesson 3}{Stacks}
-\LARGE
-\textbf{Recursion vs Stacks}\\~\\
-Order of recursive calls: larger problem to smaller problem
-$fact(n) -> fact(n - 1) -> ... -> fact(i) -> ... -> fact(1) -> fact(0)$\\~\\
-Order of return values: smaller problem to larger problem
-$fact(0) -> fact(1) -> ... -> fact(i) -> ... -> fact(n - 1) -> fact(n)$
-\end{frame}
-
 
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
@@ -1028,6 +1019,17 @@ find this pattern: we are calling fact(0) last, but it is returning
 the value first. Similarly, we are calling fact(n) first, but it is
 returning the value last. Its a Last In First Out (LIFO) order for
 all recursive calls and return values.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion uses Stacks behind}\\~\\
+Order of recursive calls: larger problem to smaller problem
+$fact(n) \rightarrow fact(n -1) \rightarrow ... 	\rightarrow fact(1) 	\rightarrow fact(0)$\\~\\
+Order of return values: smaller problem to larger problem
+$fact(0) \rightarrow fact(1) \rightarrow ... \rightarrow fact(n - 1) \rightarrow fact(n)$
 \end{frame}
 
 
@@ -1042,6 +1044,45 @@ all recursive calls and return values.
         \includegraphics[scale=0.40]{Images/callstack}
       \end{figure}
   \end{minipage}  
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{There are numerous applications of stacks}\\
+\begin{itemize}
+    \item Undo / Redo mechanism in text/image editors
+    \item Forward and Back buttons on web browsers
+    \item Web browser History
+    \item Memory management in computer programming (static memory allocation. It can be used to keep track of functions calls)
+    \item Implementing recursion
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Large
+\textbf{Advantages of Stacks}\\
+\begin{itemize}
+\item Simplicity: Stacks are a simple and easy-to-understand data structure
+\item Efficiency: Push and pop operations on a stack are very fast, providing efficient access to data.
+\item LIFO: Stacks follow the LIFO principle, ensuring that the last element added to the stack is the first one removed.
+\item Limited memory usage: Stacks only need to store the elements that have been pushed onto them, making them memory-efficient compared to other data structures.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Large
+\textbf{Disadvantages of Stacks}\\
+\begin{itemize}
+\item Limited access: Elements can only be accessed from the top, making it difficult to retrieve or modify elements in the middle of the stack.
+\item Overflow: If more elements are pushed onto a stack than it can hold, an overflow error will occur, resulting in a loss of data.
+\item No random access: Stacks do not allow for random access to elements, making them unsuitable for applications where elements need to be accessed in a specific order.
+\item Limited capacity: Fixed capacity, a limitation if the number of elements that need to be stored is unknown or highly variable.
+\end{itemize}
 \end{frame}
 
 
