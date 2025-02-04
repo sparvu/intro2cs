@@ -982,6 +982,67 @@ print(factorial(5))
 \end{frame} 
 
 
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Solving a problem recursively}\\~\\
+For a recursive algorithm to work, smaller subproblems must
+be found and arrive at the base case. In simple words, any recursive
+algorithm has two parts: the base case and the recursive structure.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{The Base Case}\\~\\
+The base case is a terminating condition where a function
+immediately returns the result. This is the smallest version of the
+problem for which we already know the solution.
+\end{frame}
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{The Recursive structure}\\~\\
+The recursive structure is an idea to design a solution to a problem
+via the solution of its smaller sub-problems, i.e., the same problem
+but for a smaller input size. We continue calling the same problem
+for smaller input sizes until we reach the base case of recursion.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion vs Stacks}\\~\\
+Order of recursive calls: larger problem to smaller problem
+$fact(n) -> fact(n - 1) -> ... -> fact(i) -> ... -> fact(1) -> fact(0)$\\~\\
+Order of return values: smaller problem to larger problem
+$fact(0) -> fact(1) -> ... -> fact(i) -> ... -> fact(n - 1) -> fact(n)$
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{How recursion works?}\\~\\
+
+If we draw the flow of recursion for the factorial program, one can
+find this pattern: we are calling fact(0) last, but it is returning
+the value first. Similarly, we are calling fact(n) first, but it is
+returning the value last. Its a Last In First Out (LIFO) order for
+all recursive calls and return values.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\begin{minipage}{0.50\textwidth}
+    Execution call stack!
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.40]{Images/callstack}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
 
 
 
