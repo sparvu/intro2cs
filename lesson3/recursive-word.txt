@@ -1,0 +1,7 @@
+subroutine word
+    read character
+    print character
+    if (character is not ' ') then
+        input_word
+    print character
+end subroutine
