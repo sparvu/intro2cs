@@ -9,6 +9,11 @@
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
 \usepackage{listings}
+\lstset{
+  language=Python,
+  columns=flexible,
+}
+
 
 
 %-------------------------------------------------------------------
@@ -359,13 +364,12 @@ machine code. In other words, "runtime" is the running phase of a program.
 \LARGE
 \textbf{Traversing the array}\\~\\
 \Large
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}
 A = [1, 2, 3, 4, 5, 6, 7,8,9]
 
 # Traversing the array
 for element in A:
-    print(element, end=" ")
-    
+    print(element, end=" ")}
 \end{lstlisting}
 \end{frame}
 
@@ -375,15 +379,16 @@ for element in A:
 \LARGE
 \textbf{Traversing the array, version 2}\\~\\
 \Large
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}
 A = [1, 2, 3, 4, 5, 6, 7,8,9]
 
 # Traversing the array
 for i in range(len(A)):
     print(A[i], end=" ")
-    
 \end{lstlisting}
 \end{frame}
+
+
 
 
 \begin{frame}{Lesson 3}{Arrays}
@@ -1142,21 +1147,189 @@ repetition) of some sort.
 
 
 
-
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion}\\
+\begin{minipage}{0.53\textwidth}
+\begin{itemize}
+    \item each function call creates a smaller problem to solve
+    \item and these calls continue until reaching a basic case which is trivial to solve
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.30]{Images/recursion_effect}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
 
 
 
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
-\textbf{There are numerous applications of stacks}\\
+\textbf{Recursive function}\\
+\begin{minipage}{0.60\textwidth}
+\Large
 \begin{itemize}
-    \item Undo / Redo mechanism in text/image editors
-    \item Forward and Back buttons on web browsers
-    \item Web browser History
-    \item Memory management in computer programming (static memory allocation. It can be used to keep track of functions calls)
-    \item Implementing recursion
+    \item \textbf{Base case} The condition under which the function stops calling itself. This prevents infinite recursion and provides a direct answer for the simplest instance of the problem.
+    \item \textbf{Recursive case} The part of the function that reduces the problem into smaller instances and calls itself with small data.
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.26]{Images/recursion_flowchart}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Recursive Factorial}\\~\\
+\begin{lstlisting}
+def factorial(n):
+    # Base case: if n is 1 or 0, factorial is 1
+    if n == 0 or n == 1:
+        return 1
+    # Recursive case: n * factorial of (n-1)
+    else:
+        return n * factorial(n - 1)
+print(factorial(5))
+ \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Recursion Types}\\
+\begin{itemize}
+    \item direct recursion
+    \item indirect recursion
+    \item tail recursion 
 \end{itemize}
 \end{frame}
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Direct Recursion} - the simplest form of recursion. A function directly calls itself within its definition. \\~\\
+\begin{lstlisting}[language=Python]
+def direct_recursion(n):
+    if n <= 0:
+        return
+    print(n)
+    direct_recursion(n - 1)
+ \end{lstlisting}
+\end{frame} 
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Indirect Recursion} - creates a cylces of function calls. A function calls another function, which calls the original function.\\~\\
+\begin{lstlisting}[language=Python]
+def functionA(n):
+    if n <= 0:
+        return
+    print(n)
+    functionB(n - 1)
+
+def functionB(n):
+    if n <= 0:
+        return
+    print(n)
+    functionA(n - 2)
+ \end{lstlisting}
+\end{frame} 
+
+    
+\begin{frame}[fragile]
+\Large
+\textbf{Tail Recursion} - the recursive call is the last operation in the function.\\~\\
+\begin{lstlisting}[language=Python]
+def tail_recursion(n, aggregate=1):
+    if n == 0:
+        return aggregate
+    return tail_recursion(n - 1, n * aggregate)
+ \end{lstlisting}
+\end{frame} 
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Iterative}\\
+\begin{minipage}{0.60\textwidth}
+\begin{itemize}
+    \item a repetitive process
+    \item runs a number of times until a specified condition is met
+    \item or certain number of iterations have been reached
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.30]{Images/iteration}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Iterative function}\\
+\begin{minipage}{0.60\textwidth}
+\Large
+\begin{itemize}
+    \item \textbf{Initialization} Start with initializing variables or setting initial conditions required for the iterative process
+    \item \textbf{Condition} Check a condition that determines whether the iteration should continue or stop
+    \item \textbf{Body} Execute a set of instructions or operations that represent the core logic of the iteration. 
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.30]{Images/iterative_flowchart}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{How to build an iterative function?}\\~\\
+\begin{itemize}
+    \item loops: while, do-while, for loops
+    \item for loop: when the number of iterations is known beforehand
+    \item while loop: when the number of iterations is unknown, and the loop continues as long as a condition is true
+    \item do-while loop: same as while loop but ensures that the loop is executed at least once before the condition is tested
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Iterative Factorial} - the iterative function to calculate the factorial\\~\\
+\Large
+\begin{lstlisting}[language=Python]
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+print(factorial(5))
+ \end{lstlisting}
+\end{frame}
+
+
+
 
 
 
