@@ -1303,7 +1303,7 @@ def tail_recursion(n, aggregate=1):
 
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
-\textbf{How to build an iterative function?}\\~\\
+\textbf{How to build an iterative function?}\\
 \begin{itemize}
     \item loops: while, do-while, for loops
     \item for loop: when the number of iterations is known beforehand
@@ -1316,7 +1316,7 @@ def tail_recursion(n, aggregate=1):
 
 \begin{frame}[fragile]
 \LARGE
-\textbf{Iterative Factorial} - the iterative function to calculate the factorial\\~\\
+\textbf{Iterative Factorial} - the iterative function to calculate the factorial\\
 \Large
 \begin{lstlisting}[language=Python]
 def factorial(n):
@@ -1330,12 +1330,46 @@ print(factorial(5))
 
 
 
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{When to use recursion vs. iteration}\\
+The nature of the problem
+\begin{itemize}
+    \item naturally fit a recursive structure or require breaking down into smaller subproblems
+    \item for loop: when the number of iterations is known beforehand
+    \item use iteration for problems with a straightforward repetitive process or when the number of iterations is known beforehand
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{When to use recursion vs. iteration}\\
+Complexity and readability
+\begin{itemize}
+    \item Use recursion when it simplifies the code and makes it more readable
+    \item Use iteration when recursion would make the code unnecessarily complex or when avoiding the risk of stack overflow is essential
+\end{itemize}
+\end{frame}
 
 
 
 \begin{frame}{Lesson 3}{Stacks}
-\Large
+\LARGE
+\textbf{When to use recursion vs. iteration}\\
+Performance consideration
+\begin{itemize}
+    \item Use recursion if the problem’s recursive nature allows for more elegant and maintainable code and manageable stack usage
+    \item Use iteration if memory usage is a concern and the problem can be solved efficiently with loops.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
 \textbf{Advantages of Stacks}\\
+\Large
 \begin{itemize}
 \item Simplicity: Stacks are a simple and easy-to-understand data structure
 \item Efficiency: Push and pop operations on a stack are very fast, providing efficient access to data.
@@ -1347,8 +1381,9 @@ print(factorial(5))
 
 
 \begin{frame}{Lesson 3}{Stacks}
-\Large
+\LARGE
 \textbf{Disadvantages of Stacks}\\
+\Large
 \begin{itemize}
 \item Limited access: Elements can only be accessed from the top, making it difficult to retrieve or modify elements in the middle of the stack.
 \item Overflow: If more elements are pushed onto a stack than it can hold, an overflow error will occur, resulting in a loss of data.
