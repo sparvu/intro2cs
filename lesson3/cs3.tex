@@ -1365,6 +1365,105 @@ Performance consideration
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Use recursion}\\
+\Large
+\begin{itemize}
+    \item \textbf{Divide and conquer} problems like merge sort, quicksort, and binary search where the problem is divided into smaller subproblems that are solved recursively 
+    \item \textbf{Tree and graph problems} Traversals (e.g., in-order, pre-order, post-order for trees) and pathfinding in graphs that naturally fit a recursive approach.
+    \item \textbf{Dynamic programming} Problems like the Fibonacci sequence, where recursion with memoization simplifies the solution
+    \item \textbf{Combinatorial problems} Generating permutations and combinations and solving puzzles like the Tower of Hanoi
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Use iteration}\\
+\Large
+\begin{itemize}
+    \item \textbf{Simple loops} Problems like summing a list of numbers, iterating through arrays or lists, and simple counting problems
+    \item \textbf{Linear problems} Iterative solutions for problems requiring a linear scan, such as finding an array’s maximum or minimum value
+    \item  \textbf{Repetitive tasks} Problems that require repeating a task a known number of times, such as printing numbers from 1 to N or iterating through data structures like arrays and linked lists.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\begin{center}
+\includegraphics[scale=0.12]{Images/Fibonacci_Spiral}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Huge 
+\textbf{Fibonacci sequence}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Fibonacci sequence}\\~\\
+\begin{center}
+\includegraphics[scale=0.60]{Images/Fib1}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\LARGE
+\textbf{Fibonacci sequence}
+\begin{center}
+\includegraphics[scale=0.45]{Images/Fib2}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Fibonacci Recursion}\\~\\
+\begin{lstlisting}[language=Python]
+def fibonacci_recursive(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+
+# Main Code
+n = 10
+print(f"Recursive method: Fibonacci({n}) = {fibonacci_recursive(n)}")
+ \end{lstlisting}
+\end{frame} 
+
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Fibonacci Iterative}\\~\\
+\begin{lstlisting}[language=Python]
+def fibonacci_iterative(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+# Main code
+n = 10
+print(f"Iterative method: Fibonacci({n}) = {fibonacci_iterative(n)}")
+ \end{lstlisting}
+\end{frame} 
+
+
 
 \begin{frame}{Lesson 3}{Stacks}
 \LARGE
