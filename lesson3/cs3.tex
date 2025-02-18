@@ -23,6 +23,7 @@
   {\end{tabular}}
 
 
+
 %-------------------------------------------------------------------
 %	 TITLE SLIDE
 %-------------------------------------------------------------------
@@ -1554,14 +1555,15 @@ q = Queue()
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Linked Lists}\\~\\
-A linked list is a linear collection of data elements where each element points to the next. 
-It is a data structure consisting of a collection of nodes which together represent a sequence.
+A linked list is a linear collection of data elements where each element points
+to the next. It is a data structure consisting of a collection of nodes which
+together represent a sequence.
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Linked lists}
 \begin{center}
-\includegraphics[scale=0.10]{Images/linked-list.png}
+\includegraphics[scale=0.80]{Images/single_linked_lists}
 \end{center}
 \end{frame}
 
@@ -1570,7 +1572,15 @@ It is a data structure consisting of a collection of nodes which together repres
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Linked Lists}\\~\\
-each node contains data, and a reference (in other words, a link) to the next node in the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration.
+Each node stores both \text{data} and \textbf{a reference (a pointer)} to the
+next node in the sequence.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Linked lists}
+\begin{center}
+\includegraphics[scale=0.10]{Images/linked-list}
+\end{center}
 \end{frame}
 
 
@@ -1578,33 +1588,37 @@ each node contains data, and a reference (in other words, a link) to the next no
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Linked Lists}\\~\\
-A drawback of linked lists is that data access time is linear in respect to the number of 
-nodes in the list. Because nodes are serially linked, accessing any node requires that 
-the prior node be accessed beforehand
+Each node contains data, and a reference (in other words, a link) to the next
+node in the sequence. This structure allows for efficient insertion or removal of
+elements from any position in the sequence during iteration.
 \end{frame}
-
-
 
 
 
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Linked Lists}\\~\\
-Linked lists are among the simplest and most common data structures. They can be used to implement 
-	several other common abstract data types, including stacks, queues, \alert{associative and dynamic arrays}.
+A drawback of linked lists is that data access time is linear in respect to the
+number of nodes in the list. Because nodes are serially linked, accessing any
+node requires that the prior node be accessed beforehand.
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
-\textbf{Associative Arrays}\\~\\
+\textbf{Linked Lists}\\~\\
+Linked lists are among the simplest and most common data structures. They can be
+used to implement several other common abstract data types, including stacks,
+queues, \alert{associative and dynamic arrays}.
 \end{frame}
+
 
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Dynamic Arrays}\\~\\
 Variable-size list data structure that allows elements to be added or removed. 
-Dynamic arrays overcome a limit of static arrays, which have a fixed capacity that needs to be specified at allocation. 
+Dynamic arrays overcome a limit of static arrays, which have a fixed capacity
+that needs to be specified at allocation. 
 \end{frame}
 
 
@@ -1630,6 +1644,33 @@ once in the collection. It supports lookup, remove, and insert operations.
    5 &  50
 \end{hashtable}
 \end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Stacks}
+\Huge
+Linked lists vs. Arrays
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{}
+{\LARGE\textbf{{Linked lists vs. Arrays}}}\\~\\
+\noindent\begin{minipage}[t]{0.5\linewidth}
+    \textbf{Linked lists}
+    \begin{itemize}
+    \item{Dynamic in size}
+    \item{Can contain any number of nodes}
+    \item{Store various data types}
+    \end{itemize}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\linewidth}
+    \textbf{Arrays}
+    \begin{itemize}
+    \item{Fixed in size}
+    \item{Size is given at the time of creation}
+    \item{Similar data types}
+    \end{itemize}
+\end{minipage}\par\bigskip
 \end{frame}
 
 
@@ -1688,8 +1729,8 @@ much more expensive operation.
 \Large
 \begin{itemize}
 	\item \textbf{Single linked list} lists contain nodes which have a value and a next pointer
-\item \textbf{Double linked list} contains nodes which inlcudes the next and previous pointer links
-\item \textbf{circular linked list}  a list where the last nide has a pointer to the first node
+\item \textbf{Double linked list} contains nodes which includes the next and previous pointer links
+\item \textbf{circular linked list}  a list where the last node has a pointer to the first node
 \end{itemize}
 \end{frame}
 
@@ -1720,6 +1761,9 @@ much more expensive operation.
 \includegraphics[scale=0.11]{Images/circular-linked-list}
 \end{center}
 \end{frame}
+
+
+
 
 
 
