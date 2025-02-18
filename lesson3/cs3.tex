@@ -720,81 +720,6 @@ calling and returning from subroutines."
 
 
 \begin{frame}{Lesson 3}{Stacks}
-{\LARGE\textbf{{Who was Alan Turing?}}}
-\Large
-\begin{minipage}{0.70\textwidth}
-    \begin{itemize}
-      \item The father of Computer Science
-      \item English mathematician, computer scientist, logician, cryptanalyst
-      \item Established the very first formalisation of the concepts of algorithm and computation with the Turing machine (a model of a general-purpose computer)
-     \end{itemize}
-  \end{minipage}
-\begin{minipage}{.0\textwidth}
-    % Show the image at item three and afterwards
-      \begin{figure}
-        \includegraphics[scale=0.28]{Images/Alan_turing}
-      \end{figure}
-  \end{minipage}  
-\end{frame}
-
-\begin{frame}{Lesson 3}{Stacks}
-{\LARGE\textbf{{Remember this? The Turing Machine}}}\\~\\
-\begin{minipage}{0.57\textwidth}
-\includegraphics[scale=0.24]{Images/Turing_Machine}
-\end{minipage}
-\Large
-\begin{minipage}{0.42\textwidth}
-    \begin{itemize}
-      \item Infinite tape, divided into cells with symbols
-      \item A head can read/write symbols on the tape
-      \item A register that stores the state of the machine
-    \end{itemize}
-  \end{minipage}
-\end{frame}
-
-\begin{frame}{Lesson 3}{Stacks}
-\LARGE
-During World War II, Turing worked for the Government Code and Cypher
-School at Bletchley Park, Britain's codebreaking centre that produced
-Ultra intelligence. He led Hut 8, the section responsible for German
-naval cryptanalysis. Turing devised techniques for speeding the
-breaking of German ciphers, including improvements to the pre-war
-Polish bomba method, an electromechanical machine that could find
-settings for the Enigma machine. 
-\end{frame}
-
-
-\begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/Bombe}}
-\end{frame}
-
-
-\begin{frame}{Lesson 3}{Stacks}
-\LARGE
-\textbf{Alan Turing - the inventor of ACE}\\~\\
-Automatic Computing Engine (ACE) was a British early electronic
-serial stored-program computer
-\end{frame}
-
-
-\begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/Pilot_ACE3}}
-\end{frame}
-
-\begin{frame}{Lesson 3}{}
-\Huge
- Want to know more? Read about Turing. See the \textbf{Imitation Game}
- movie.
- \end{frame}
- 
-
-\begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/enigma}}
-\end{frame}
-
-
-
-\begin{frame}{Lesson 3}{Stacks}
 \Huge 
 \textbf{Stacks}\\~\\
 How can we implement a stack? 
@@ -1692,11 +1617,31 @@ once in the collection. It supports lookup, remove, and insert operations.
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{Linked lists}
+\LARGE
+\textbf{Associative Arrays}\\~\\
+\begin{center}
+\begin{hashtable}
+   0 & 110 \\
+   1 & 100 \\
+   2 &  90 \\
+   3 &  80 \\
+   4 &  70 \\
+   5 &  50
+\end{hashtable}
+\end{center}
+\end{frame}
+
+
 
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Linked Lists}\\~\\
-The principal benefit of a linked list over a conventional array is that the list elements can be easily inserted or removed without reallocation or reorganization of the entire structure because the data items do not need to be stored contiguously in memory or on disk, while restructuring an array at run-time is a much more expensive operation.
+The principal benefit of a linked list over a conventional array is that the list
+elements can be easily inserted or removed without reallocation or reorganization
+of the entire structure because the data items do not need to be stored
+contiguously in memory or on disk, while restructuring an array at run-time is a
+much more expensive operation.
 \end{frame}
 
 
@@ -1725,14 +1670,14 @@ The principal benefit of a linked list over a conventional array is that the lis
 
 \begin{frame}{Lesson 3}{Linked lists}
 \begin{center}
-\includegraphics[scale=0.10]{Images/linkedLists-addingnode}
+\includegraphics[scale=0.12]{Images/linkedLists-addingnode}
 \end{center}
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Linked lists}
 \begin{center}
-\includegraphics[scale=0.10]{Images/linkedLists-deletingnode}
+\includegraphics[scale=0.12]{Images/linkedLists-deletingnode}
 \end{center}
 \end{frame}
 
@@ -1754,7 +1699,7 @@ The principal benefit of a linked list over a conventional array is that the lis
 \LARGE
 \textbf{Single Linked list}\\~\\
 \begin{center}
-\includegraphics[scale=0.25]{Images/linked-list}
+\includegraphics[scale=0.12]{Images/linked-list}
 \end{center}
 \end{frame}
 
@@ -1763,7 +1708,7 @@ The principal benefit of a linked list over a conventional array is that the lis
 \LARGE
 \textbf{Double Linked list}\\~\\
 \begin{center}
-\includegraphics[scale=0.20]{Images/double-linked-list}
+\includegraphics[scale=0.13]{Images/double-linked-list}
 \end{center}
 \end{frame}
 
@@ -1772,8 +1717,50 @@ The principal benefit of a linked list over a conventional array is that the lis
 \LARGE
 \textbf{Circular Linked list}\\~\\
 \begin{center}
-\includegraphics[scale=0.20]{Images/circll}
+\includegraphics[scale=0.11]{Images/circular-linked-list}
 \end{center}
+\end{frame}
+
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hash Table / Associative Arrays
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Lesson 3}{Hash Table}
+\begin{center}
+\Huge Hash Table
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Linked lists}
+\LARGE
+\textbf{Linked Lists}\\~\\
+A hash table is a data structure that implements an associative array, also
+called a dictionary or simply map; an associative array is an abstract data type
+that maps keys to values.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Table}\\~\\
+A hash table uses a hash function to compute an index, also called a hash code,
+into an array of buckets or slots, from which the desired value can be found.
+During lookup, the key is hashed and the resulting hash indicates where the
+corresponding value is stored. A map implemented by a hash table is called a hash
+map.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Table}\\~\\
+Hashing concept - each key is translated by a hash function into a 
+distinct index in an array. The index functions as a storage location for the
+matching value. In simple words, it maps the keys with the value.
 \end{frame}
 
 
