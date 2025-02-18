@@ -1,6 +1,6 @@
-# Data Structures and Algorithms
+# Data Structures and Algorithms DSA
 
-* Data Structures: Sets. Arrays. Matrices. Stacks. Queues. Linked lists. Hash tables. Trees
+* Data Structures: Sets. Arrays. Matrices. Stacks. Queues. Linked lists. Trees. Graphs. Hash tables.
 * Algorithms
 * Analysing and Designing algorithms
 * Classes of algorithms
