@@ -1691,7 +1691,9 @@ much more expensive operation.
 \begin{frame}{Lesson 3}{Linked lists}
 \LARGE
 \textbf{Linked Lists}\\~\\
- Linked lists allow insertion and removal of nodes at any point in the list, and allow doing so with a constant number of operations by keeping the link previous to the link being added or removed in memory during list traversal. 
+ Linked lists allow insertion and removal of nodes at any point in the list, and
+ allow doing so with a constant number of operations by keeping the link previous
+ to the link being added or removed in memory during list traversal. 
 \end{frame}
 
 
@@ -1764,6 +1766,24 @@ much more expensive operation.
 
 
 
+\begin{frame}[fragile]
+\Large
+\textbf{Linked List Example}\\
+\begin{lstlisting}
+# importing module 
+import collections 
+
+# initialising a deque() of arbitrary length 
+linked_list = collections.deque()
+# filling deque() with elements 
+linked_list.append('subaru') 
+linked_list.append('toyota') 
+linked_list.append('mercedes') 
+  
+print("Elements in the linked_list:") 
+print(linked_list)
+\end{lstlisting}
+\end{frame}
 
 
 
@@ -1779,12 +1799,20 @@ much more expensive operation.
 \end{frame}
 
 
-\begin{frame}{Lesson 3}{Linked lists}
+\begin{frame}{Lesson 3}{Hash Table}
 \LARGE
 \textbf{Linked Lists}\\~\\
 A hash table is a data structure that implements an associative array, also
 called a dictionary or simply map; an associative array is an abstract data type
 that maps keys to values.
+\end{frame}
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Remember Associative Arrays}\\~\\
+A map, symbol table, or dictionary is an abstract data type that stores a
+collection of (key, value) pairs, such that each possible key appears at most
+once in the collection. It supports lookup, remove, and insert operations. 
 \end{frame}
 
 
@@ -1798,6 +1826,14 @@ corresponding value is stored. A map implemented by a hash table is called a has
 map.
 \end{frame}
 
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Table}\\
+\begin{center}
+\includegraphics[scale=0.10]{Images/hash_table}
+\end{center}
+\end{frame}
+
 
 \begin{frame}{Lesson 3}{Hash Table}
 \LARGE
@@ -1805,6 +1841,202 @@ map.
 Hashing concept - each key is translated by a hash function into a 
 distinct index in an array. The index functions as a storage location for the
 matching value. In simple words, it maps the keys with the value.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Functions: cyclic redundancy checks}\\~\\
+\begin{center}
+\includegraphics[scale=0.60]{Images/hash_function1}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Functions: checksums}\\
+\begin{center}
+\includegraphics[scale=0.35]{Images/hash_function2}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Functions: universal}\\~\\
+\begin{center}
+\includegraphics[scale=0.60]{Images/hash_function3}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Functions: keyed cryptographic}\\
+\begin{center}
+\includegraphics[scale=0.35]{Images/hash_function4}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Functions: unkeyed cryptographic}\\
+\begin{center}
+\includegraphics[scale=0.35]{Images/hash_function5}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Collisions}\\~\\
+A hash collision or hash clash is when two distinct pieces of data in a hash
+table share the same hash value. The hash value in this case is derived from a
+hash function which takes a data input and returns a fixed length of bits.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Collisions}\\
+\begin{center}
+\includegraphics[scale=0.10]{Images/hash_collision}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Table}\\~\\
+Hash tables are very much used as table lookup structures, in many kinds of
+computer software, particularly database indexing, caches, and sets.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Hash Table}
+\LARGE
+\textbf{Hash Table}\\~\\
+In hash tables, since hash collisions are inevitable, hash tables have mechanisms
+of dealing with them, known as collision resolutions. 
+\Large
+\begin{itemize}
+	\item \textbf{open addressing} cells in the hash table are assigned one of three states in this method – occupied, empty, or deleted
+	\item \textbf{separate chaining} allows more than one record to be chained to the cells of a hash table.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Hash Table}\\
+\begin{lstlisting}
+hash_table = {"Alice": "January", "Bob": "May", "Charlie": "January"}
+
+my_dictionary = {}
+my_dictionary["Alice"] = "January" 
+# Hash function determines the location for "January"
+
+# print the key value
+print(my_dictionary["Alice"]) # "January"
+\end{lstlisting}
+\end{frame}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Trees
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\Huge Trees
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{What is a tree?}\\~\\
+A tree is a very widely used abstract data type that represents a hierarchical
+ structure with a set of connected nodes. Each node in the tree can be
+connected to many children (depending on the type of tree), but must be connected
+to exactly one parent, except for the root node, which has no parent
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Unsorted tree}\\
+\begin{center}
+\includegraphics[scale=0.12]{Images/tree1}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree}\\~\\
+There should be no cycles or "loops" (no node can be its own ancestor), and also
+that each child can be treated like the root node of its own subtree, making
+recursion a useful technique for tree traversal.	
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree Node}\\~\\
+A node is a structure which may contain data and connections to other nodes,
+sometimes called edges or links. Each node in a tree has zero or more child
+nodes, which are below it in the tree (by convention, trees are drawn with
+descendants going downwards).
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree Node}\\~\\
+A node that has a child is called the child's parent node (or superior). All
+nodes have exactly one parent, except the topmost root node, which has none. A
+node might have many ancestor nodes, such as the parent's parent.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\includegraphics[scale=0.15]{Images/tree3}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\includegraphics[scale=0.60]{Images/tree4}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\includegraphics[scale=0.10]{Images/tree5}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\includegraphics[scale=0.10]{Images/tree2}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Binary Tree}\\~\\
+A binary tree is a tree data structure in which each node has at most two
+children, referred to as the left child and the right child.
 \end{frame}
 
 
