@@ -1961,10 +1961,11 @@ print(my_dictionary["Alice"]) # "January"
 \begin{frame}{Lesson 3}{Trees}
 \LARGE
 \textbf{What is a tree?}\\~\\
-A tree is a very widely used abstract data type that represents a hierarchical
- structure with a set of connected nodes. Each node in the tree can be
-connected to many children (depending on the type of tree), but must be connected
-to exactly one parent, except for the root node, which has no parent
+A tree is a very widely used abstract data type that represents a
+hierarchical structure with a set of connected nodes. Each node i
+the tree can be connected to many children (depending on the type of
+tree), but must be connected to exactly one parent, except for the
+root node, which has no parent
 \end{frame}
 
 
@@ -1980,27 +1981,29 @@ to exactly one parent, except for the root node, which has no parent
 \begin{frame}{Lesson 3}{Trees}
 \LARGE
 \textbf{Tree}\\~\\
-There should be no cycles or "loops" (no node can be its own ancestor), and also
-that each child can be treated like the root node of its own subtree, making
-recursion a useful technique for tree traversal.	
+There should be no cycles or "loops" (no node can be its own
+ancestor), and also that each child can be treated like the root
+node of its own subtree, making recursion a useful technique for
+tree traversal.	
 \end{frame}
 
 \begin{frame}{Lesson 3}{Trees}
 \LARGE
 \textbf{Tree Node}\\~\\
-A node is a structure which may contain data and connections to other nodes,
-sometimes called edges or links. Each node in a tree has zero or more child
-nodes, which are below it in the tree (by convention, trees are drawn with
-descendants going downwards).
+A node is a structure which may contain data and connections to
+other nodes, sometimes called edges or links. Each node in a tree
+has zero or more child nodes, which are below it in the tree (by
+convention, trees are drawn with descendants going downwards).
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Trees}
 \LARGE
 \textbf{Tree Node}\\~\\
-A node that has a child is called the child's parent node (or superior). All
-nodes have exactly one parent, except the topmost root node, which has none. A
-node might have many ancestor nodes, such as the parent's parent.
+A node that has a child is called the child's parent node (or
+superior). All nodes have exactly one parent, except the topmost
+root node, which has none. A node might have many ancestor nodes,
+such as the parent's parent.
 \end{frame}
 
 
@@ -2034,10 +2037,272 @@ node might have many ancestor nodes, such as the parent's parent.
 
 \begin{frame}{Lesson 3}{Trees}
 \LARGE
-\textbf{Binary Tree}\\~\\
-A binary tree is a tree data structure in which each node has at most two
-children, referred to as the left child and the right child.
+\textbf{Structure}\\
+\begin{center}
+\includegraphics[scale=0.55]{Images/tree-structure}
+\end{center}
 \end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Organization}
+\begin{center}
+\includegraphics[scale=0.48]{Images/tree-structure2}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree - Properties}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Number of edges} as the connection between two nodes. If a tree has N nodes then it will have (N-1) edges. There is only one path from each node to any other node of the tree
+	\item \textbf{Depth of a node} the length of the path from the root to that node. Each edge adds 1 unit of length to the path. So, it can also be defined as the number of edges in the path from the root of the tree to the node.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree Properties}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Height of a node} as the length of the longest path from the node to a leaf node of the tree.
+	\item \textbf{Height of the Tree} is the length of the longest path from the root of the tree to a leaf node of the tree
+	\item \textbf{Degree of a Node} the total count of subtrees attached to that node
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Height vs. Depth}
+\begin{center}
+\includegraphics[scale=0.48]{Images/depth-height}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree - Non-linear data structure}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{not linear} data in a tree are not stored in a sequential manner
+	\item \textbf{hierarchical structure} data arranged on multiple levels
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Types of Trees}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Binary tree}
+	\item \textbf{Ternary Tree}
+	\item \textbf{Generic Tree}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\huge Binary Trees
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Binary Tree}\\~\\
+A binary tree is a tree data structure in which each node has at
+most two children, referred to as the left child and the right
+child.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\includegraphics[scale=0.60]{Images/binary-tree}
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Full Binary Tree}\\~\\
+A full binary tree is a binary tree with either zero or two child
+nodes for each node. 
+\begin{center}
+\includegraphics[scale=0.48]{Images/full-binary-tree}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Complete Binary Tree}\\
+A complete binary tree is a special type of binary tree where all
+the levels of the tree are filled completely except the lowest level
+nodes which are filled from as left as possible.
+\begin{center}
+\includegraphics[scale=0.60]{Images/complete-binary-tree}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Perfect Binary Tree}\\
+A perfect binary tree is a special type of binary tree in which all
+the leaf nodes are at the same depth, and all non-leaf nodes have
+two children. In simple terms, this means that all leaf nodes are at
+the maximum depth of the tree, and the tree is completely filled
+with no gaps.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Perfect Binary Tree}\\
+\begin{center}
+\includegraphics[scale=0.45]{Images/perfect-binary-tree}
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\huge Ternary Trees
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Ternary Tree}\\~\\
+\begin{center}
+\includegraphics[scale=0.48]{Images/ternary-tree}
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\huge Generic Trees
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Generic Tree}\\~\\
+\begin{center}
+\includegraphics[scale=0.55]{Images/generic-tree}
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\begin{center}
+\includegraphics[scale=0.55]{Images/tree-types}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Binary search tree (BST)}\\
+A B-Tree is a specialized N-way tree designed to optimize data
+access, especially on disk-based storage systems.
+\begin{center}
+\includegraphics[scale=0.65]{Images/btree}
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Binary Search Trees (BST)}\\~\\
+\Large
+A B-tree is a \alert{self-balancing} tree data structure that
+maintains sorted data and allows searches, sequential access,
+insertions, and deletions very fast (logarithmic time). The B-tree
+generalizes the binary search tree, allowing for nodes with more
+than two children.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Self-Balancing?}\\~\\
+\Large
+A self-balancing tree is a tree that automatically keeps its height
+(maximal number of levels below the root) small in the face of
+arbitrary item insertions and deletions.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Un-balanced tree}\\~\\
+\begin{center}
+\includegraphics[scale=0.65]{Images/unbalanced-tree}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Self-balanced tree}\\~\\
+\begin{center}
+\includegraphics[scale=0.65]{Images/selfbalanced-tree}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Binary Search Trees (BST)}\\~\\
+\Large
+Binary search trees allow very fast lookup, addition, and removal of
+data items using binary search. Binary search trees are the basis
+and very important in sortings and search algorithms.
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{Tree Operations}\\~\\
+\Large
+\begin{itemize}
+\item \textbf{CREATE} — create a tree in a data structure
+\item \textbf{INSERT} — insert data in a tree
+\item \textbf{SEARCH} — search data in a tree
+\item \textbf{TRAVERSAL} — Depth-First, Breadth-First
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Trees}
+\LARGE
+\textbf{There are numerous applications of trees}\\
+\begin{itemize}
+    \item File system implementation: directory structure
+    \item Natural language processing (NLP)
+    \item AI, Genetic programming
+    \item Database indexing (BST B-Trees, B+ Trees)
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
