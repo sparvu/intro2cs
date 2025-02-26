@@ -2281,6 +2281,7 @@ and very important for sorting and search algorithms.
 \begin{frame}{Lesson 3}{Trees}
 \LARGE
 \textbf{There are numerous applications of trees}\\
+\Large
 \begin{itemize}
     \item File system implementation: directory structure
     \item Natural language processing (NLP)
@@ -2350,15 +2351,181 @@ called the root node.
 
 
 \begin{frame}{Lesson 3}{Graphs}
+\begin{center}
+\includegraphics[scale=0.35]{Images/treevsgraph2}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
 \LARGE
 \textbf{Graphs vs Trees}\\
+\Large
+\begin{itemize}
+    \item \textbf{Cycles} Graphs can contain cycles, while trees cannot
+    \item \textbf{Connectivity} Graphs can be disconnected, while trees are always connected
+    \item \textbf{Hierarchy} Trees have a hierarchical structure, with one vertex designated as the root. Graphs do not have this hierarchical structure
+    \item \textbf{Applications} Trees used in hierarchical data structures, such as file systems and XML documents. Graphs better for modelling transportation networks, social networks, computer networks
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Types of graphs}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Directed and Undirected graphs}
+	\item \textbf{Weighted Vs Unweighted graphs}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Directed graph}\\
+A directed graph is defined as a type of graph where the edges have
+a direction associated with them.
 \begin{center}
-\includegraphics[scale=0.45]{Images/treevsgraph2}
+\includegraphics[scale=0.65]{Images/directed-graph}
 \end{center}
 \end{frame}
 
 
 
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Directed graphs}\\~\\
+\Large
+\begin{itemize}
+	\item edges have a direction associated with them, indicating a one-way relationship between vertices
+	\item each vertex in a directed graph has two different degree measures: indegree and outdegree. Indegree is the number of incoming edges to a vertex, while outdegree is the number of outgoing edges from a vertex
+	\item A directed graph can contain cycles, which are paths that start and end at the same vertex and contain at least one edge
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{There are numerous applications of directed graphs}\\
+\Large
+\begin{itemize}
+    \item social networks
+    \item transportation networks: flight routes, railroads, and road networks. Cities, towns, and intersections are represented by nodes, and the links that connect these locations—such as highways, train tracks, and flight routes—are represented by edges.
+    \item computer networks
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Undirected graph}\\
+An undirected graph is a type of graph where the edges have no
+specified direction assigned to the them.
+\begin{center}
+\includegraphics[scale=0.65]{Images/undirected-graph}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Undirected graphs}\\~\\
+\Large
+\begin{itemize}
+	\item edges in an undirected graph are bidirectional
+	\item there is no concept of a “parent” or “child” vertex as there is no direction to the edges.
+	\item may contain loops, which are edges that connect a vertex to itself
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Applications of un-directed graphs}\\
+\Large
+\begin{itemize}
+    \item traffic flow optimization: Undirected graphs are used in traffic flow optimization to model the flow of vehicles on road networks. The vertices of the graph represent intersections or road segments, and the edges represent the connections between them. The graph can be used to optimize traffic flow and plan transportation infrastructure
+    \item website analysis: analyze the links between web pages on the internet
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Weighted graph}\\
+A weighted graph is defined as a special type of graph in which the
+edges are assigned some weights which represent cost, distance, and
+many other relative measuring units.
+\begin{center}
+\includegraphics[scale=0.45]{Images/weighted-graph}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Applications of weighted graphs}\\
+\Large
+\begin{itemize}
+    \item Transportation networks: solve the path that takes the least time, or the path with the least overall distance. This is a simplification of how weighted graphs can be used for more complex things like a GPS system. Graphs are used to study traffic patterns, traffic light timings and much more by many big tech companies such as UBER etc. Graph networks are used by many map programs such as Google Maps, Bing Maps
+    \item Epidemiology: Weighted graphs can be used to find the maximum distance transmission from an infectious to a healthy person
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Unweighted graph}\\
+An unweighted graph is a graph in which the edges do not have
+weights or costs associated with them. Instead, they simply
+represent the presence of a connection between two vertices.
+\begin{center}
+\includegraphics[scale=0.65]{Images/unweighted-graph}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Applications of unweighted graphs}\\
+\Large
+\begin{itemize}
+    \item represent circuit diagrams
+    \item solve puzzles    
+    \item used in social media sites to find whether two users are connected or not
+    \item can modelate the possible moves in a game
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{A real problem}\\
+Given a list of cities and the distances between each pair of
+cities, what is the shortest possible route that visits each city
+exactly once and returns to the origin city?
+\begin{center}
+\includegraphics[scale=0.55]{Images/tsp}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{How we plan to solve the problem?}\\~\\
+\begin{itemize}
+    \item think how we represent the problem
+    \item what data structure we plan to use
+    \item and what algorithm
+\end{itemize}
+\end{frame}
 
 
 
