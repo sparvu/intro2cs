@@ -2895,8 +2895,8 @@ number of terms. An example of a polynomial of a single indeterminate x is
 \begin{itemize}
 	\item Predictable Growth: The growth rate of polynomial functions is predictable and manageable for small to moderate input sizes.
 	\item Efficient for Larger Inputs: Algorithms with polynomial complexity are generally considered efficient and scalable.
-	\item Classification: Polynomial time algorithms are categorized based on their degree: Linear Time (O(n)): The simplest form, where the running time increases directly with the input size.
-	\item Quadratic Time (O(n^2)): The running time increases with the square of the input size.
+	\item Classification: Polynomial time algorithms are categorized based on their degree: Linear Time $O(n)$: The simplest form, where the running time increases directly with the input size.
+	\item Quadratic Time $O(n^2)$: The running time increases with the square of the input size.
 \end{itemize}
 \end{frame}
 
@@ -2992,22 +2992,29 @@ input size increases. This is often called the order of growth.
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\begin{center}
+\huge Big-O notation helps us answer the question, “Will it scale?”
+\end{center}
+\end{frame}
+
+
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
 \textbf{Constant time $O(1)$}\\~\\
 On the other hand if we we searching for the first word in a dictionary, this
 operation is of constant time complexity, regardless of number of words in the
-dictionary. Same way, joining the end of a queue in a bank is of constant complexity
-regardless of how long the queue is.
+dictionary. Same way, joining the end of a queue in a bank is of constant
+complexity regardless of how long the queue is.
 \end{frame}
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
 \textbf{Linear time - $O(n)$}\\~\\
-We are looking for a specific item in a long unsorted list. We will probable compare
-each item. Search time is proportional to the list size. Here we say the complexity is
-to be \textbf{linear}.
+We are looking for a specific item in a long unsorted list. We will probable
+compare each item. Search time is proportional to the list size. Here we say the
+complexity is to be \textbf{linear}.
 \end{frame}
 
 
@@ -3027,9 +3034,9 @@ to be \textbf{linear}.
 \LARGE
 \textbf{Quadratic time $O(n^2)$}\\~\\
 If we are planning to find all duplicates in an unsorted list then the complexity
-becomes quadratic. Checking for duplicates for one item is of linear complexity. But
-if we do this for all items, complexity becomes quadratic. Similarly, if all people in
-a room are asked to shake hands with every other person, the complexity 
+becomes quadratic. Checking for duplicates for one item is of linear complexity.
+But if we do this for all items, complexity becomes quadratic. Similarly, if all
+people in a room are asked to shake hands with every other person, the complexity 
 \textbf{quadratic}.
 \end{frame}
 
