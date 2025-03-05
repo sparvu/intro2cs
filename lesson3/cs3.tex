@@ -2529,4 +2529,552 @@ exactly once and returns to the origin city?
 
 
 
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{TSP Example 1}\\
+\begin{center}
+\includegraphics[scale=0.35]{Images/tsp0}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{TSP Example 2}\\
+\begin{center}
+\includegraphics[scale=0.40]{Images/tsp1}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{TSP Example 3}
+\begin{center}
+\includegraphics[scale=0.33]{Images/tsp2}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{TSP Original Problem}\\
+\begin{center}
+\includegraphics[scale=0.65]{Images/tsp}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Why TSP matters?}\\
+\Large
+It represents real-world problems:
+\begin{itemize}
+    \item Delivery services need to plan routes to drop off packages at multiple locations
+    \item Logistics companies need to find the shortest path to transport goods efficiently
+    \item Manufacturing companies need to reduce the travel of robotic arms in factories
+    \item Solving TSP helps reduce time, fuel costs, and energy, making operations faster and cheaper
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\Huge
+How to solve it?
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{How to solve TSP?}\\~\\
+\Large
+\begin{itemize}
+	\item Brute-Force Approach
+	\item Dynamic Programming
+	\item Approximation Algorithms
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Brute-Force Approach}\\~\\
+\Large
+This method explores all possible routes (permutations) between
+cities, calculates the total distance for each route, and selects
+the shortest one. It guarantees an optimal solution but is
+inefficient.
+\begin{itemize}
+	\item Advantages: Guarantees the optimal solution
+	\item Disadvantages: Extremely slow for large datasets due to factorial growth in possible routes
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Dynamic Programming}\\~\\
+\Large
+The travelling salesman problem using dynamic programming breaks the
+problem into smaller subproblems. It solves these subproblems and
+stores the results to avoid redundant calculations.
+\begin{itemize}
+	\item Advantages: More efficient than brute-force and provides an exact solution
+	\item Disadvantages:  Still exponential, making it impractical for large numbers of cities, though it performs better than brute-force
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{How to solve TSP?}\\
+\begin{center}
+\includegraphics[scale=0.60]{Images/solve-tsp}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\LARGE
+\textbf{Travelling salesman problem (TSP)}\\~\\
+\Large
+It is an \alert{NP-hard} problem in combinatorial optimization,
+important in theoretical computer science and operations research.
+Applications: the travelling purchaser problem, the vehicle routing
+problem and the ring star problem are three generalizations of TSP.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\Huge
+NP-Hard problem?
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+% Computational complexity theory
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+\begin{frame}{Lesson 3}{}
+\begin{center}
+\Huge \textbf{Algorithm Complexity}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Computational complexity}\\~\\
+\Large
+A computational problem is a task solved by a computer. A
+computation problem is solvable by an algorithm.\\
+\textbf{Computational complexity theory focuses on classifying
+computational problems according to their resource usage, and
+explores the relationships between these classifications}
+\end{frame}
+ 
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Analysis of algorithms}\\~\\
+\Large
+A problem is regarded as inherently difficult if its solution
+requires significant resources, whatever the algorithm used. The
+theory formalizes this intuition, by introducing mathematical models
+of computation to study these problems and quantifying their
+computational complexity, i.e., the amount of resources needed to
+solve them, such as time and storage.
+\end{frame}
+
+ 
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Analysis of algorithms}\\~\\
+\Large
+Analyzing the amount of resources needed by a particular algorithm
+to solve a problem.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Computational complexity theory}\\~\\
+\Large
+Focuses on classifying computational problems, describing all
+possible algorithms that could be used to solve the same problem. 
+It tries to classify problems that can or cannot be solved with
+appropriately restricted resources.
+\end{frame}
+ 
+ 
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes}\\~\\
+\Large
+In CS, problems are divided into classes known as Complexity
+classes. In complexity theory, a Complexity Class is a
+set of problems with related complexity.
+\begin{itemize}
+	\item Problems that cannot be solved by computers
+	\item Problems that can be efficiently solved (Polynomial time) by computers
+	\item Problems with no efficient solution (Exponential time)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes. Types}\\
+\begin{center}
+\includegraphics[scale=0.35]{Images/np-hard}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes. Types}\\~\\
+\Large
+\begin{itemize}
+	\item P: Polynomial Time. Problems in class P are those that can be solved by an algorithm in polynomial time. In other words, the time taken to solve these problems grows at a polynomial rate as the input size increases.
+	\item NP: Non-deterministic Polynomial Time. Problems in class NP are those where a solution can be verified in polynomial time, but we don’t necessarily know how to solve them efficiently.	
+    \item NP-Hard: NP-Hard problems are at least as hard as the hardest problems in NP, but they may not even belong to class NP.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes. P class}\\~\\
+\Large
+Problems in class P are those that can be solved by an algorithm in polynomial
+time. In other words, the time taken to solve these problems grows at a polynomial
+rate as the input size increases. Polynomial time algorithms are considered
+efficient and practical for real-world use. If a problem is in class P, it means
+we can solve it relatively quickly even for large inputs.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes. NP class}\\~\\
+\Large
+Problems in class NP are those where a solution can be verified in polynomial
+time, but we don’t necessarily know how to solve them efficiently. The key idea
+here is that if someone gives us a solution, we can check if it’s correct in a
+reasonable amount of time. NP problems are crucial because they are often more
+challenging to solve but still easy to verify. Easy means Polynomial time.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes. NP-Hard class}\\~\\
+\Large
+NP-Hard problems are at least as hard as the hardest problems in NP, but they may not
+even belong to class NP. We could develop an algorithm to solve the problem, but once
+it’s executed, it keeps running endlessly without ever stopping. That would only
+happen if you use a large input for a given problem.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes. NP-Hard class}\\~\\
+\Large
+Example: trying to solve a traveling salesman problem and you input 1000 cities,
+expecting to get a solution, it won’t happen. You’ve essentially set the program to
+run indefinitely, and it will take about 240 years to solve if you have a super
+computer.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes}\\~\\
+\Large
+The common resources required by a solution are \textbf{time} and
+\textbf{space}, meaning how much time the algorithm takes to solve 
+a problem and the corresponding memory usage.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes}\\~\\
+\Large
+The \alert{time complexity} of an algorithm is used to describe the 
+number of steps required to solve a problem, but it can also be used
+to describe how long it takes to verify the answer (the running time
+of your algorithm)\\~\\
+The \alert{space complexity} of an algorithm describes how much memory is
+required for the algorithm to operate. 
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes}\\~\\
+\Large
+An algorithm having time complexity of the form $O(n^k)$ for input n
+and constant k is called polynomial time solution. These solutions scale well.
+\\~\\
+On the other hand, time complexity of the form $O(k^n)$ is exponential time.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Polynomial Time}\\~\\
+\Large
+An algorithm is said to be of polynomial time if its running time is upper bounded
+by a \alert{polynomial} expression in the size of the input for the algorithm,
+that is \(T(n) = O(n^k)\) for some positive constant k.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{What is Polynomial Complexity?}\\~\\
+An algorithm is said to have polynomial complexity if its resource usage can be
+expressed as a polynomial function of the input size, n. Formally, an algorithm
+has polynomial time complexity if its running time is O(nk) for some non-negative
+integer k.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Polynomial expression}\\~\\
+\Large
+In mathematics, a polynomial is a mathematical expression consisting of variables
+and coefficients, that involves only the operations of addition, subtraction,
+multiplication and exponentiation to nonnegative integer powers, and has a finite
+number of terms. An example of a polynomial of a single indeterminate x is 
+\(x^2 + 3x - 5\)
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Polynomial of degree 0 \(f(x)=2\)}\\
+\begin{center}
+\includegraphics[scale=0.10]{Images/polynom-deg0}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Polynomial of degree 1 \(f(x) = 2x + 1\)}\\
+\begin{center}
+\includegraphics[scale=0.55]{Images/polynom-deg1}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Polynomial of degree 2 }\\
+\begin{center}
+\includegraphics[scale=0.10]{Images/polynom-deg2}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Characteristics of Polynomial Complexity}\\~\\
+\Large
+\begin{itemize}
+	\item Predictable Growth: The growth rate of polynomial functions is predictable and manageable for small to moderate input sizes.
+	\item Efficient for Larger Inputs: Algorithms with polynomial complexity are generally considered efficient and scalable.
+	\item Classification: Polynomial time algorithms are categorized based on their degree: Linear Time (O(n)): The simplest form, where the running time increases directly with the input size.
+	\item Quadratic Time (O(n^2)): The running time increases with the square of the input size.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Polynomial Time}\\~\\
+\Large
+Some examples of polynomial-time algorithms:
+\begin{itemize}
+	\item Linear search, selection sort sorting algorithm 
+	\item Bubble sort
+	\item All the basic arithmetic operations (addition, subtraction, multiplication, division, and comparison) can be done in polynomial time.
+	\item Maximum matchings in graphs can be found in polynomial time. In some contexts, especially in optimization, one differentiates between strongly polynomial time and weakly polynomial time algorithms.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Exponential Time}\\~\\
+\Large
+An algorithm is said to be exponential time, if T(n) is upper bounded by
+\(2^{poly(n)}\), where poly is some polynomial in n.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{What is Exponential Complexity?}\\~\\
+An algorithm has exponential complexity if its resource usage can be expressed as
+an exponential function of the input size, typically $O(2^n)$ or $O(c^n)$ for some
+constant c>1.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Characteristics of Exponential Complexity}\\~\\
+\Large
+\begin{itemize}
+	\item Rapid Growth: Exponential functions grow much faster than polynomial functions. Even for relatively small input sizes, the resource requirements can become impractically large.
+	\item Hard to control: Algorithms with exponential complexity are generally considered hard to control for large input sizes.	
+    \item Resource Exhaustion: Due to the rapid growth in resource requirements, these algorithms often become infeasible as the input size increase.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Algorithmic complexity: the time}\\~\\
+Time complexity is the computational complexity that describes the
+amount of computer time it takes to run an algorithm. Time
+complexity is commonly estimated by counting the number of
+elementary operations performed by the algorithm, supposing that
+each elementary operation takes a fixed amount of time to perform.
+\end{frame}
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Algorithmic complexity: the time}\\~\\
+Algorithmic complexity is a measure of how long an algorithm would take to 
+complete given an input of size n. If an algorithm has to scale, it should 
+compute the result within a finite and practical time bound even for 
+large values of n.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{}
+\begin{center}
+\huge \textbf{Big-O notation}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Big-O Notation}\\~\\
+\Large
+Big-O notation is the prevalent notation to represent algorithmic complexity. 
+It gives an upper bound on complexity and hence it signifies the worst-case
+performance of the algorithm. With such a notation, it's easy to compare different
+algorithms because the notation tells clearly how the algorithm scales when 
+input size increases. This is often called the order of growth.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Constant time $O(1)$}\\~\\
+On the other hand if we we searching for the first word in a dictionary, this
+operation is of constant time complexity, regardless of number of words in the
+dictionary. Same way, joining the end of a queue in a bank is of constant complexity
+regardless of how long the queue is.
+\end{frame}
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Linear time - $O(n)$}\\~\\
+We are looking for a specific item in a long unsorted list. We will probable compare
+each item. Search time is proportional to the list size. Here we say the complexity is
+to be \textbf{linear}.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Logarithmic time $O(log n)$}\\~\\
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Log-Liner time $O(n log n)$}\\~\\
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Quadratic time $O(n^2)$}\\~\\
+If we are planning to find all duplicates in an unsorted list then the complexity
+becomes quadratic. Checking for duplicates for one item is of linear complexity. But
+if we do this for all items, complexity becomes quadratic. Similarly, if all people in
+a room are asked to shake hands with every other person, the complexity 
+\textbf{quadratic}.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Time complexity}\\
+\begin{center}
+\includegraphics[scale=0.25]{Images/time-complexity}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Graphs}
+\huge
+Why should we care about an algorithm's performance when we have cloud and processors are getting 
+faster and memories are getting cheaper and cheaper?
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Remember: solving the problem!}\\~\\
+Complexity is about the algorithm itself, the way it processes the data to solve a
+given problem. It's a software design concern at the "idea level". It is NOT about
+Python vs Java execution time.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{How efficient you solve the problem?}\\~\\
+Its about how fast and efficient you solve a problem.\\
+It's possible to have an inefficient algorithm that's executed on high-end hardware to
+give a result quickly. However, with large input datasets, the limitations of the
+hardware will become apparent. Thus, it's desirable to optimize the algorithm first
+before thinking about hardware upgrades.
+\end{frame}
+
+
+
+
+
+
 \end{document}
