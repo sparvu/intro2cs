@@ -2650,13 +2650,16 @@ problem and the ring star problem are three generalizations of TSP.
 
 \begin{frame}{Lesson 3}{Graphs}
 \Huge
+\begin{center}
 NP-Hard problem?
+\end{center}
 \end{frame}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
-% Computational complexity theory
+% Algorithm Complexity                        %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
 \begin{frame}{Lesson 3}{}
 \begin{center}
 \Huge \textbf{Algorithm Complexity}
@@ -2664,48 +2667,32 @@ NP-Hard problem?
 \end{frame}
 
 
-\begin{frame}{Lesson 3}{Algorithm Complexity}
-\LARGE
-\textbf{Computational complexity}\\~\\
-\Large
-A computational problem is a task solved by a computer. A
-computation problem is solvable by an algorithm.\\
-\textbf{Computational complexity theory focuses on classifying
-computational problems according to their resource usage, and
-explores the relationships between these classifications}
-\end{frame}
- 
-
-\begin{frame}{Lesson 3}{Algorithm Complexity}
-\LARGE
-\textbf{Analysis of algorithms}\\~\\
-\Large
-A problem is regarded as inherently difficult if its solution
-requires significant resources, whatever the algorithm used. The
-theory formalizes this intuition, by introducing mathematical models
-of computation to study these problems and quantifying their
-computational complexity, i.e., the amount of resources needed to
-solve them, such as time and storage.
-\end{frame}
-
- 
-\begin{frame}{Lesson 3}{Algorithm Complexity}
-\LARGE
-\textbf{Analysis of algorithms}\\~\\
-\Large
-Analyzing the amount of resources needed by a particular algorithm
-to solve a problem.
+\begin{frame}{Lesson 3}{Graphs}
+\Huge
+\begin{center}
+What is a NP-Hard problem?
+\end{center}
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Computational complexity theory}\\~\\
-\Large
-Focuses on classifying computational problems, describing all
-possible algorithms that could be used to solve the same problem. 
-It tries to classify problems that can or cannot be solved with
-appropriately restricted resources.
+\textbf{Computational problems}\\~\\
+There are problems which can be solved simple way and problems which 
+might not be simple to solve at all, but still for which we can find an 
+algorithm to solve them.\\~\\
+\textbf{And there are problems for which we cant find an algorithm at all to
+solve them.}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Problem classification}\\~\\
+Computational complexity theory focuses on classifying computational problems, 
+describing all possible algorithms that could be used to solve them. It tries to
+classify problems that can or cannot be solved.
 \end{frame}
  
  
@@ -2713,14 +2700,14 @@ appropriately restricted resources.
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
 \textbf{Complexity Classes}\\~\\
-\Large
 In CS, problems are divided into classes known as Complexity
-classes. In complexity theory, a Complexity Class is a
-set of problems with related complexity.
+classes. A Complexity Class is a set of problems, which can be solved 
+by computers depending on their related complexity.
+\Large
 \begin{itemize}
-	\item Problems that cannot be solved by computers
-	\item Problems that can be efficiently solved (Polynomial time) by computers
+	\item Problems that can be efficiently solved (Polynomial time)
 	\item Problems with no efficient solution (Exponential time)
+	\item Problems that cannot be solved by computers
 \end{itemize}
 \end{frame}
 
@@ -2739,9 +2726,9 @@ set of problems with related complexity.
 \textbf{Complexity Classes. Types}\\~\\
 \Large
 \begin{itemize}
-	\item P: Polynomial Time. Problems in class P are those that can be solved by an algorithm in polynomial time. In other words, the time taken to solve these problems grows at a polynomial rate as the input size increases.
-	\item NP: Non-deterministic Polynomial Time. Problems in class NP are those where a solution can be verified in polynomial time, but we don’t necessarily know how to solve them efficiently.	
-    \item NP-Hard: NP-Hard problems are at least as hard as the hardest problems in NP, but they may not even belong to class NP.
+	\item \textbf{P class}: Polynomial Time. Problems that can be solved by an algorithm in polynomial time. In other words, the time taken to solve these problems grows at a polynomial rate as the input size increases.
+	\item \textbf{NP class}: Non-deterministic Polynomial Time. Problems in class NP are those where a solution can be verified in polynomial time, but we don’t necessarily know how to solve them efficiently.	
+    \item \textbf{NP-Hard}: NP-Hard problems are at least as hard as the hardest problems in NP, but they may not even belong to class NP.
 \end{itemize}
 \end{frame}
 
@@ -2753,8 +2740,9 @@ set of problems with related complexity.
 Problems in class P are those that can be solved by an algorithm in polynomial
 time. In other words, the time taken to solve these problems grows at a polynomial
 rate as the input size increases. Polynomial time algorithms are considered
-efficient and practical for real-world use. If a problem is in class P, it means
-we can solve it relatively quickly even for large inputs.
+efficient and practical for real-world use. 
+\textbf{If a problem is in class P, it means we can solve it relatively quickly
+even for large inputs.}
 \end{frame}
 
 
@@ -2765,20 +2753,40 @@ we can solve it relatively quickly even for large inputs.
 Problems in class NP are those where a solution can be verified in polynomial
 time, but we don’t necessarily know how to solve them efficiently. The key idea
 here is that if someone gives us a solution, we can check if it’s correct in a
-reasonable amount of time. NP problems are crucial because they are often more
-challenging to solve but still easy to verify. Easy means Polynomial time.
+reasonable amount of time.
+\textbf{NP problems are crucial because they are often more challenging to solve
+but still easy to verify. Easy means Polynomial time.}
 \end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{A problem is in NP if it is easy to verify its solutions.}
+\end{frame}
+
+
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
 \textbf{Complexity Classes. NP-Hard class}\\~\\
 \Large
-NP-Hard problems are at least as hard as the hardest problems in NP, but they may not
-even belong to class NP. We could develop an algorithm to solve the problem, but once
-it’s executed, it keeps running endlessly without ever stopping. That would only
-happen if you use a large input for a given problem.
+NP-Hard problems are at least as hard as the hardest problems in NP, but they may
+not even belong to class NP. 
+\textbf{We could develop an algorithm to solve the problem, but once it’s
+executed, it keeps running endlessly without ever stopping. That would only 
+happen if you use a large input for a given problem.}
 \end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{A problem is NP-hard if it is difficult to solve, or find a solution.}
+\end{frame}
+
+
+
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
@@ -2786,33 +2794,11 @@ happen if you use a large input for a given problem.
 \textbf{Complexity Classes. NP-Hard class}\\~\\
 \Large
 Example: trying to solve a traveling salesman problem and you input 1000 cities,
-expecting to get a solution, it won’t happen. You’ve essentially set the program to
-run indefinitely, and it will take about 240 years to solve if you have a super
+expecting to get a solution, it won’t happen. You’ve essentially set the program
+to run indefinitely, and it will take about 240 years to solve if you have a super
 computer.
 \end{frame}
 
-
-\begin{frame}{Lesson 3}{Algorithm Complexity}
-\LARGE
-\textbf{Complexity Classes}\\~\\
-\Large
-The common resources required by a solution are \textbf{time} and
-\textbf{space}, meaning how much time the algorithm takes to solve 
-a problem and the corresponding memory usage.
-\end{frame}
-
-
-\begin{frame}{Lesson 3}{Algorithm Complexity}
-\LARGE
-\textbf{Complexity Classes}\\~\\
-\Large
-The \alert{time complexity} of an algorithm is used to describe the 
-number of steps required to solve a problem, but it can also be used
-to describe how long it takes to verify the answer (the running time
-of your algorithm)\\~\\
-The \alert{space complexity} of an algorithm describes how much memory is
-required for the algorithm to operate. 
-\end{frame}
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
@@ -2833,7 +2819,7 @@ On the other hand, time complexity of the form $O(k^n)$ is exponential time.
 \Large
 An algorithm is said to be of polynomial time if its running time is upper bounded
 by a \alert{polynomial} expression in the size of the input for the algorithm,
-that is \(T(n) = O(n^k)\) for some positive constant k.
+that is $T(n) = O(n^k)$ for some positive constant k.
 \end{frame}
 
 
@@ -2842,8 +2828,8 @@ that is \(T(n) = O(n^k)\) for some positive constant k.
 \textbf{What is Polynomial Complexity?}\\~\\
 An algorithm is said to have polynomial complexity if its resource usage can be
 expressed as a polynomial function of the input size, n. Formally, an algorithm
-has polynomial time complexity if its running time is O(nk) for some non-negative
-integer k.
+has polynomial time complexity if its running time is $O(n^k)$ for some non
+negative integer k.
 \end{frame}
 
 
@@ -2890,7 +2876,7 @@ number of terms. An example of a polynomial of a single indeterminate x is
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Characteristics of Polynomial Complexity}\\~\\
+\textbf{Characteristics of Polynomial Complexity}\\
 \Large
 \begin{itemize}
 	\item Predictable Growth: The growth rate of polynomial functions is predictable and manageable for small to moderate input sizes.
@@ -2905,7 +2891,7 @@ number of terms. An example of a polynomial of a single indeterminate x is
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Polynomial Time}\\~\\
+\textbf{Polynomial Time}\\
 \Large
 Some examples of polynomial-time algorithms:
 \begin{itemize}
@@ -2933,8 +2919,10 @@ An algorithm is said to be exponential time, if T(n) is upper bounded by
 \textbf{What is Exponential Complexity?}\\~\\
 An algorithm has exponential complexity if its resource usage can be expressed as
 an exponential function of the input size, typically $O(2^n)$ or $O(c^n)$ for some
-constant c>1.
+constant $c>1$.
 \end{frame}
+
+
 
 
 
@@ -2951,10 +2939,74 @@ constant c>1.
 
 
 
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Algorithm Complexity}\\~\\
+A computational problem is a task solved by a computer. A
+computation problem is solvable by an algorithm.\\~\\
+\Large
+\textbf{Computational complexity theory focuses on classifying
+computational problems according to their resource usage, and
+explores the relationships between these classifications}
+\end{frame}
+ 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Algorithmic complexity: the time}\\~\\
+\textbf{Algorithm Complexity}\\~\\
+\Large
+A problem is regarded as difficult if its solution requires significant 
+resources, whatever the algorithm used. The theory formalizes this intuition, 
+by introducing mathematical models of computation to study these problems and
+quantifying their computational complexity, i.e., the amount of resources 
+needed to solve them, such as time and storage.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{What is Algorithm Complexity Analysis?}\\~\\
+\Large
+The primary motive to use data structures and algorithms (DSA) is to 
+\alert{solve} a problem effectively and efficiently. But how can you decide 
+if a program is efficient or not? We measure that by analysing the algorithm
+complexity.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Algorithm Complexity}\\~\\
+\Large
+The \alert{time complexity} of an algorithm is used to describe the 
+number of steps required to solve a problem, but it can also be used
+to describe how long it takes to verify the answer (the running time
+of your algorithm)\\~\\
+The \alert{space complexity} of an algorithm describes how much memory is
+required for the algorithm to operate. 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Space complexity}\\~\\
+The space complexity of an algorithm is the space taken by an algorithm 
+to run the program for a given input size. The program has some space 
+requirements necessary for its execution these include auxiliary space 
+and input space.\\~\\
+\Large
+\textbf{the space taken by the algorithm to run for a given input size}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Time complexity}\\~\\
 Time complexity is the computational complexity that describes the
 amount of computer time it takes to run an algorithm. Time
 complexity is commonly estimated by counting the number of
@@ -2964,12 +3016,57 @@ each elementary operation takes a fixed amount of time to perform.
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Algorithmic complexity: the time}\\~\\
-Algorithmic complexity is a measure of how long an algorithm would take to 
+\textbf{Time complexity}\\~\\
+Time algorithmic complexity is a measure of how long an algorithm would take to 
 complete given an input of size n. If an algorithm has to scale, it should 
 compute the result within a finite and practical time bound even for 
 large values of n.
 \end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Time complexity}\\~\\
+To be able to select the best algorithm, calculation of complexity and time 
+consumption of an algorithm is important. Thats why we need to take into
+consideration time complexity analysis.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Time complexity}\\~\\
+There are 3 type of time complexity analysis (notations):
+\Large
+\begin{itemize}
+	\item \textbf{Big-O}: Denotes the upper bound of any algorithm’s runtime, the time is taken by the algorithm in the worst case.
+	\item \textbf{Big-Omega}: Denotes the best runtime of an algorithm
+	\item \textbf{Big-Theta}: Denotes average case time complexity
+\end{itemize}
+
+\end{frame}
+
+
+ 
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Analysis of algorithms}\\~\\
+\Large
+Analyzing the amount of resources needed by a particular algorithm to solve a 
+problem.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Complexity Classes}\\~\\
+\Large
+The common resources required by a solution are \textbf{time} and
+\textbf{space}, meaning how much time the algorithm takes to solve 
+a problem and the corresponding memory usage.
+\end{frame}
+
 
 
 
@@ -2984,7 +3081,7 @@ large values of n.
 \LARGE
 \textbf{Big-O Notation}\\~\\
 \Large
-Big-O notation is the prevalent notation to represent algorithmic complexity. 
+Big-O notation is the most common notation to represent algorithmic complexity. 
 It gives an upper bound on complexity and hence it signifies the worst-case
 performance of the algorithm. With such a notation, it's easy to compare different
 algorithms because the notation tells clearly how the algorithm scales when 
@@ -2994,24 +3091,59 @@ input size increases. This is often called the order of growth.
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \begin{center}
-\huge Big-O notation helps us answer the question, “Will it scale?”
+\huge Big-O notation helps us answer the question, “Will it scale?”\\~\\
+\Large 
+Describes the upper bound of any algorithm’s runtime, example the time is taken by
+the algorithm in the worst case.
 \end{center}
 \end{frame}
 
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Constant time $O(1)$ - Excellent/Best}\\~\\
+The algorithm runs for the same amount of time every time irrespective of the
+input size. We call this, constant time complexity.\\~\\
+\Large
+For example, accessing an element in an array by index, searching for the first
+word in a dictionary. Same way, joining the end of a queue in a bank is of
+constant complexity regardless of how long the queue is.
+\end{frame}
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
 \textbf{Constant time $O(1)$}\\~\\
-On the other hand if we we searching for the first word in a dictionary, this
-operation is of constant time complexity, regardless of number of words in the
-dictionary. Same way, joining the end of a queue in a bank is of constant
-complexity regardless of how long the queue is.
+\begin{center}
+\includegraphics[scale=0.10]{Images/polynom-deg0}
+\end{center}
 \end{frame}
+
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Linear time - $O(n)$}\\~\\
+\textbf{Logarithmic time $O(log n)$ - Good}\\~\\
+When the algorithm runtime increases very slowly compared to an increase 
+in input size, we say the algorithm is of logarithmic time complexity.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Logarithmic time $O(log n)$ - Good}\\~\\
+\begin{center}
+\includegraphics[scale=0.30]{Images/log-function}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Linear time - $O(n)$- Fair}\\~\\
+If the algorithm runtime is linearly proportional to the input size then we call 
+the algorithm to be of linear time complexity.
+\\~\\
+\Large
 We are looking for a specific item in a long unsorted list. We will probable
 compare each item. Search time is proportional to the list size. Here we say the
 complexity is to be \textbf{linear}.
@@ -3020,25 +3152,41 @@ complexity is to be \textbf{linear}.
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Logarithmic time $O(log n)$}\\~\\
+\textbf{Linear time - $O(n)$- Fair}\\~\\
+\begin{center}
+\includegraphics[scale=0.08]{Images/linear-function}
+\end{center}
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Log-Liner time $O(n log n)$}\\~\\
+\textbf{Log-Liner time $O(n log n)$ - Bad}\\~\\
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{Quadratic time $O(n^2)$}\\~\\
+\textbf{Quadratic time $O(n^2)$ - Very bad}\\~\\
 If we are planning to find all duplicates in an unsorted list then the complexity
 becomes quadratic. Checking for duplicates for one item is of linear complexity.
 But if we do this for all items, complexity becomes quadratic. Similarly, if all
 people in a room are asked to shake hands with every other person, the complexity 
 \textbf{quadratic}.
 \end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Exponential time $O(2^n)$ - Horrible}\\~\\
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Factorial time $O(n!)$ - Worst}\\~\\
+\end{frame}
+
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
@@ -3050,37 +3198,409 @@ people in a room are asked to shake hands with every other person, the complexit
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Travelling salesman problem (TSP). NP-Hard}\\~\\
+TSP is considered an NP-hard problem, meaning that the time required to find the
+optimal solution increases exponentially as the number of cities grows.
+\end{frame}
 
-\begin{frame}{Lesson 3}{Graphs}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Travelling salesman problem (TSP). Brute-force}\\~\\
+If we start to solve this problem using the brute-force method is SLOW. 
+Very slow.\\
+\Large
+Brute force? Involves evaluating every possible permutation of cities to identify
+the shortest route. This method has a factorial runtime $O(n!)$, making it 
+impractical even for moderately sized datasets. For example, with just 20 cities,
+there are over 2.4 quintillion ($10^18$) possible routes!
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Travelling salesman problem (TSP). Brute-force}\\~\\
+Suitable only for a small network with few cities
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Travelling salesman problem (TSP). Dynamic Programming}\\~\\
+The Held-Karp Algorithm\\
+\Large
+It offers a more efficient solution using dynamic programming. It reduces 
+the time complexity to $O(n^2 * 2^n)$, which is significantly better than 
+brute force but still exponential. While feasible for smaller datasets, 
+the Held-Karp algorithm becomes impractical as the number of cities grows.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Travelling salesman problem (TSP). Dynamic programming}\\~\\
+Suitable for an average network with aprox 50 cities
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Travelling salesman problem (TSP). Polynomial Time}\\~\\
+The holy grail of TSP research is a polynomial-time algorithm—one that can solve
+the problem efficiently as the number of cities increases. Despite extensive
+efforts, no such algorithm exists for the general case of the TSP. This remains 
+research and development, in the context of the P vs NP problem.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
 \huge
-Why should we care about an algorithm's performance when we have cloud and processors are getting 
-faster and memories are getting cheaper and cheaper?
+Why should we care about an algorithm's performance when we have cloud and
+processors are getting faster and memories are getting cheaper and cheaper?
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Algorithm Complexity}
+\LARGE
+\textbf{Solving the problem!}\\~\\
+Complexity is about the algorithm itself, the way it processes the data to 
+solve a given problem. It's a software design concern at the "idea level". 
+It is NOT about Python vs Java execution time.
 \end{frame}
 
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
-\LARGE
-\textbf{Remember: solving the problem!}\\~\\
-Complexity is about the algorithm itself, the way it processes the data to solve a
-given problem. It's a software design concern at the "idea level". It is NOT about
-Python vs Java execution time.
+\huge
+\textbf{How efficient you solve the problem?}
 \end{frame}
-
 
 
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
-\textbf{How efficient you solve the problem?}\\~\\
-Its about how fast and efficient you solve a problem.\\
-It's possible to have an inefficient algorithm that's executed on high-end hardware to
-give a result quickly. However, with large input datasets, the limitations of the
-hardware will become apparent. Thus, it's desirable to optimize the algorithm first
-before thinking about hardware upgrades.
+Its about how fast and efficient you solve a problem.\\~\\
+\alert{It's possible to have an inefficient algorithm that's executed on high-end
+hardware to give a result quickly. However, with large input datasets, the
+limitations of the hardware will become apparent. Thus, it's desirable to 
+optimize the algorithm first before thinking about hardware upgrades.}
 \end{frame}
 
 
 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+% Sorting Algorithms                          %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{}
+\begin{center}
+\Huge \textbf{Sorting Algorithms}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\begin{center}
+\includegraphics[scale=0.35]{Images/sorting-algorithms}
+\end{center}
+\end{frame}
+
+
+
+% %%%%%%%%%%%% %
+% Selection Sort
+% %%%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Selection Sort}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item in-place comparison-based algorithm
+    \item repeatedly selecting the smallest element from the unsorted portion and swapping it with the first unsorted element
+    \item repeats until the entire array is sorted
+    \item inefficient on large lists
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/selection-sort}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Selection Sort. Time complexity $O(n^2)$}\\~\\
+There are two nested loops!\\
+One loop to select n element of array one by one = O(n)\\
+Another loop to compare that element with every other array element = O(n)\\
+$O(n) * O(n) = O(n*n) = O(n^2)$
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Advantages of Selection Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{easy}: very good for teaching basic sorting concepts.
+ runtime, the time is taken by the algorithm in the worst case.
+	\item \textbf{memory efficient}: it requires constant O(1) extra memory space
+	\item \textbf{simple}: good when we dont have memory constraints
+	\item Suitable for small lists
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Disadvantages of Selection Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{slow}: it has $O(n^2)$ time complexity vs others
+	\item \textbf{not stable}: does not maintain the relative order of equal elements which means it is not \alert{stable}.
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\Huge
+ But what is a stable sorting algorithm?
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Stable sorting algorithm}\\
+A sorting algorithm is said to be stable if two objects with equal keys appear in
+the same order in sorted output as they appear in the input data set
+\begin{center}
+\includegraphics[scale=0.25]{Images/stable-sort}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+def selection_sort(a):
+    n = len(a)
+    for i in range(n - 1):
+      
+        # saves the minimum element
+        min_index = i
+        
+        # Iterate through the unsorted array to find the actual minimum
+        for j in range(i + 1, n):
+            if a[j] < a[min_index]:
+              
+                # Update min_idx if a smaller element is found
+                min_index = j
+                      
+        # Swap minimum element to its correct position
+        a[i], a[min_index] = a[min_index], a[i]
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+% %%%%%%%%%%%% %
+% Insertion Sort
+% %%%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Insertion Sort}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item Start with 2nd element of the array as 1st element is assumed to be sorted
+    \item Compare 2nd element with the 1st element and check if the 2nd element is smaller then swap them.
+    \item Move to the third element and compare it with the first two elements and put at its correct position
+    \item Repeat until the entire array is sorted.
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/insertion-sort}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+\LARGE
+\textbf{Insertion Sort. Time complexity $O(n^2)$}\\~\\
+Best case O(n) if the list is already sorted, where n is the number of elements in
+the list. Worst case $O(n^2)$
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Advantages of Insertion Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{simple}: very simple and easy to implement
+ runtime, the time is taken by the algorithm in the worst case.
+	\item \textbf{memory efficient}: it requires constant O(1) extra memory space
+	\item \textbf{stable}: it is a stable sorting algorithm
+	\item Suitable for small or almost sorted lists
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Disadvantages of Insertion Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{inefficient}: slow for large lists
+	\item \textbf{slow}: not as efficient as other sorting algorithms: merge or quicksort
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Insertion Sort}\\~\\
+\begin{lstlisting}[language=Python]
+def insertionSort(a):
+    for i in range(1, len(a)):
+        key = a[i]
+        j = i - 1
+
+        # Swap elements of a[0..i-1], greater than key 1 position ahead
+        while j >= 0 and key < a[j]:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j + 1] = key
+
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+% %%%%%%%%%%% %
+% Bubble Sort
+% %%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Bubble Sort}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item Start with 2nd element of the array as 1st element is assumed to be sorted
+    \item Compare 2nd element with the 1st element and check if the 2nd element is smaller then swap them.
+    \item Move to the third element and compare it with the first two elements and put at its correct position
+    \item Repeat until the entire array is sorted.
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/bubble-sort}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+\LARGE
+\textbf{Insertion Sort. Time complexity $O(n^2)$}\\~\\
+Best case O(n) if the list is already sorted, where n is the number of elements in
+the list. Worst case $O(n^2)$
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Advantages of Insertion Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{simple}: very simple and easy to implement
+ runtime, the time is taken by the algorithm in the worst case.
+	\item \textbf{memory efficient}: it requires constant O(1) extra memory space
+	\item \textbf{stable}: it is a stable sorting algorithm
+	\item Suitable for small or almost sorted lists
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Disadvantages of Insertion Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{inefficient}: slow for large lists
+	\item \textbf{slow}: not as efficient as other sorting algorithms: merge or quicksort
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\Large
+\textbf{Insertion Sort}\\~\\
+\begin{lstlisting}[language=Python]
+def insertionSort(a):
+    for i in range(1, len(a)):
+        key = a[i]
+        j = i - 1
+
+        # Swap elements of a[0..i-1], greater than key 1 position ahead
+        while j >= 0 and key < a[j]:
+            a[j + 1] = a[j]
+            j -= 1
+        a[j + 1] = key
+
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+% Searching Algorithms                        %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
+
+%\begin{frame}{Lesson 3}{}
+%\begin{center}
+%\Huge \textbf{Searching Algorithms}
+%\end{center}
+%\end{frame}
 
 
 
