@@ -3447,6 +3447,7 @@ def selection_sort(a):
 \end{frame}
 
 
+\begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
 \textbf{Insertion Sort. Time complexity $O(n^2)$}\\~\\
 Best case O(n) if the list is already sorted, where n is the number of elements in
@@ -3512,10 +3513,11 @@ def insertionSort(a):
 \begin{minipage}{0.65\textwidth}
 \Large
 \begin{itemize}
-    \item Start with 2nd element of the array as 1st element is assumed to be sorted
-    \item Compare 2nd element with the 1st element and check if the 2nd element is smaller then swap them.
-    \item Move to the third element and compare it with the first two elements and put at its correct position
-    \item Repeat until the entire array is sorted.
+    \item very simple algorithm
+    \item repeatedly steps through the input list element by element
+    \item comparing the current element with the one after it
+    \item swapping their values if needed
+    \item these passes through the list are repeated until no swaps have to be performed during a pass, meaning that the list has become fully sorted
 \end{itemize}
   \end{minipage}
 \begin{minipage}{.0\textwidth}
@@ -3526,20 +3528,20 @@ def insertionSort(a):
   \end{minipage}  
 \end{frame}
 
-
+\begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
-\textbf{Insertion Sort. Time complexity $O(n^2)$}\\~\\
-Best case O(n) if the list is already sorted, where n is the number of elements in
-the list. Worst case $O(n^2)$
+\textbf{Bubble Sort. Time complexity $O(n^2)$}\\~\\
+Bubble sort has a worst-case and average complexity of $O(n^2)$, where 
+n is the number of items being sorted.
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
-\textbf{Advantages of Insertion Sort}\\~\\
+\textbf{Advantages of Bubble Sort}\\~\\
 \Large
 \begin{itemize}
-	\item \textbf{simple}: very simple and easy to implement
+	\item \textbf{easy}: easy to understand and implement
  runtime, the time is taken by the algorithm in the worst case.
 	\item \textbf{memory efficient}: it requires constant O(1) extra memory space
 	\item \textbf{stable}: it is a stable sorting algorithm
@@ -3550,11 +3552,11 @@ the list. Worst case $O(n^2)$
 
 \begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
-\textbf{Disadvantages of Insertion Sort}\\~\\
+\textbf{Disadvantages of Bubble Sort}\\~\\
 \Large
 \begin{itemize}
-	\item \textbf{inefficient}: slow for large lists
-	\item \textbf{slow}: not as efficient as other sorting algorithms: merge or quicksort
+	\item \textbf{inefficient}: slow for large data sets
+	\item \textbf{slow}: not as efficient as other sorting algorithms: merge or quicksort.
 \end{itemize}
 
 \end{frame}
@@ -3562,19 +3564,25 @@ the list. Worst case $O(n^2)$
 
 \begin{frame}[fragile]
 \Large
-\textbf{Insertion Sort}\\~\\
+\textbf{Bubble Sort}\\~\\
 \begin{lstlisting}[language=Python]
-def insertionSort(a):
-    for i in range(1, len(a)):
-        key = a[i]
-        j = i - 1
+def bubbleSort(arr):
+    n = len(a)
+    
+    # Traverse the array a
+    for i in range(n):
+        swapped = False
 
-        # Swap elements of a[0..i-1], greater than key 1 position ahead
-        while j >= 0 and key < a[j]:
-            a[j + 1] = a[j]
-            j -= 1
-        a[j + 1] = key
+        # Last i elements are already in place
+        for j in range(0, n-i-1):
 
+            # Traverse the array a from 0 to n-i-1
+            # Swap if the element found is greater than the next element
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+                swapped = True
+        if (swapped == False):
+            break
 \end{lstlisting}
 \end{frame}
 
