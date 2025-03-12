@@ -3482,8 +3482,6 @@ the list. Worst case $O(n^2)$
 
 
 \begin{frame}[fragile]
-\Large
-\textbf{Insertion Sort}\\~\\
 \begin{lstlisting}[language=Python]
 def insertionSort(a):
     for i in range(1, len(a)):
@@ -3563,8 +3561,6 @@ n is the number of items being sorted.
 
 
 \begin{frame}[fragile]
-\Large
-\textbf{Bubble Sort}\\~\\
 \begin{lstlisting}[language=Python]
 def bubbleSort(arr):
     n = len(a)
@@ -3589,8 +3585,126 @@ def bubbleSort(arr):
 
 
 
+% %%%%%%%%%%% %
+% Heapsort
+% %%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Heap Sort}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item an efficient comparison-based sorting algorithm
+    \item reorganizes an input array into a tree (heap)
+    \item a data structure where each node is greater than its children
+    \item repeatedly removes the largest node from that heap, placing it at the end of the array
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/heap-sort}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
 
 
+
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Heap Sort. Time complexity $O(n log n)$}\\~\\
+Better than bubblesort, the heapsort has a very simple implementation and a more 
+favorable worst-case $O(n log n)$ runtime. Memory Space: $O(log n)$, due to the 
+recursive call stack. However, the space can be $O(1)$ for iterative
+implementation.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Advantages of Bubble Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{efficient}: good for sorting large data sets runtime, the time is taken by the algorithm in the worst case.
+	\item \textbf{memory usage}: Memory usage can be minimal (by writing an iterative heapify() instead of a recursive one). So apart from what is necessary to hold the initial list of items to be sorted, it needs no additional memory space to work
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Disadvantages of Bubble Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Unstable}: it is an unstable algorithm
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+def heapify(arr, n, i):
+    
+     # Initialize largest as root
+    largest = i 
+    
+    #  left index = 2*i + 1
+    l = 2 * i + 1 
+    
+    # right index = 2*i + 2
+    r = 2 * i + 2  
+
+    # If left child is larger than root
+    if l < n and arr[l] > arr[largest]:
+        largest = l
+
+  \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+
+    # If right child is larger than largest so far
+    if r < n and arr[r] > arr[largest]:
+        largest = r
+
+    # If largest is not root
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]  # Swap
+
+        # Recursively heapify the affected sub-tree
+        heapify(arr, n, largest)
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+def heapSort(arr):
+    
+    n = len(arr) 
+
+    # Build heap (rearrange array)
+    for i in range(n // 2 - 1, -1, -1):
+        heapify(arr, n, i)
+
+    # One by one extract an element from heap
+    for i in range(n - 1, 0, -1):
+      
+        # Move root to end
+        arr[0], arr[i] = arr[i], arr[0] 
+
+        # Call max heapify on the reduced heap
+        heapify(arr, i, 0)
+\end{lstlisting}
+\end{frame}
 
 
 
