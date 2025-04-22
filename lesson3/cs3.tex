@@ -3268,9 +3268,9 @@ processors are getting faster and memories are getting cheaper and cheaper?
 \begin{frame}{Lesson 3}{Algorithm Complexity}
 \LARGE
 \textbf{Solving the problem!}\\~\\
-Complexity is about the algorithm itself, the way it processes the data to 
-solve a given problem. It's a software design concern at the "idea level". 
-It is NOT about Python vs Java execution time.
+Complexity is about the algorithm itself, the way it processes the
+data to solve a given problem. It's a software design concern at the
+"idea level". It is NOT about Python vs Java execution time.
 \end{frame}
 
 
@@ -3305,13 +3305,85 @@ optimize the algorithm first before thinking about hardware upgrades.}
 
 
 
+% %%%%%%%%%%%% %
+% Sorting
+% %%%%%%%%%%%% %
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{8 1 10 9 7}\\~\\
+How could we sort this list of numbers?
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{8 1 10 9 7}\\~\\
+Sort them numerically: 1 7 8 9 10
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{8 1 10 9 7}\\~\\
+Or sort them alpha-numerically: 1 10 7 8 9
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{8 1 10 9 7}\\~\\
+Do we need extra memory to sort or not? In place sort does not 
+require extra memory. Out of place sort does require extra memory.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{8 1 10 1 7 8 9}\\~\\
+How are we gonna sort these numbers, which have duplicates?
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+$ 8^1  1^1  10  1^2  7  8^2  9$\\~\\
+We can sort these numbers by $1^1 1^2 7 8^1 8^2 9 10$ keeping the 
+order of the duplicates. We call this a stable sort.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\huge
+\textbf{We need to think how to sort them}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Sorts}\\~\\
+\Large
+\begin{itemize}
+	\item numerically or not
+ 	\item in place vs out of place 
+	\item stable or unstable sorting
+	\item the complexity
+\end{itemize}
+
+\end{frame}
+
+
+
 
 \begin{frame}{Lesson 3}{Sorting Algorithms}
 \begin{center}
 \includegraphics[scale=0.35]{Images/sorting-algorithms}
 \end{center}
 \end{frame}
-
 
 
 % %%%%%%%%%%%% %
@@ -3611,22 +3683,19 @@ def bubbleSort(arr):
 
 
 
-
-
-
 \begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
 \textbf{Heap Sort. Time complexity $O(n log n)$}\\~\\
-Better than bubblesort, the heapsort has a very simple implementation and a more 
-favorable worst-case $O(n log n)$ runtime. Memory Space: $O(log n)$, due to the 
-recursive call stack. However, the space can be $O(1)$ for iterative
-implementation.
+Better than bubblesort, the heapsort has a very simple implementation
+and a more favorable worst-case $O(n log n)$ runtime. Memory Space:
+$O(log n)$, due to the recursive call stack. However, the space can
+be $O(1)$ for iterative implementation.
 \end{frame}
 
 
 \begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
-\textbf{Advantages of Bubble Sort}\\~\\
+\textbf{Advantages of Heap Sort}\\~\\
 \Large
 \begin{itemize}
 	\item \textbf{efficient}: good for sorting large data sets runtime, the time is taken by the algorithm in the worst case.
@@ -3637,7 +3706,7 @@ implementation.
 
 \begin{frame}{Lesson 3}{Sorting Algorithms}
 \LARGE
-\textbf{Disadvantages of Bubble Sort}\\~\\
+\textbf{Disadvantages of Heap Sort}\\~\\
 \Large
 \begin{itemize}
 	\item \textbf{Unstable}: it is an unstable algorithm
@@ -3709,7 +3778,564 @@ def heapSort(arr):
 
 
 
+% %%%%%%%%%%% %
+% Quicksort
+% %%%%%%%%%%% %
 
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Quicksort}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item an efficient, general-purpose algorithm
+    \item faster than merge sort, heapsort
+    \item a \alert{divide-and-conquer} algorithm
+    \item select a \textbf{pivot} and partition the other elements into two sub-arrays, according to whether they are less than or greater than the pivot
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/quicksort}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Quicksort}\\
+\begin{center}
+\includegraphics[scale=0.40]{Images/quicksort2}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\Huge
+ But what is divide-and-conquer? 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Divide and Conquer}\\~\\
+\Large
+\begin{itemize}
+	\item its an algorithm \textbf{design paradigm}
+	\item a generic \textbf{model} or framework which underlies the design of a class of algorithms
+	\item there are different models or frameworks in how we design algorithms
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{}
+\Large
+\begin{itemize}
+    \item Backtracking
+    \item Branch and bound
+    \item Brute-force search
+    \item \textbf{Divide and conquer}
+    \item Dynamic programming
+    \item Greedy algorithm
+    \item Recursion
+    \item Prune and search
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Divide and Conquer}\\~\\
+\Large
+\begin{itemize}
+	\item Breaks down a problem into two or more sub-problems 
+	\item sub-problems of the same or related type
+	\item Repeat until these become simple enough to be solved directly
+	\item Then the solutions to the sub-problems are then combined to give a solution to the original problem
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Divide and Conquer}\\~\\
+\Large
+The \textbf{divide-and-conquer} technique is the basis of efficient algorithms for
+many problems, such as sorting (quicksort, merge sort) or multiplying large numbers, 
+finding the closest pair of points, syntactic analysis, and computing the discrete
+Fourier transform(FFT).
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Divide and Conquer}\\~\\
+\Large
+\textbf{Designing efficient divide-and-conquer algorithms can be difficult}
+\\~\\
+It is often necessary to generalize the problem to make it solvable to a
+\alert{recursive} solution. The correctness of a divide-and-conquer algorithm is
+usually proved by mathematical induction, and its computational cost is often
+determined by solving recurrence relations.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\Huge
+Do you remember \textbf{Recursion}?
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Recursion}\\~\\
+In computer science (CS), \textbf{recursion} is a method of solving a 
+computational problem where the solution depends on solutions to smaller instances of 
+the same problem.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Recursion}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\textbf{Recursion} solves such recursive problems by using functions that call 
+themselves from within their own code. The approach can be applied to many 
+types of problems, and recursion is one of the central ideas of computer science.
+\end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/RecursiveTree}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{}
+\Large
+\begin{itemize}
+    \item \textbf{Backtracking}
+    \item Branch and bound
+    \item Brute-force search
+    \item Divide and conquer
+    \item Dynamic programming
+    \item Greedy algorithm
+    \item Recursion
+    \item Prune and search
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\~\\
+\Large
+\begin{itemize}
+	\item another algorithm \textbf{design paradigm}
+	\item for different type of algorithms
+	\item for which the solution is found by checking and dropping candidates for the solution
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\~\\
+\Large
+Backtracking is a technique for finding solutions to some
+computational problems, notably constraint satisfaction problems,
+that incrementally builds candidates to the solutions, and abandons a
+candidate ("backtracks") as soon as it determines that the candidate
+cannot possibly be completed to a valid solution.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\~\\
+\Large
+Backtracking can be applied only for problems which admit the concept 
+of a \textbf{partial candidate solution} and a relatively quick test 
+of whether it can possibly be completed to a valid solution. It is 
+useless, for example, for locating a given value in an unordered 
+table. When it is applicable, however, backtracking is often much 
+faster than brute-force enumeration of all complete candidates, since 
+it can eliminate many candidates with a single test.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\~\\
+\Large
+\textbf{Backtracking} is an important tool for solving constraint 
+satisfaction problems, such as crosswords, verbal arithmetic, Sudoku,
+and many other puzzles. It is often the most convenient technique for
+parsing, for the knapsack problem and other combinatorial
+optimization problems.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\~\\
+\Large
+The backtracking algorithm enumerates a set of partial candidates 
+that, in principle, could be completed in various ways to give all 
+the possible solutions to the given problem. The completion is done 
+incrementally, by a sequence of candidate extension steps.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\
+\begin{center}
+\includegraphics[scale=0.37]{Images/backtracking}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Backtracking}\\~\\
+\Large
+Conceptually, the partial candidates are represented as the nodes of
+a tree structure, the potential search tree. Each partial candidate
+is the parent of the candidates that differ from it by a single
+extension step; the leaves of the tree are the partial candidates
+that cannot be extended any further.
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Quicksort. Time complexity $O(n log n)$}\\~\\
+Slightly faster than merge sort and heapsort for randomized data,
+particularly on larger distributions. Worst-case $O(n^{2})$
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Advantages of Quicksort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Efficient}: It is a divide-and-conquer algorithm that makes it easier to solve problems. It is efficient on large data sets.
+	\item \textbf{Low overhead}: it requires a small amount of memory to function
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Disadvantages of Quicksort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Worst complexity}: $O(n^{2})$ when the pivot is chosen poorly
+	\item \textbf{Not efficient} small datasets
+	\item \textbf{Not stable} meaning that if two elements have the same key, their relative order will not be preserved in the sorted output in case of quick sort, because here we are swapping elements according to the pivot’s position (without considering their original positions)
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+# Partition function
+def partition(arr, low, high):
+    
+    # Choose the pivot
+    pivot = arr[high]
+    
+    # Index of smaller element and indicates 
+    # the right position of pivot found so far
+    i = low - 1
+\end{lstlisting}
+\end{frame}
+    
+    
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]    
+    # Traverse arr[low..high] and move all smaller
+    # elements to the left side. Elements from low to 
+    # i are smaller after every iteration
+    for j in range(low, high):
+        if arr[j] < pivot:
+            i += 1
+            swap(arr, i, j)
+    
+    # Move pivot after smaller elements and
+    # return its position
+    swap(arr, i + 1, high)
+    return i + 1
+\end{lstlisting}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+# Swap function
+def swap(arr, i, j):
+    arr[i], arr[j] = arr[j], arr[i]
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+# The QuickSort function implementation
+def quickSort(arr, low, high):
+    if low < high:
+        
+        # pi is the partition return index of pivot
+        pi = partition(arr, low, high)
+        
+        # Recursion calls for smaller elements
+        # and greater or equals elements
+        quickSort(arr, low, pi - 1)
+        quickSort(arr, pi + 1, high)
+\end{lstlisting}
+\end{frame}
+        
+        
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+	
+    arr = [10, 7, 8, 9, 1, 5]
+    n = len(arr)
+
+    quickSort(arr, 0, n - 1)
+    
+    for val in arr:
+        print(val, end=" ") 
+
+\end{lstlisting}
+\end{frame}
+
+
+
+
+
+% %%%%%%%%%%% %
+% Merge sort
+% %%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Merge Sort}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item an efficient comparison-based sorting algorithm
+    \item a stable sort
+    \item a divide-and-conquer algorithm 
+    \item invented by John von Neumann 1945
+\end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/mergesort}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Merge Sort}\\~\\
+\begin{itemize}
+\item Divide the unsorted list into n sub-lists, each containing one element (a list of one element is considered sorted).
+\item Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Merge Sort}\\~\\
+Merge sort is a sorting algorithm that follows the divide-and-conquer 
+approach. It works by recursively dividing the input array into 
+smaller subarrays and sorting those subarrays then merging them back 
+together to obtain the sorted array.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Merge Sort}\\~\\
+The merge sort algorithm is to divide the array into two halves, sort 
+each half, and then merge the sorted halves back together. This 
+process is repeated until the entire array is sorted.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Merge sort}\\
+\begin{center}
+\includegraphics[scale=0.37]{Images/mergesort2}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Merge Sort. Time complexity $O(n log n)$}\\~\\
+Best Case: $O(n log n)$, when the array is already sorted or nearly 
+sorted. Worst Case: $O(n log n)$, when the array is sorted in reverse 
+order. Memory space: $O(n)$, additional space is required for the
+temporary array used during merging.
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Advantages of Merge Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Stability}: it is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array.	
+	\item \textbf{Guaranteed worst-case performance}: Merge sort has a worst-case time complexity of $O(N logN)$ , which means it performs well even on large datasets.
+	\item \textbf{Simplicity}: Using a divide-and-conquer approach
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Sorting Algorithms}
+\LARGE
+\textbf{Disadvantages of Merge Sort}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{Space complexity}: extra memory for sorting
+	\item \textbf{Not in-place}: it requires additional memory to store the sorted data. This can be a disadvantage in applications where memory usage is a concern.
+	\item \textbf{Slow}: slower than quicksort
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+
+def merge(arr, left, mid, right):
+    n1 = mid - left + 1
+    n2 = right - mid
+
+    # Create temp arrays
+    L = [0] * n1
+    R = [0] * n2
+
+    # Copy data to temp arrays L[] and R[]
+    for i in range(n1):
+        L[i] = arr[left + i]
+    for j in range(n2):
+        R[j] = arr[mid + 1 + j]
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+
+    i = 0  # Initial index of first subarray
+    j = 0  # Initial index of second subarray
+    k = left  # Initial index of merged subarray
+
+    # Merge the temp arrays back
+    # into arr[left..right]
+    while i < n1 and j < n2:
+        if L[i] <= R[j]:
+            arr[k] = L[i]
+            i += 1
+        else:
+            arr[k] = R[j]
+            j += 1
+        k += 1
+
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+   # Copy the remaining elements of L[],
+    # if there are any
+    while i < n1:
+        arr[k] = L[i]
+        i += 1
+        k += 1
+
+    # Copy the remaining elements of R[], 
+    # if there are any
+    while j < n2:
+        arr[k] = R[j]
+        j += 1
+        k += 1
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+
+def merge_sort(arr, left, right):
+    if left < right:
+        mid = (left + right) // 2
+
+        merge_sort(arr, left, mid)
+        merge_sort(arr, mid + 1, right)
+        merge(arr, left, mid, right)
+
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+
+def print_list(arr):
+    for i in arr:
+        print(i, end=" ")
+    print()
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+    arr = [12, 11, 13, 5, 6, 7]
+    print("Given array is")
+    print_list(arr)
+
+    merge_sort(arr, 0, len(arr) - 1)
+
+    print("\nSorted array is")
+    print_list(arr)    
+\end{lstlisting}
+\end{frame}
 
 
 
@@ -3718,12 +4344,178 @@ def heapSort(arr):
 % Searching Algorithms                        %
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %
 
-%\begin{frame}{Lesson 3}{}
-%\begin{center}
-%\Huge \textbf{Searching Algorithms}
-%\end{center}
-%\end{frame}
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\begin{center}
+\Huge \textbf{Searching Algorithms}
+\end{center}
+\end{frame}
 
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Searching Algorithms}\\~\\
+Searching algorithms are essential tools in computer science used to locate specific items 
+within a collection of data. In this tutorial, we are mainly going to focus upon searching 
+in an array. When we search an item in an array, there are two most common algorithms used 
+based on the type of input array.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Searching algorithms}\\~\\
+\Large
+\begin{itemize}
+	\item \textbf{linear search}: used for an unsorted array. It mainly does one by one comparison of the item to be search with array elements. It takes linear or $O(n)$ time.
+	\item \textbf{binary search}: It is used for a sorted array. It mainly compares the array's middle element first and if the middle element is same as input, then it returns. Otherwise it searches in either left half or right half based on comparison result (Whether the mid element is smaller or greater). This algorithm is faster than linear search and takes $O(Log n)$ time.
+\end{itemize}
+\end{frame}
+
+
+% %%%%%%%%%%%%% %
+% Linear search
+% %%%%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Linear search}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item is a method for finding an element within a list
+    \item it sequentially checks each element of the list until a match is found or the whole list has been searched
+ \end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/linearsearch}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Linear search}\\~\\
+In \textbf{Linear Search}, we iterate over all the elements of the array and check if it 
+the current element is equal to the target element. If we find any element to be equal to 
+the target element, then return the index of the current element. Otherwise, if no element 
+is equal to the target element, then return -1 as the element is not found. Linear search
+is also known as sequential search.
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+def search(arr, N, x):
+
+    for i in range(0, N):
+        if (arr[i] == x):
+            return i
+    return -1
+
+
+arr = [2, 3, 4, 10, 40]
+x = 10
+N = len(arr)
+
+# Function call
+result = search(arr, N, x)
+if(result == -1):
+    print("Element is not present in array")
+else:
+    print("Element is present at index", result)
+
+\end{lstlisting}
+\end{frame}
+
+
+
+
+% %%%%%%%%%%%%%%% %
+% Binary search
+% %%%%%%%%%%%%%%% %
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Binary search}\\~\\
+\begin{minipage}{0.65\textwidth}
+\Large
+\begin{itemize}
+    \item known as half-interval search, logarithmic search, or binary chop
+    \item a search algorithm that finds the position of a target value within a sorted array
+ \end{itemize}
+  \end{minipage}
+\begin{minipage}{.0\textwidth}
+    % Show the image at item three and afterwards
+      \begin{figure}
+        \includegraphics[scale=0.45]{Images/binarysearch}
+      \end{figure}
+  \end{minipage}  
+\end{frame}
+
+
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Binary search}\\~\\
+\textbf{Binary Search Algorithm} is a searching algorithm used in a sorted array by
+repeatedly dividing the search interval in half. The idea of binary search is to use the
+information that the array is sorted and reduce the time complexity to O(log N). 
+\end{frame}
+
+
+\begin{frame}{Lesson 3}{Searching Algorithms}
+\LARGE
+\textbf{Binary search}\\~\\
+Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+# It returns location of x in given array arr
+def binarySearch(arr, low, high, x):
+
+    while low <= high:
+
+        mid = low + (high - low) // 2
+
+        # Check if x is present at mid
+        if arr[mid] == x:
+            return mid
+
+        # If x is greater, ignore left half
+        elif arr[mid] < x:
+            low = mid + 1
+
+        # If x is smaller, ignore right half
+        else:
+            high = mid - 1
+
+    # If we reach here, then the element
+    # was not present
+    return -1
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\begin{lstlisting}[language=Python]
+
+arr = [2, 3, 4, 10, 40]
+x = 10
+
+# Function call
+result = binarySearch(arr, 0, len(arr)-1, x)
+if result != -1:
+    print("Element is present at index", result)
+ else:
+    print("Element is not present in array")
+\end{lstlisting}
+\end{frame}
 
 
 \end{document}
