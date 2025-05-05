@@ -442,8 +442,32 @@ Take a look...
 \end{frame}
 
 
+\begin{frame}[fragile]
+\LARGE
+\textbf{Search and sort for all jpg and png images measuring the elapsed time under Windows, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ time find /myhome -type f | grep png
+
+...
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/en-us/53/osi-certified-72x60.png
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/en-us/54/osi-certified-72x60.png
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/zh-cn/53/osi-certified-72x60.png
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/images/logo.png
+/myhome/.vscode/extensions/vadimcn.vscode-lldb-1.8.1/images/lldb.png
 
 
+real    2m20.786s
+user    0m0.421s
+sys     0m1.686s
+
+\end{lstlisting}
+\end{frame}
+
+
+
+
+$ time find /cygdrive/c/Users/parvust/ -type f | grep png
 
 
 
