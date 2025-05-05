@@ -7,6 +7,10 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.15}
 \usepackage{mathrsfs}
+\usepackage{listings}
+\lstset{
+  columns=flexible
+}
 \usetikzlibrary{arrows}
 
 
@@ -34,7 +38,7 @@
 \frametitle{Lesson 5}
 \Huge In this lesson we will talk about:\\
 \huge
- \alert{Data pipelines. Origins and Definitions}\\
+ \alert{Data pipelines. Origins and Implementations}\\
  \alert{Data Capture, Transforming \& Analysing}\\
  \alert{Raw Data. Data Aggregation}\\
  \alert{Pipeline efficiency}\\
@@ -42,21 +46,68 @@
 \end{frame}
 
 
-
-
-\begin{frame}{Lesson 5}{}
+\begin{frame}{Lesson 5}{Data Pipelines}
 \Huge
- What is a data pipeline?
- \end{frame}
+\begin{center}
+Origins
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+2025. Present time 
+\end{center}
+\end{frame}
 
 
 
-\begin{frame}{Lesson 5}{}
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+ IBM
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
 \LARGE
-Data Pipeline deals with information that is flowing from one end to 
+"A data pipeline is a method in which raw data is ingested from 
+various data sources, transformed and then ported to a data store, 
+such as a data lake or data warehouse, for analysis."
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"Data pipelines act as the “piping” for data science projects or 
+business intelligence dashboards. Data can be sourced through a wide 
+variety of places: APIs, SQL and NoSQL databases, files."
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"During sourcing, data lineage is tracked to document the 
+relationship between enterprise data in various business and IT 
+applications, for example, where data is currently and how it’s 
+stored in an environment, such as on-premises, in a data lake or in a
+data warehouse."\\~\\
+Source: ibm.com
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+www.geeksforgeeks.org
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"Data Pipeline deals with information that is flowing from one end to 
 another. In simple words, we can say collecting the data from various 
 resources than processing it as per requirement and transferring it 
-to the destination by following some sequential activities.\\~\\
+to the destination by following some sequential activities."\\~\\
 Source: www.geeksforgeeks.org
 \end{frame}
 
@@ -65,50 +116,113 @@ Source: www.geeksforgeeks.org
 \end{frame}
 
 
-
-\begin{frame}{Lesson 5}{}
-\LARGE
-A data pipeline is a method in which raw data is ingested from 
-various data sources, transformed and then ported to a data store, 
-such as a data lake or data warehouse, for analysis.
-\end{frame}
-
-\begin{frame}{Lesson 5}{}
-\LARGE
-Data pipelines act as the “piping” for data science projects or 
-business intelligence dashboards. Data can be sourced through a wide 
-variety of places: APIs, SQL and NoSQL databases, files.
-\end{frame}
-
-\begin{frame}{Lesson 5}{}
-\LARGE
-During sourcing, data lineage is tracked to document the relationship 
-between enterprise data in various business and IT applications, for 
-example, where data is currently and how it’s stored in an 
-environment, such as on-premises, in a data lake or in a data 
-warehouse.\\~\\
-Source: ibm.com
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+AMAZON
+\end{center}
 \end{frame}
 
 
-\begin{frame}{Lesson 5}{}
+\begin{frame}{Lesson 5}{Data Pipelines}
 \LARGE
-A data pipeline is a series of processing steps to prepare enterprise 
-data for analysis. Organizations have a large volume of data from 
-various sources like applications, Internet of Things (IoT) devices, 
-and other digital channels. However, raw data is useless; it must be 
-moved, sorted, filtered, reformatted, and analyzed for business 
-intelligence. A data pipeline includes various technologies to 
-verify, summarize, and find patterns in data to inform business 
-decisions.\\~\\
-Source: amazon.com
+"A data pipeline is a series of processing steps to prepare 
+enterprise data for analysis. Organizations have a large volume of 
+data from various sources like applications, Internet of Things (IoT)
+devices, and other digital channels. However, raw data is useless; it
+must be moved, sorted, filtered, reformatted, and analyzed for
+business intelligence. A data pipeline includes various technologies
+to verify, summarize, and find patterns in data to inform business 
+decisions."
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"Just like a water pipeline moves water from the reservoir to your
+taps, a data pipeline moves data from the collection point to
+storage. A data pipeline extracts data from a source, makes changes,
+then saves it in a specific destination. We explain the critical
+components of data pipeline architecture below."
 \end{frame}
 
 
 \begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/pipeline1}}
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/amazon_pipeline}}
 \end{frame}
 
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+ Data pipeline = a program or what? Lets rollback time... 
+ \end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+1969. UNIX 
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{The very first data pipelines}\\~\\
+As early as 1964 Douglas McIlroy thought about a mechanism how we 
+could connect programs same way like we connect and combine
+garden hoses together. 
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/garden-pipeline}}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/garden-pipeline2}}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/garden-pipeline3}}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Connecting Garden Hoses}\\~\\
+\begin{itemize}
+    \item it should connect different hoses
+    \item as efficiently as possible
+    \item with no leaks
+    \item covering all the garden
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Pipelines are everywhere}\\~\\
+\begin{itemize}
+    \item transport fresh water pipelines
+    \item collection pipelines from ground gas and oil to refineries
+    \item wastewater pipelines
+    \item distribution pipelines
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/water-pipeline}}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+ The idea was to reuse the model from other industries to CS
+ \end{frame}
 
 
 \begin{frame}
@@ -125,241 +239,214 @@ Source: amazon.com
 \end{frame}
 
 
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+ The very first models of data pipelines were defined, introduced and 
+ implemented in the operating systems. \textbf{Enter UNIX}
+ \end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{UNIX pipelines}\\~\\
+The very first data pipeline was implemented for UNIX based operating
+systems. The ideas was very simple: combine one or many programs 
+using the \textbf{pipe} operator \text{\textbar}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+\textbf{program} \text{\textbar} \textbf{program} \text{\textbar} ... 
+\end{center}
+\end{frame}
+
+
 
 \begin{frame}[plain,noframenumbering]
 \makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/pipeline}}
 \end{frame}
 
 
-\begin{frame}{Lesson 5}{}
+\begin{frame}{Lesson 5}{Data Pipelines}
 \Huge
- Our software is \textbf{complex}, \textbf{buggy} and \textbf{difficult} to maintain.
- \end{frame}
+The pipeline: is connecting one or many programs together! It is not 
+a single monolithic program.
+\end{frame}
 
 
-\begin{frame}
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{UNIX pipelines}\\~\\
+\Huge
+But why connect different programs instead of having a single big 
+program to handle all the input data?
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
 \begin{center}
+Few reasons behind... have small, \textbf{modular} programs which can 
+connect together to solve a problem quickly and as modular as
+possible
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
 \Huge
-\begin{quote}
-\textbf{"If our software is buggy, what does
-that say about its security?"}
-\begin{flushright}
-{--- Prof. Robert H. Morris}
-\end{flushright}
-\end{quote}
+\begin{center}
+And \alert{enforce} a strict \alert{order} of execution!!!
 \end{center}
 \end{frame}
 
 
-\begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/outage1}}
-\end{frame}
-
-\begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/outage2}}
-\end{frame}
-
-\begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/outage3}}
-\end{frame}
-
-\begin{frame}{Lesson 2}{}
-\Huge
-\center
-    \textbf{What can we do about it?} 
-\end{frame}
-
-
-
-\begin{frame}{Lesson 2}{}
-\Huge
-\begin{center}
-   Start with a \textbf{smart design} at the specification level
-\end{center}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\begin{center}
-\Huge\textbf{Software Specifications}
-\end{center}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\Huge{What is a specification?}
-\includegraphics[scale=0.52]{Images/specs}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\Huge{What is a functional specification?}
-\includegraphics[scale=0.46]{Images/funcspecs0}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
+\begin{frame}{Lesson 5}{Data Pipelines}
 \huge
-    A \textbf{functional software specification} is a
-    \alert{written} description of what our program is supposed to do.
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\includegraphics[scale=0.41]{Images/funcspecs}
-\end{frame}
-
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{How can we write the specification?}\\~\\
 \begin{itemize}
-    \item English. Finnish. Chinese
-    \item Graphical diagrams. Drawing
-    \item Technical sketches. Mockups
+    \item smaller programs are easy to develop 
+    \item and are simple and cheaper to maintain
+    \item as well the amount of data might not fit one program
+    \item no temporary files or data in between
 \end{itemize}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Functional specification}\\~\\
-Helps us to understand what our program will do. It’s highly important to write first a specification of our program \alert{before}  implementing and developing anything.
-\end{frame}
-
-
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-    \textbf{The specification -- what our program does.}\\~\\
-  
-\textbf{But how should we describe this specification? How can we be precise? What does it mean to be precise?}
-\end{frame}
-
-
-
-\begin{frame}{Lesson 2}{}
-\begin{center}
-\Huge
-	Imprecision can lead to \alert{\textbf{ERRORS!}}
-\end{center}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Precise specifications}\\~\\
-Its difficult to be precise using English or Chinese. Thats why in science and engineering precise specifications have adopted basic maths to describe the specifications.
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Basic math}\\~\\
-Elementary mathematics. Propositional logic.
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Propositional Logic}\\~\\
-\includegraphics[scale=0.54]{Images/basiclogic}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Propositional Logic, cont.}
-\includegraphics[scale=0.55]{Images/basiclogic2}
-\end{frame}
-
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Formal methods}\\~\\
-\includegraphics[scale=0.53]{Images/fm}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Specifications using formal methods}\\~\\
-\includegraphics[scale=0.53]{Images/fms}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-    Formal verification is the use of software tools to prove properties of a formal specification, or to prove that a formal model of a system implementation satisfies its specification.\\~\\
-\textbf{Once a formal specification has been developed, the specification may be used as the basis for proving properties of the specification.}
-\end{frame}
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-\textbf{Why maths?}\\~\\
-\begin{itemize}
-    \item Quantify output behavior
-    \item Predict behavior of systems as design time
-    \item Understand safety margins
-    \item Understand system interactions
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-    \textbf{Verification: Are we building the product right?}
-
-\end{frame}
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-    \textbf{Validation: Are we building the right product?}
-\end{frame}
-
-\begin{frame}{Lesson 2}{}
-\LARGE
-"Building the product right" checks that the specifications are correctly implemented by the system while "building the right product" refers back to the user's needs. Ideally, formal methods provide a mathematical guarantee that software meets its specifications.
-\end{frame}
-
-
-\begin{frame}{Lesson 2}{}
-	\Huge Industry
 \end{frame}
 
 
 \begin{frame}[plain,noframenumbering]
-\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/fmaws2}}
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/unix-pipeline}}
 \end{frame}
 
-\begin{frame}{Lesson 2}{}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
 \LARGE
-\textbf{Industry: Amazon, Microsoft, NASA, ESA, Intel}\\~\\
-\includegraphics[scale=0.18]{Images/fmaws}
-\includegraphics[scale=0.25]{Images/fmms}
+\textbf{UNIX pipelines}\\~\\
+Connects different UNIX programs: like ls, sort, wc, grep to solve a problem using the \text{\textbar} pipe character
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/unix-pipeline2}}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{UNIX pipelines, example}\\~\\
+\begin{lstlisting}[language=sh]
+$ ls -lrt Images/*.png | wc -l
+     140
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Sort all images which were produced during Feb, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ ls -l Images/ | awk '{print $6,$7,$9}' | grep Feb | sort
+Feb 26 treevsgraph.png
+Feb 26 treevsgraph2.png
+Feb 26 tsp.png
+Feb 3 Alan_turing.jpg
+Feb 3 Bombe.jpg
+Feb 4 Queue.png
+...
+Feb 4 factorial2.png
+Feb 4 recursion.png
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Sort all images which were produced during Feb, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ ls -l Images/ | awk '{print $6,$7,$9}' | grep Feb | sort -V
+Feb 19 hash_function4.png
+Feb 19 hash_function5.png
+Feb 25 binary-tree.png
+Feb 26 btree.png
+Feb 26 depth-height.png
+Feb 26 directed-graph.png
+Feb 26 graph.png
+Feb 26 selfbalanced-tree.png
+Feb 26 treevsgraph.png
+...
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+But how about the pipeline's \alert{speed} and overall
+\alert{performance}? Should we care about?
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Search for all png images measuring the elapsed time, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ time find $HOME -type f | grep png
+...
+/myhome/feynman_path/examples/no-entanglement.png
+/myhome/feynman_path/examples/no-interference-circuit.png
+/myhome/feynman_path/examples/entanglement.png
+/myhome/feynman_path/examples/no-entanglement-circuit.png
+
+real 0m9.167s
+user 0m0.450s
+sys 0m3.147s
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Search  and sort for all jpg and png images measuring the elapsed time, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ time find $HOME -type f | egrep 'png|jpg' | sort -V
+...
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/en-us/53/osi-certified-72x60.png
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/en-us/54/osi-certified-72x60.png
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/zh-cn/53/osi-certified-72x60.png
+/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/images/logo.png
+/myhome/.vscode/extensions/vadimcn.vscode-lldb-1.8.1/images/lldb.png
+
+real 0m9.240s
+user 0m0.773s
+sys 0m3.034s
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Performance matters! Measuring pipeline execution time matters!
+Take a look... 
+\end{center}
 \end{frame}
 
 
 
 
 
-%\begin{frame}{Lesson 2}{}
-%\LARGE
-%\textbf{}\\~\\
-%A computer system differs from the systems traditionally studied by 
-% scientists because we can
-%pretend that its state changes in discrete steps. So, we represent the 
-%execution
-%of a system as a sequence of states. Formally, we define a behavior to be 
-%a
-%sequence of states, where a state is an assignment of values to 
-%variables. We
-%specify a system by specifying a set of possible behaviors—the ones 
-%representing
-%a correct execution of the system
+
+
 
 \end{document}
 
