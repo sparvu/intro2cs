@@ -38,7 +38,7 @@
 \frametitle{Lesson 5}
 \Huge In this lesson we will talk about:\\
 \huge
- \alert{Data pipelines. Origins and Implementations}\\
+ \alert{Data pipelines. Origins. Types}\\
  \alert{Data Capture, Transforming \& Analysing}\\
  \alert{Raw Data. Data Aggregation}\\
  \alert{Pipeline efficiency}\\
@@ -420,11 +420,11 @@ sys 0m3.147s
 \begin{lstlisting}[language=sh]
 $ time find $HOME -type f | egrep 'png|jpg' | sort -V
 ...
-/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/en-us/53/osi-certified-72x60.png
-/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/en-us/54/osi-certified-72x60.png
-/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/client/3rd/vscode-lua-doc/doc/zh-cn/53/osi-certified-72x60.png
-/myhome/.vscode/extensions/sumneko.lua-3.6.3-darwin-arm64/images/logo.png
-/myhome/.vscode/extensions/vadimcn.vscode-lldb-1.8.1/images/lldb.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/logo.png
+/myhome/.vscode/extensions/lldb.png
 
 real 0m9.240s
 user 0m0.773s
@@ -433,18 +433,9 @@ sys 0m3.034s
 \end{frame}
 
 
-\begin{frame}{Lesson 5}{Data Pipelines}
-\Huge
-\begin{center}
-Performance matters! Measuring pipeline execution time matters!
-Take a look... 
-\end{center}
-\end{frame}
-
-
 \begin{frame}[fragile]
 \LARGE
-\textbf{Search and sort for all jpg and png images measuring the elapsed time under Windows, example}\\
+\textbf{Search and sort for all jpg, png measuring the elapsed time under Windows, example}\\
 \Large
 \begin{lstlisting}[language=sh]
 $ time find /myhome -type f | grep png
@@ -455,12 +446,273 @@ $ time find /myhome -type f | grep png
 /myhome/.vscode/extensions/images/logo.png
 /myhome/.vscode/extensions/images/lldb.png
 
-
 real    2m20.786s
 user    0m0.421s
 sys     0m1.686s
 
 \end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Measuring pipeline elapsed time matters!
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+UNIX Pipelines
+\begin{itemize}
+    \item a chain link of different parts or modules (programs)
+    \item each part, designed to do one thing but do it well (atomicity)
+    \item pipeline must be simple to change and expand (modularity)
+    \item it should perform in time (performance matters)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+From OS pipelines were adopted everywhere else in IT. Remember ETL?
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+From OS pipelines were adopted everywhere else in IT. Remember \alert{ETL}?
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ETL - Extract, transform, load}\\~\\
+A three-phase computing process where data is extracted from an input source, 
+transformed (including cleaning), and loaded somewhere else for further 
+processing or analysis.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ETL Systems}\\~\\
+In large IT organisations, \alert{ETL systems} started to be deployed as 
+in-house or 3rd party based applications, most common close to \alert{date 
+warehousing}. 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Data warehousing?
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data warehousing}\\~\\
+"It is a system used for reporting and data analysis, a core component of 
+business intelligence for any IT organization. Data warehouses are central 
+repositories of data integrated from disparate sources. They store current and 
+historical data organized in a way that is optimized for data analysis, 
+generation of reports, and developing insights across the integrated data."
+(wikipedia)
+\end{frame}
+
+
+\begin{frame}{Lesson 2}{}
+\begin{center}
+	\includegraphics[scale=0.12]{Images/data_warehouse}
+\end{center}
+Source: wikipedia
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data warehousing}\\~\\
+Data warehousing = it is a huge repository of different data sources.
+But how is this different from a classic transactional database? Whats the 
+difference?
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Transactional Databases}\\
+\begin{itemize}
+	\item OLTP (Online transaction processing)
+	\item transaction-oriented applications
+	\item Used to update data in real-time
+	\item designed for write and read operations
+	\item normalized data structure
+	\item SQL and noSQL implementation
+	\item high transaction data, multi-users accessing the system
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{OLTP. Normalized data}\\~\\
+Data in OLTP systems is typically normalized to reduce redundancy and improve 
+data integrity. It is a technique for creating database tables with suitable 
+columns and keys by decomposing a large table into smaller logical units.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Warehousing}\\
+\begin{itemize}
+	\item large repository of different datasets
+	\item historical data storage
+	\item designed for complex read operations
+	\item Data is denormalized to improve query performance and simplify data retrieval
+	\item ETL mechanisms to consolidate data from multiple sources into a single central repository.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Pipelines and ETL}\\~\\
+Pipelines started to be used for different ETL systems and when deploying data 
+warehousing systems. Fetching or capturing data, transforming and manipulating
+data for a specific business reason all parts of a data pipelines.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data pipelines vs ETL pipelines}\\~\\
+Data pipelines and ETL pipelines or ETL systems are sometimes used. There are
+however some few and important differences between ETL and Data pipelines. 
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ETL vs Data Pipelines}\\
+\begin{itemize}
+	\item specific, clear structure and order
+	\item Extract, Transform and Load
+	\item not all data pipelines follow this order
+	\item ETL is very much know for batch processing
+	\item sometimes data pipelines do not transform data
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Types of Data Pipelines
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Types}\\~\\
+Like waterpipes, there are different type of data pipelines. The model of a 
+basic OS pipelines went beyond operating systems. But still the very same 
+principles apply no matter of pipeline type and complexity. (elapsed time, 
+modularity, simplicity, atomicity)
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+Data Pipeline Types
+\begin{itemize}
+    \item batch - run at specific time, with large amounts of data at once
+    \item streaming - processes the data in real-time
+    \item data integration - merge data from different sources into a single central place
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Data Capture (Ingestion), Transformation and Analysis
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Capturing Data}\\~\\
+"Data is collected from various sources—including software-as-a-service (SaaS) 
+platforms, internet-of-things (IoT) devices and mobile devices—and various data 
+structures, both structured and unstructured data. Within streaming data, these 
+raw data sources are typically known as producers, publishers, or senders." -
+IBM 
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Capturing Data}\\~\\
+\begin{itemize}
+    \item from multiple data sources
+    \item stored as raw data: flat files, on on a central repository
+    \item no transformations, no changes to original data
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Ingestion}\\~\\
+Data capturing or data collection is also known as data ingestion. Todays every 
+IT organization uses data ingestion as the term for capturing data from one or 
+many data sources. 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Transformation}\\~\\
+This turns raw data which was previously collected into a format required by 
+the destination data repository. A number of processes might be applied to 
+clean or format data in a specific way.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Transformation, Example 1}\\~\\
+A data stream may be ingested as a nested JSON format, and the data 
+transformation stage will aim to flatten that JSON and extract the key 
+fields for analysis.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Transformation, Example 2}\\~\\
+Another data stream might be ingested as a XML file. We need to transform the 
+XML input file into a SQL table to be stored in a SQL database.
 \end{frame}
 
 
