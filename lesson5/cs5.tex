@@ -703,16 +703,154 @@ clean or format data in a specific way.
 \LARGE
 \textbf{Data Transformation, Example 1}\\~\\
 A data stream may be ingested as a nested JSON format, and the data 
-transformation stage will aim to flatten that JSON and extract the key 
-fields for analysis.
+transformation stage will aim to flatten that JSON and extract the
+key fields for analysis.
 \end{frame}
 
 
 \begin{frame}{Lesson 5}{Data Pipelines}
 \LARGE
 \textbf{Data Transformation, Example 2}\\~\\
-Another data stream might be ingested as a XML file. We need to transform the 
-XML input file into a SQL table to be stored in a SQL database.
+Another data stream might be ingested as a XML file. We need to 
+transform the XML input file into a SQL table to be stored in a SQL
+database.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Storage and Analysis}\\~\\
+"The transformed data is then stored within a data repository, where
+it can be exposed to various stakeholders. This transformed data are
+typically known as consumers, subscribers, or recipients." (IBM)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Raw Data
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Raw Data}\\~\\
+Raw data, also known as primary data, are data (e.g., numbers, 
+instrument readings, figures, etc.) collected from a source. In the 
+context of examinations, the raw data might be described as a raw 
+score (after test scores)." (wikipedia)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Raw Data}\\~\\
+Raw data is fundamental to any data analysis.\\~\\
+The primary, original data collected from a source, which has not
+been transformed, aggregated or changed in any way.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+The raw data is primary. The interface secondary.
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Time series}\\~\\
+All recorded observations, metrics are variable measured
+sequentially in time, called time series, stored as raw data. Raw
+data is produced by a recorder, which fetches data from a system,
+device or sensor, data which has not been modified or changed in any
+way. The data is saved as CSV flat files on disk.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Universal Format}\\~\\
+The original recorded data, available as ascii text, CSV files or 
+plain old sql dump files will always work with any software, user-
+interface or applications. The raw data never becomes obsolete, old 
+or dated by any technology standards or new software methodologies.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Centric}\\~\\
+Many software applications are putting effort in providing shiny and 
+modern front-ends. This reflect an interface centric, rather than 
+data centric approach. Any UI will soon become obsolete. Effort 
+should be put in capturing and consolidating raw data. The data is 
+primary, the user-interface secondary.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Open Data}\\~\\
+A data centric system will always be able to process and offer 
+original raw data in a simple manner for usage, without constraints. 
+The data can be made available directly for download or accessible 
+over a programmable interface which other programs and applications 
+can use.
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Not all data is good. How do you know to capture or ingest the right 
+data? 
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Open Data}\\~\\
+A data centric system will always be able to process and offer 
+original raw data in a simple manner for usage, without constraints. 
+The data can be made available directly for download or accessible 
+over a programmable interface which other programs and applications 
+can use.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Data aggregation
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Aggregating Data}\\~\\
+Data aggregation is the process of collecting and summarizing 
+information from various databases to create combined datasets for 
+analysis. It helps in organizing large amounts of data into a more 
+usable format, making it easier to derive insights and make 
+decisions. (wikipedia)
 \end{frame}
 
 
