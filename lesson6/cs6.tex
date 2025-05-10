@@ -1,0 +1,908 @@
+\documentclass[aspectratio=1610]{beamer}
+\usetheme{boxes}
+\usecolortheme{crane}
+\usepackage{amsmath,amsfonts}
+\usepackage{algpseudocode}
+\usepackage{multicol}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usepackage{listings}
+\lstset{
+  columns=flexible
+}
+\usetikzlibrary{arrows}
+
+
+%-------------------------------------------------------------------
+%	 TITLE SLIDE
+%-------------------------------------------------------------------
+
+
+\begin{document}
+
+% -------------------------------------------------------------------
+% Lesson 6
+% -------------------------------------------------------------------
+\section{Build Safe and Secure Software}
+
+\begin{frame}
+\begin{center}
+\Huge Lesson 6\\~\\
+\textbf{Build Safe and Secure Software}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Lesson 6}
+\Huge In this lesson we will talk about:\\
+\huge
+ \alert{Why today's software sucks!}\\
+ \alert{Functional vs Non-functional testing}\\
+ \alert{Static and Dynamic Analysis}\\
+ \alert{CI/CD Pipelines}\\
+ \alert{Formal methods}\\
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Origins
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+2025. We are drowning in security vulnerabilities and bugs! 
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+ IBM
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"A data pipeline is a method in which raw data is ingested from 
+various data sources, transformed and then ported to a data store, 
+such as a data lake or data warehouse, for analysis."
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"Data pipelines act as the “piping” for data science projects or 
+business intelligence dashboards. Data can be sourced through a wide 
+variety of places: APIs, SQL and NoSQL databases, files."
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"During sourcing, data lineage is tracked to document the 
+relationship between enterprise data in various business and IT 
+applications, for example, where data is currently and how it’s 
+stored in an environment, such as on-premises, in a data lake or in a
+data warehouse."\\~\\
+Source: ibm.com
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+www.geeksforgeeks.org
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"Data Pipeline deals with information that is flowing from one end to 
+another. In simple words, we can say collecting the data from various 
+resources than processing it as per requirement and transferring it 
+to the destination by following some sequential activities."\\~\\
+Source: www.geeksforgeeks.org
+\end{frame}
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/pipeline1}}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+AMAZON
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"A data pipeline is a series of processing steps to prepare 
+enterprise data for analysis. Organizations have a large volume of 
+data from various sources like applications, Internet of Things (IoT)
+devices, and other digital channels. However, raw data is useless; it
+must be moved, sorted, filtered, reformatted, and analyzed for
+business intelligence. A data pipeline includes various technologies
+to verify, summarize, and find patterns in data to inform business 
+decisions."
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+"Just like a water pipeline moves water from the reservoir to your
+taps, a data pipeline moves data from the collection point to
+storage. A data pipeline extracts data from a source, makes changes,
+then saves it in a specific destination. We explain the critical
+components of data pipeline architecture below."
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/amazon_pipeline}}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+ Data pipeline = a program or what? Lets rollback time... 
+ \end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+1969. UNIX 
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{The very first data pipelines}\\~\\
+As early as 1964 Douglas McIlroy thought about a mechanism how we 
+could connect programs same way like we connect and combine
+garden hoses together. 
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/garden-pipeline}}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/garden-pipeline2}}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/garden-pipeline3}}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Connecting Garden Hoses}\\~\\
+\begin{itemize}
+    \item it should connect different hoses
+    \item as efficiently as possible
+    \item with no leaks
+    \item covering all the garden
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Pipelines are everywhere}\\~\\
+\begin{itemize}
+    \item transport fresh water pipelines
+    \item collection pipelines from ground gas and oil to refineries
+    \item wastewater pipelines
+    \item distribution pipelines
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/water-pipeline}}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+ The idea was to reuse the model from other industries to CS
+ \end{frame}
+
+
+\begin{frame}
+\begin{center}
+\Huge
+\begin{quote}
+\textbf{"A pipeline is a mechanism for connecting the output of one program directly and conveniently into the 
+    input of another program."}
+\begin{flushright}
+{--- Brian Kernighan, UNIX father}	
+\end{flushright}
+\end{quote}
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+ The very first models of data pipelines were defined, introduced and 
+ implemented in the operating systems. \textbf{Enter UNIX}
+ \end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{UNIX pipelines}\\~\\
+The very first data pipeline was implemented for UNIX based operating
+systems. The ideas was very simple: combine one or many programs 
+using the \textbf{pipe} operator \text{\textbar}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+\textbf{program} \text{\textbar} \textbf{program} \text{\textbar} ... 
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/pipeline}}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+The pipeline: is connecting one or many programs together! It is not 
+a single monolithic program.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{UNIX pipelines}\\~\\
+\Huge
+But why connect different programs instead of having a single big 
+program to handle all the input data?
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Few reasons behind... have small, \textbf{modular} programs which 
+can connect together to solve a problem quickly and efficiently.
+\end{center}
+\end{frame}
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+By \alert{enforcing} a strict \alert{order} of execution!!!
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\huge
+\begin{itemize}
+    \item smaller programs are easy to develop 
+    \item and are simple and cheaper to maintain
+    \item as well the amount of data might not fit one program
+    \item no temporary files or data in between
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/unix-pipeline}}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{UNIX pipelines}\\~\\
+Connects different UNIX programs: like ls, sort, wc, grep to solve a problem using the \text{\textbar} pipe character
+\end{frame}
+
+
+\begin{frame}[plain,noframenumbering]
+\makebox[\linewidth]{\includegraphics[width=\paperwidth]{Images/unix-pipeline2}}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{UNIX pipelines, example}\\~\\
+\begin{lstlisting}[language=sh]
+$ ls -lrt Images/*.png | wc -l
+     140
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Sort all images which were produced during Feb, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ ls -l Images/ | awk '{print $6,$7,$9}' | grep Feb | sort
+Feb 26 treevsgraph.png
+Feb 26 treevsgraph2.png
+Feb 26 tsp.png
+Feb 3 Alan_turing.jpg
+Feb 3 Bombe.jpg
+Feb 4 Queue.png
+...
+Feb 4 factorial2.png
+Feb 4 recursion.png
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Sort all images which were produced during Feb, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ ls -l Images/ | awk '{print $6,$7,$9}' | grep Feb | sort -V
+Feb 19 hash_function4.png
+Feb 19 hash_function5.png
+Feb 25 binary-tree.png
+Feb 26 btree.png
+Feb 26 depth-height.png
+Feb 26 directed-graph.png
+Feb 26 graph.png
+Feb 26 selfbalanced-tree.png
+Feb 26 treevsgraph.png
+...
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+But how about the pipeline's \alert{speed} and overall
+\alert{performance}? Should we care about?
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Search for all png images measuring the elapsed time, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ time find $HOME -type f | grep png
+...
+/myhome/feynman_path/examples/no-entanglement.png
+/myhome/feynman_path/examples/no-interference-circuit.png
+/myhome/feynman_path/examples/entanglement.png
+/myhome/feynman_path/examples/no-entanglement-circuit.png
+
+real 0m9.167s
+user 0m0.450s
+sys 0m3.147s
+\end{lstlisting}
+\end{frame}
+
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Search  and sort for all jpg and png images measuring the elapsed time, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ time find $HOME -type f | egrep 'png|jpg' | sort -V
+...
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/logo.png
+/myhome/.vscode/extensions/lldb.png
+
+real 0m9.240s
+user 0m0.773s
+sys 0m3.034s
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\LARGE
+\textbf{Search and sort for all jpg, png measuring the elapsed time under Windows, example}\\
+\Large
+\begin{lstlisting}[language=sh]
+$ time find /myhome -type f | grep png
+...
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/osi-certified-72x60.png
+/myhome/.vscode/extensions/images/logo.png
+/myhome/.vscode/extensions/images/lldb.png
+
+real    2m20.786s
+user    0m0.421s
+sys     0m1.686s
+
+\end{lstlisting}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Measuring pipeline elapsed time matters!
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+UNIX Pipelines
+\begin{itemize}
+    \item a chain link of different parts or modules (programs)
+    \item each part, designed to do one thing but do it well (atomicity)
+    \item pipeline must be simple to change and expand (modularity)
+    \item it should perform in time (performance matters)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+From OS pipelines were adopted everywhere else in IT. Remember ETL?
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+From OS pipelines were adopted everywhere else in IT. Remember \alert{ETL}?
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ETL - Extract, transform, load}\\~\\
+A three-phase computing process where data is extracted from an input source, 
+transformed (including cleaning), and loaded somewhere else for further 
+processing or analysis.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ETL Systems}\\~\\
+In large IT organisations, \alert{ETL systems} started to be deployed as 
+in-house or 3rd party based applications, most common close to \alert{date 
+warehousing}. 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Data warehousing?
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data warehousing}\\~\\
+"It is a system used for reporting and data analysis, a core component of 
+business intelligence for any IT organization. Data warehouses are central 
+repositories of data integrated from disparate sources. They store current and 
+historical data organized in a way that is optimized for data analysis, 
+generation of reports, and developing insights across the integrated data."
+(wikipedia)
+\end{frame}
+
+
+\begin{frame}{Lesson 2}{}
+\begin{center}
+	\includegraphics[scale=0.12]{Images/data_warehouse}
+\end{center}
+Source: wikipedia
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data warehousing}\\~\\
+Data warehousing = it is a huge repository of different data sources.
+But how is this different from a classic transactional database? Whats the 
+difference?
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Transactional Databases}\\
+\begin{itemize}
+	\item OLTP (Online transaction processing)
+	\item transaction-oriented applications
+	\item Used to update data in real-time
+	\item designed for write and read operations
+	\item normalized data structure
+	\item SQL and noSQL implementation
+	\item high transaction data, multi-users accessing the system
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{OLTP. Normalized data}\\~\\
+Data in OLTP systems is typically normalized to reduce redundancy and improve 
+data integrity. It is a technique for creating database tables with suitable 
+columns and keys by decomposing a large table into smaller logical units.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Warehousing}\\
+\begin{itemize}
+	\item large repository of different datasets
+	\item historical data storage
+	\item designed for complex read operations
+	\item Data is denormalized to improve query performance and simplify data retrieval
+	\item ETL mechanisms to consolidate data from multiple sources into a single central repository.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Pipelines and ETL}\\~\\
+Pipelines started to be used for different ETL systems and when deploying data 
+warehousing systems. Fetching or capturing data, transforming and manipulating
+data for a specific business reason all parts of a data pipelines.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data pipelines vs ETL pipelines}\\~\\
+Data pipelines and ETL pipelines or ETL systems are sometimes used. There are
+however some few and important differences between ETL and Data pipelines. 
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ETL vs Data Pipelines}\\
+\begin{itemize}
+	\item specific, clear structure and order
+	\item Extract, Transform and Load
+	\item not all data pipelines follow this order
+	\item ETL is very much know for batch processing
+	\item sometimes data pipelines do not transform data
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Types of Data Pipelines
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Types}\\~\\
+Like waterpipes, there are different type of data pipelines. The model of a 
+basic OS pipelines went beyond operating systems. But still the very same 
+principles apply no matter of pipeline type and complexity. (elapsed time, 
+modularity, simplicity, atomicity)
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+Data Pipeline Types
+\begin{itemize}
+    \item batch - run at specific time, with large amounts of data at once
+    \item streaming - processes the data in real-time
+    \item data integration - merge data from different sources into a single central place
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Data Capture (Ingestion), Transformation and Analysis
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Capturing Data}\\~\\
+"Data is collected from various sources—including software-as-a-service (SaaS) 
+platforms, internet-of-things (IoT) devices and mobile devices—and various data 
+structures, both structured and unstructured data. Within streaming data, these 
+raw data sources are typically known as producers, publishers, or senders." -
+IBM 
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Capturing Data}\\~\\
+\begin{itemize}
+    \item from multiple data sources
+    \item stored as raw data: flat files, on on a central repository
+    \item no transformations, no changes to original data
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Ingestion}\\~\\
+Data capturing or data collection is also known as data ingestion. Todays every 
+IT organization uses data ingestion as the term for capturing data from one or 
+many data sources. 
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Transformation}\\~\\
+This turns raw data which was previously collected into a format required by 
+the destination data repository. A number of processes might be applied to 
+clean or format data in a specific way.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Transformation, Example 1}\\~\\
+A data stream may be ingested as a nested JSON format, and the data 
+transformation stage will aim to flatten that JSON and extract the
+key fields for analysis.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Transformation, Example 2}\\~\\
+Another data stream might be ingested as a XML file. We need to 
+transform the XML input file into a SQL table to be stored in a SQL
+database.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Storage and Analysis}\\~\\
+"The transformed data is then stored within a data repository, where
+it can be exposed to various stakeholders. This transformed data are
+typically known as consumers, subscribers, or recipients." (IBM)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Raw Data
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Raw Data}\\~\\
+Raw data, also known as primary data, are data (e.g., numbers, 
+instrument readings, figures, etc.) collected from a source. In the 
+context of examinations, the raw data might be described as a raw 
+score (after test scores)." (wikipedia)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Raw Data}\\~\\
+Raw data is fundamental to any data analysis.\\~\\
+The primary, original data collected from a source, which has not
+been transformed, aggregated or changed in any way.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+The raw data is primary. The interface secondary.
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Time series}\\~\\
+All recorded observations, metrics are variable measured
+sequentially in time, called time series, stored as raw data. Raw
+data is produced by a recorder, which fetches data from a system,
+device or sensor, data which has not been modified or changed in any
+way. The data is saved as CSV flat files on disk.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Universal Format}\\~\\
+The original recorded data, available as ascii text, CSV files or 
+plain old sql dump files will always work with any software, user-
+interface or applications. The raw data never becomes obsolete, old 
+or dated by any technology standards or new software methodologies.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data Centric}\\~\\
+Many software applications are putting effort in providing shiny and 
+modern front-ends. This reflect an interface centric, rather than 
+data centric approach. Any UI will soon become obsolete. Effort 
+should be put in capturing and consolidating raw data. The data is 
+primary, the user-interface secondary.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Open Data}\\~\\
+A data centric system will always be able to process and offer 
+original raw data in a simple manner for usage, without constraints. 
+The data can be made available directly for download or accessible 
+over a programmable interface which other programs and applications 
+can use.
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Not all data is good. How do you know to capture or ingest the right 
+data? 
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Open Data}\\~\\
+A data centric system will always be able to process and offer 
+original raw data in a simple manner for usage, without constraints. 
+The data can be made available directly for download or accessible 
+over a programmable interface which other programs and applications 
+can use.
+\end{frame}
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Data aggregation
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Aggregating Data}\\~\\
+"Data aggregation is the process of collecting and summarizing 
+information from various databases to create combined datasets for 
+analysis. It helps in organizing large amounts of data into a more 
+usable format, making it easier to derive insights and make 
+decisions." (wikipedia)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Pipeline efficiency
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{How do you measure good or bad?}\\~\\
+\begin{itemize}
+    \item performance metrics
+    \item data quality output
+    \item errors
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Performance metrics}\\~\\
+\begin{itemize}
+    \item throughput
+    \item latency (wait time)
+    \item response time (wait time + service time)
+    \item busy time
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Quality metrics}\\~\\
+\begin{itemize}
+    \item do we have the right output?
+    \item is the output the right format
+    \item is data consistent? 
+    \item can we aggregate from this data?
+    \item ensures that data remains consistent across different parts of the system or over time.
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
+
