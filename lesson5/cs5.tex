@@ -681,9 +681,9 @@ IBM
 \begin{frame}{Lesson 5}{Data Pipelines}
 \LARGE
 \textbf{Data Ingestion}\\~\\
-Data capturing or data collection is also known as data ingestion. Todays every 
-IT organization uses data ingestion as the term for capturing data from one or 
-many data sources. 
+Data capturing or data collection is also known as data ingestion. 
+Todays every IT organization uses data ingestion as the term for 
+capturing data from one or many data sources. 
 \end{frame}
 
 
@@ -850,6 +850,110 @@ information from various databases to create combined datasets for
 analysis. It helps in organizing large amounts of data into a more 
 usable format, making it easier to derive insights and make 
 decisions." (wikipedia)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\Huge
+\begin{center}
+Date warehouses. Data lakes. Data lakehouses.
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data warehouses}\\~\\
+ Are the foundations for decision support and business intelligence 
+ applications (\alert{OLAP}). But these were expensive and not very 
+ good for handling unstructured data, semi-structured data.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Structured vs Unstructured Data}\\~\\
+Data classified by its format and the existence or missing schema.
+\begin{itemize}
+    \item \textbf{structured} predefined data model, includes a schema (relational database or data warehouse). A financial report is an example of structured data.
+    \item \textbf{unstructured} no schema or data model behind. (audio or video files, web pages, sensory data)
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data lakes}\\~\\
+ \textbf{Data lakes} are simple storage computing systems designed 
+ to handle raw data on cheap storage for data science and 
+ machine learning. But there is no support for transactions, 
+ no data quality. In other words, a data lake stores cheaply data of 
+ any nature in any format. (Azure Data Lake Storage- ADLS)
+\end{frame}
+
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data lakehouses}\\~\\
+ Are combining the benefits of data lakes and data warehouses 
+ together. Provides storage and processing capabilities for 
+ different organizations built on top of the \alert{medallion data
+ design paradigm}.
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Data lakehouses. Medallion architecture}\\~\\
+ Data is organized in layers, that describes the quality of data.
+ The new architecture offers guarantee to atomicity, isolation and
+ durability as data passes through different layers of validations
+ and transformations: \textbf{bronze}(raw data), \textbf{silver} 
+ (validated data), \textbf{gold} (rich, business ready data)
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Databricks lakehouse}\\~\\
+Includes the following technologies:
+\begin{itemize}
+    \item \textbf{compute engine}: Apache Spark, a scalable engine decoupled from storage
+    \item \textbf{optimized storage}: Delta lake, supports file-based transaction log for \alert{ACID} transactions for tables. (Delta tables)
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{ACID}\\
+\begin{itemize}
+    \item \textbf{Atomicity}: each transactions is seen as a single unit which either succeeds or fails completely. 
+    \item \textbf{Consistency}: ensures the data is consistent, according with the rules defined. Prevents data corruption.
+    \item \textbf{Isolation}: ensures that concurrent execution of transactions would not be affected by other transactions.
+    \item \textbf{Durability}: commited changes are permanent
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Lesson 5}{Data Pipelines}
+\LARGE
+\textbf{Why data lakehouses?}\\~\\
+\begin{itemize}
+    \item \textbf{non proprietary}: data is stored using different open formats
+    \item \textbf{simplicity}: data is indexed using different protocols used by AI, data science, other 3rd party applications 
+    \item \textbf{performance} low latency and high availability for BI reports and advanced analytics
+\end{itemize}
 \end{frame}
 
 
